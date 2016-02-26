@@ -1,27 +1,28 @@
-# French translation of Libgpg-error
-# Copyright (C) 2005, 2011, 2012, 2014 Free Software Foundation, Inc.
-# This file is distributed under the same license as the libgpg-error package.
+# zh_TW.po - Chinese traditional translations for libgpg-error
+# Copyright (C) 2014 Jedi Lin
+# This file is distributed under the same license as the libngpg-error package.
+# Jedi Lin <Jedi@Jedi.org>, 2014
 #
-# Stephane Roy <sroy@j2n.net>, 2005.
-# David Prévot <david@tilapin.org>, 2011, 2012, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: libgpg-error-1.17\n"
+"Project-Id-Version: libgpg-error 1.17\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
 "POT-Creation-Date: 2015-01-26 10:35+0100\n"
-"PO-Revision-Date: 2014-11-01 22:07-0400\n"
-"Last-Translator: David Prévot <david@tilapin.org>\n"
-"Language-Team: French <traduc@traduc.org>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2014-11-17 21:25+0800\n"
+"Last-Translator: Jedi Lin <Jedi@Jedi.org>\n"
+"Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
+"Language: zh_TW\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"X-Generator: Poedit 1.5.7\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-Basepath: libgpg-error-1.17\n"
 
 #: src/err-sources.h:28
 msgid "Unspecified source"
-msgstr "Source non indiquée"
+msgstr "未指定的來源"
 
 #: src/err-sources.h:29
 msgid "gcrypt"
@@ -37,11 +38,11 @@ msgstr "GpgSM"
 
 #: src/err-sources.h:32
 msgid "GPG Agent"
-msgstr "Agent GPG"
+msgstr "GPG 代理"
 
 #: src/err-sources.h:33
 msgid "Pinentry"
-msgstr "Pinentry"
+msgstr "個人識別碼項目"
 
 #: src/err-sources.h:34
 msgid "SCD"
@@ -89,283 +90,283 @@ msgstr "TLS"
 
 #: src/err-sources.h:45
 msgid "Any source"
-msgstr "N'importe quelle source"
+msgstr "任何來源"
 
 #: src/err-sources.h:46
 msgid "User defined source 1"
-msgstr "Source 1 définie par l'utilisateur"
+msgstr "使用者定義來源 1"
 
 #: src/err-sources.h:47
 msgid "User defined source 2"
-msgstr "Source 2 définie par l'utilisateur"
+msgstr "使用者定義來源 2"
 
 #: src/err-sources.h:48
 msgid "User defined source 3"
-msgstr "Source 3 définie par l'utilisateur"
+msgstr "使用者定義來源 3"
 
 #: src/err-sources.h:49
 msgid "User defined source 4"
-msgstr "Source 4 définie par l'utilisateur"
+msgstr "使用者定義來源 4"
 
 #: src/err-sources.h:50
 msgid "Unknown source"
-msgstr "Source inconnue"
+msgstr "未知的來源"
 
 #: src/err-codes.h:28
 msgid "Success"
-msgstr "Réussite"
+msgstr "成功"
 
 #: src/err-codes.h:29
 msgid "General error"
-msgstr "Erreur générale"
+msgstr "一般錯誤"
 
 #: src/err-codes.h:30
 msgid "Unknown packet"
-msgstr "Paquet inconnu"
+msgstr "未知的封包"
 
 #: src/err-codes.h:31
 msgid "Unknown version in packet"
-msgstr "Version inconnue dans le paquet"
+msgstr "封包中的未知版本"
 
 #: src/err-codes.h:32
 msgid "Invalid public key algorithm"
-msgstr "Algorithme à clef publique incorrect"
+msgstr "無效的公鑰演算法"
 
 #: src/err-codes.h:33
 msgid "Invalid digest algorithm"
-msgstr "Algorithme de hachage incorrect"
+msgstr "無效的摘要演算法"
 
 #: src/err-codes.h:34
 msgid "Bad public key"
-msgstr "Mauvaise clef publique"
+msgstr "不良的公鑰"
 
 #: src/err-codes.h:35
 msgid "Bad secret key"
-msgstr "Mauvaise clef secrète"
+msgstr "不良的私鑰"
 
 #: src/err-codes.h:36
 msgid "Bad signature"
-msgstr "Mauvaise signature"
+msgstr "不良的簽章"
 
 #: src/err-codes.h:37
 msgid "No public key"
-msgstr "Pas de clef publique"
+msgstr "沒有公鑰"
 
 #: src/err-codes.h:38
 msgid "Checksum error"
-msgstr "Erreur de somme de contrôle"
+msgstr "檢核碼錯誤"
 
 #: src/err-codes.h:39
 msgid "Bad passphrase"
-msgstr "Mauvaise phrase secrète"
+msgstr "不良的密語"
 
 #: src/err-codes.h:40
 msgid "Invalid cipher algorithm"
-msgstr "Algorithme de chiffrement incorrect"
+msgstr "無效的編密演算法"
 
 #: src/err-codes.h:41
 msgid "Keyring open"
-msgstr "Porte-clefs ouvert"
+msgstr "金鑰鏈開啟"
 
 #: src/err-codes.h:42
 msgid "Invalid packet"
-msgstr "Paquet incorrect"
+msgstr "無效的封包"
 
 #: src/err-codes.h:43
 msgid "Invalid armor"
-msgstr "Armure incorrecte"
+msgstr "無效的封裝"
 
 #: src/err-codes.h:44
 msgid "No user ID"
-msgstr "Pas d'identité"
+msgstr "沒有使用者 ID"
 
 #: src/err-codes.h:45
 msgid "No secret key"
-msgstr "Pas de clef secrète"
+msgstr "沒有私鑰"
 
 #: src/err-codes.h:46
 msgid "Wrong secret key used"
-msgstr "Mauvaise clef secrète utilisée"
+msgstr "使用錯誤的私鑰"
 
 #: src/err-codes.h:47
 msgid "Bad session key"
-msgstr "Mauvaise clef de session"
+msgstr "不良的階段金鑰"
 
 #: src/err-codes.h:48
 msgid "Unknown compression algorithm"
-msgstr "Algorithme de compression inconnu"
+msgstr "未知的壓縮演算法"
 
 #: src/err-codes.h:49
 msgid "Number is not prime"
-msgstr "Ce nombre n'est pas premier"
+msgstr "數值並非質數"
 
 #: src/err-codes.h:50
 msgid "Invalid encoding method"
-msgstr "Méthode d'encodage incorrecte"
+msgstr "無效的編碼方法"
 
 #: src/err-codes.h:51
 msgid "Invalid encryption scheme"
-msgstr "Schéma de chiffrement incorrect"
+msgstr "無效的加密框架"
 
 #: src/err-codes.h:52
 msgid "Invalid signature scheme"
-msgstr "Schéma de signature incorrect"
+msgstr "無效的簽署框架"
 
 #: src/err-codes.h:53
 msgid "Invalid attribute"
-msgstr "Attribut incorrect"
+msgstr "無效的屬性"
 
 #: src/err-codes.h:54
 msgid "No value"
-msgstr "Pas de valeur"
+msgstr "沒有值"
 
 #: src/err-codes.h:55
 msgid "Not found"
-msgstr "Non trouvé"
+msgstr "找不到"
 
 #: src/err-codes.h:56
 msgid "Value not found"
-msgstr "Valeur non trouvée"
+msgstr "找不到值"
 
 #: src/err-codes.h:57
 msgid "Syntax error"
-msgstr "Erreur de syntaxe"
+msgstr "語法錯誤"
 
 #: src/err-codes.h:58
 msgid "Bad MPI value"
-msgstr "Mauvaise valeur MPI"
+msgstr "不良的 MPI 值"
 
 #: src/err-codes.h:59
 msgid "Invalid passphrase"
-msgstr "Phrase secrète incorrecte"
+msgstr "無效的密語"
 
 #: src/err-codes.h:60
 msgid "Invalid signature class"
-msgstr "Classe de signature incorrecte"
+msgstr "無效的簽章類別"
 
 #: src/err-codes.h:61
 msgid "Resources exhausted"
-msgstr "Ressources épuisées"
+msgstr "資源已耗盡"
 
 #: src/err-codes.h:62
 msgid "Invalid keyring"
-msgstr "Porte-clefs incorrect"
+msgstr "無效的鑰匙圈"
 
 #: src/err-codes.h:63
 msgid "Trust DB error"
-msgstr "Erreur de la base de confiance"
+msgstr "信任資料庫錯誤"
 
 #: src/err-codes.h:64
 msgid "Bad certificate"
-msgstr "Mauvais certificat"
+msgstr "不良的憑證"
 
 #: src/err-codes.h:65
 msgid "Invalid user ID"
-msgstr "Identité incorrecte"
+msgstr "無效的使用者 ID"
 
 #: src/err-codes.h:66
 msgid "Unexpected error"
-msgstr "Erreur inattendue"
+msgstr "未預期的錯誤"
 
 #: src/err-codes.h:67
 msgid "Time conflict"
-msgstr "Conflit temporel"
+msgstr "時間衝突"
 
 #: src/err-codes.h:68
 msgid "Keyserver error"
-msgstr "Erreur du serveur de clefs"
+msgstr "金鑰伺服器錯誤"
 
 #: src/err-codes.h:69
 msgid "Wrong public key algorithm"
-msgstr "Mauvais algorithme à clef publique"
+msgstr "錯誤的公鑰演算法"
 
 #: src/err-codes.h:70
 msgid "Tribute to D. A."
-msgstr "Hommage à D. A."
+msgstr "向 D. A. 致意"
 
 #: src/err-codes.h:71
 msgid "Weak encryption key"
-msgstr "Clef de chiffrement faible"
+msgstr "弱加密金鑰"
 
 #: src/err-codes.h:72
 msgid "Invalid key length"
-msgstr "Longueur de clef incorrecte"
+msgstr "無效的金鑰長度"
 
 #: src/err-codes.h:73
 msgid "Invalid argument"
-msgstr "Argument incorrect"
+msgstr "無效的引數"
 
 #: src/err-codes.h:74
 msgid "Syntax error in URI"
-msgstr "Erreur de syntaxe dans l'URI"
+msgstr "網址中的語法錯誤"
 
 #: src/err-codes.h:75
 msgid "Invalid URI"
-msgstr "URI incorrecte"
+msgstr "無效的網址"
 
 #: src/err-codes.h:76
 msgid "Network error"
-msgstr "Erreur réseau"
+msgstr "網路錯誤"
 
 #: src/err-codes.h:77
 msgid "Unknown host"
-msgstr "Hôte inconnu"
+msgstr "未知的主機"
 
 #: src/err-codes.h:78
 msgid "Selftest failed"
-msgstr "Échec de l'autotest"
+msgstr "自我測試失敗"
 
 #: src/err-codes.h:79
 msgid "Data not encrypted"
-msgstr "Données non chiffrées"
+msgstr "資料未經加密"
 
 #: src/err-codes.h:80
 msgid "Data not processed"
-msgstr "Données non traitées"
+msgstr "資料未處理"
 
 #: src/err-codes.h:81
 msgid "Unusable public key"
-msgstr "Clef publique inutilisable"
+msgstr "無法使用的公鑰"
 
 #: src/err-codes.h:82
 msgid "Unusable secret key"
-msgstr "Clef privée inutilisable"
+msgstr "無法使用的私鑰"
 
 #: src/err-codes.h:83
 msgid "Invalid value"
-msgstr "Valeur incorrecte"
+msgstr "無效的值"
 
 #: src/err-codes.h:84
 msgid "Bad certificate chain"
-msgstr "Mauvaise chaîne de certificat"
+msgstr "不良的憑證鏈"
 
 #: src/err-codes.h:85
 msgid "Missing certificate"
-msgstr "Certificat manquant"
+msgstr "遺失憑證"
 
 #: src/err-codes.h:86
 msgid "No data"
-msgstr "Pas de données"
+msgstr "沒有資料"
 
 #: src/err-codes.h:87
 msgid "Bug"
-msgstr "Bogue"
+msgstr "瑕疵"
 
 #: src/err-codes.h:88
 msgid "Not supported"
-msgstr "Non pris en charge"
+msgstr "未支援"
 
 #: src/err-codes.h:89
 msgid "Invalid operation code"
-msgstr "Code d'opération incorrect"
+msgstr "無效的操作碼"
 
 #: src/err-codes.h:90
 msgid "Timeout"
-msgstr "Délai d'attente dépassé"
+msgstr "逾時"
 
 #: src/err-codes.h:91
 msgid "Internal error"
-msgstr "Erreur interne"
+msgstr "內部錯誤"
 
 #: src/err-codes.h:92
 msgid "EOF (gcrypt)"
@@ -373,599 +374,599 @@ msgstr "EOF (gcrypt)"
 
 #: src/err-codes.h:93
 msgid "Invalid object"
-msgstr "Objet incorrect"
+msgstr "無效的物件"
 
 #: src/err-codes.h:94
 msgid "Provided object is too short"
-msgstr "L'objet fourni est trop petit"
+msgstr "提供的物件太短"
 
 #: src/err-codes.h:95
 msgid "Provided object is too large"
-msgstr "L'objet fourni est trop grand"
+msgstr "提供的物件太大"
 
 #: src/err-codes.h:96
 msgid "Missing item in object"
-msgstr "Élément manquant dans l'objet"
+msgstr "物件中遺失項目"
 
 #: src/err-codes.h:97
 msgid "Not implemented"
-msgstr "Non implémenté"
+msgstr "未實作"
 
 #: src/err-codes.h:98
 msgid "Conflicting use"
-msgstr "Utilisation conflictuelle"
+msgstr "彼此衝突的用法"
 
 #: src/err-codes.h:99
 msgid "Invalid cipher mode"
-msgstr "Mode de chiffrement incorrect"
+msgstr "無效的密碼法模式"
 
 #: src/err-codes.h:100
 msgid "Invalid flag"
-msgstr "Option incorrecte"
+msgstr "無效的旗標"
 
 #: src/err-codes.h:101
 msgid "Invalid handle"
-msgstr "Gestion incorrecte"
+msgstr "無效的代號"
 
 #: src/err-codes.h:102
 msgid "Result truncated"
-msgstr "Résultat tronqué"
+msgstr "結果已截剩部分"
 
 #: src/err-codes.h:103
 msgid "Incomplete line"
-msgstr "Ligne incomplète"
+msgstr "不完整列"
 
 #: src/err-codes.h:104
 msgid "Invalid response"
-msgstr "Réponse incorrecte"
+msgstr "無效的回應"
 
 #: src/err-codes.h:105
 msgid "No agent running"
-msgstr "Pas d'agent en cours d'exécution"
+msgstr "沒有執行中的代理程式"
 
 #: src/err-codes.h:106
 msgid "Agent error"
-msgstr "Erreur d'agent"
+msgstr "代理程式錯誤"
 
 #: src/err-codes.h:107
 msgid "Invalid data"
-msgstr "Données incorrectes"
+msgstr "無效的資料"
 
 #: src/err-codes.h:108
 msgid "Unspecific Assuan server fault"
-msgstr "Erreur générale du serveur Assuan"
+msgstr "未指定的 Assuan 伺服器出錯"
 
 #: src/err-codes.h:109
 msgid "General Assuan error"
-msgstr "Erreur générale Assuan"
+msgstr "一般性的 Assuan 錯誤"
 
 #: src/err-codes.h:110
 msgid "Invalid session key"
-msgstr "Clef de session incorrecte"
+msgstr "無效的階段金鑰"
 
 #: src/err-codes.h:111
 msgid "Invalid S-expression"
-msgstr "Expression symbolique incorrecte"
+msgstr "無效的 S-表示式"
 
 #: src/err-codes.h:112
 msgid "Unsupported algorithm"
-msgstr "Algorithme non pris en charge"
+msgstr "未支援的演算法"
 
 #: src/err-codes.h:113
 msgid "No pinentry"
-msgstr "Pas de pinentry"
+msgstr "沒有個人識別碼項目"
 
 #: src/err-codes.h:114
 msgid "pinentry error"
-msgstr "Erreur de pinentry"
+msgstr "個人識別碼錯誤"
 
 #: src/err-codes.h:115
 msgid "Bad PIN"
-msgstr "Mauvais code personnel"
+msgstr "不良的個人識別碼"
 
 #: src/err-codes.h:116
 msgid "Invalid name"
-msgstr "Nom incorrect"
+msgstr "無效的名稱"
 
 #: src/err-codes.h:117
 msgid "Bad data"
-msgstr "Mauvaises données"
+msgstr "無效的資料"
 
 #: src/err-codes.h:118
 msgid "Invalid parameter"
-msgstr "Paramètre incorrect"
+msgstr "無效的參數"
 
 #: src/err-codes.h:119
 msgid "Wrong card"
-msgstr "Mauvaise carte"
+msgstr "錯誤的卡片"
 
 #: src/err-codes.h:120
 msgid "No dirmngr"
-msgstr "Pas de dirmngr"
+msgstr "沒有 dirmngr"
 
 #: src/err-codes.h:121
 msgid "dirmngr error"
-msgstr "Erreur de dirmngr"
+msgstr "dirmngr 錯誤"
 
 #: src/err-codes.h:122
 msgid "Certificate revoked"
-msgstr "Certificat révoqué"
+msgstr "憑證已撤銷"
 
 #: src/err-codes.h:123
 msgid "No CRL known"
-msgstr "Pas de CRL connu"
+msgstr "沒有已知的 CRL"
 
 #: src/err-codes.h:124
 msgid "CRL too old"
-msgstr "CRL trop ancien"
+msgstr "CRL 太老舊"
 
 #: src/err-codes.h:125
 msgid "Line too long"
-msgstr "Ligne trop longue"
+msgstr "列太長"
 
 #: src/err-codes.h:126
 msgid "Not trusted"
-msgstr "Pas de confiance"
+msgstr "未信任"
 
 #: src/err-codes.h:127
 msgid "Operation cancelled"
-msgstr "Opération annulée"
+msgstr "操作已取消"
 
 #: src/err-codes.h:128
 msgid "Bad CA certificate"
-msgstr "Mauvais certificat de l'autorité de certification"
+msgstr "不良的 CA 憑證"
 
 #: src/err-codes.h:129
 msgid "Certificate expired"
-msgstr "Certificat expiré"
+msgstr "憑證已逾期"
 
 #: src/err-codes.h:130
 msgid "Certificate too young"
-msgstr "Certificat trop récent"
+msgstr "憑證太年輕"
 
 #: src/err-codes.h:131
 msgid "Unsupported certificate"
-msgstr "Certificat non pris en charge"
+msgstr "未支援的憑證"
 
 #: src/err-codes.h:132
 msgid "Unknown S-expression"
-msgstr "Expression symbolique inconnue"
+msgstr "未知的 S-表示式"
 
 #: src/err-codes.h:133
 msgid "Unsupported protection"
-msgstr "Protection non prise en charge"
+msgstr "未支援的保護"
 
 #: src/err-codes.h:134
 msgid "Corrupted protection"
-msgstr "Protection corrompue"
+msgstr "損毀的保護"
 
 #: src/err-codes.h:135
 msgid "Ambiguous name"
-msgstr "Nom ambigu"
+msgstr "模糊曖昧的名稱"
 
 #: src/err-codes.h:136
 msgid "Card error"
-msgstr "Erreur de carte"
+msgstr "卡片錯誤"
 
 #: src/err-codes.h:137
 msgid "Card reset required"
-msgstr "Réinitialisation de la carte nécessaire"
+msgstr "卡片需要重設"
 
 #: src/err-codes.h:138
 msgid "Card removed"
-msgstr "Carte enlevée"
+msgstr "卡片已移除"
 
 #: src/err-codes.h:139
 msgid "Invalid card"
-msgstr "Carte incorrecte"
+msgstr "無效的卡片"
 
 #: src/err-codes.h:140
 msgid "Card not present"
-msgstr "Carte absente"
+msgstr "卡片不存在"
 
 #: src/err-codes.h:141
 msgid "No PKCS15 application"
-msgstr "Application non PKCS15"
+msgstr "沒有 PKCS15 應用程式"
 
 #: src/err-codes.h:142
 msgid "Not confirmed"
-msgstr "Non confirmé"
+msgstr "未確認"
 
 #: src/err-codes.h:143
 msgid "Configuration error"
-msgstr "Erreur de configuration"
+msgstr "組態錯誤"
 
 #: src/err-codes.h:144
 msgid "No policy match"
-msgstr "Aucune correspondance de politique"
+msgstr "沒有相符的政策"
 
 #: src/err-codes.h:145
 msgid "Invalid index"
-msgstr "Indice incorrect"
+msgstr "無效的索引"
 
 #: src/err-codes.h:146
 msgid "Invalid ID"
-msgstr "Identifiant incorrect"
+msgstr "無效的 ID"
 
 #: src/err-codes.h:147
 msgid "No SmartCard daemon"
-msgstr "Pas de démon SmartCard"
+msgstr "沒有智慧卡服務"
 
 #: src/err-codes.h:148
 msgid "SmartCard daemon error"
-msgstr "Erreur de démon SmartCard"
+msgstr "智慧卡服務錯誤"
 
 #: src/err-codes.h:149
 msgid "Unsupported protocol"
-msgstr "Protocole non pris en charge"
+msgstr "未支援的協定"
 
 #: src/err-codes.h:150
 msgid "Bad PIN method"
-msgstr "Mauvaise méthode de code personnel"
+msgstr "不良的個人識別碼方法"
 
 #: src/err-codes.h:151
 msgid "Card not initialized"
-msgstr "Carte non initialisée"
+msgstr "卡片無法初始化"
 
 #: src/err-codes.h:152
 msgid "Unsupported operation"
-msgstr "Opération non prise en charge"
+msgstr "未支援的操作"
 
 #: src/err-codes.h:153
 msgid "Wrong key usage"
-msgstr "Mauvaise utilisation de la clef"
+msgstr "錯誤的金鑰用法"
 
 #: src/err-codes.h:154
 msgid "Nothing found"
-msgstr "Rien de trouvé"
+msgstr "找不到任何東西"
 
 #: src/err-codes.h:155
 msgid "Wrong blob type"
-msgstr "Mauvais type de blob"
+msgstr "錯誤的二進位大型物件類型"
 
 #: src/err-codes.h:156
 msgid "Missing value"
-msgstr "Valeur manquante"
+msgstr "遺失值"
 
 #: src/err-codes.h:157
 msgid "Hardware problem"
-msgstr "Problème matériel"
+msgstr "硬體問題"
 
 #: src/err-codes.h:158
 msgid "PIN blocked"
-msgstr "Code personnel bloqué"
+msgstr "個人識別碼已擋掉"
 
 #: src/err-codes.h:159
 msgid "Conditions of use not satisfied"
-msgstr "Conditions d'utilisation non satisfaites"
+msgstr "使用條件未滿足"
 
 #: src/err-codes.h:160
 msgid "PINs are not synced"
-msgstr "Les codes personnels ne sont pas synchrones"
+msgstr "個人識別碼未同步"
 
 #: src/err-codes.h:161
 msgid "Invalid CRL"
-msgstr "CRL incorrect"
+msgstr "無效的 CRL"
 
 #: src/err-codes.h:162
 msgid "BER error"
-msgstr "Erreur de BER"
+msgstr "BER 錯誤"
 
 #: src/err-codes.h:163
 msgid "Invalid BER"
-msgstr "BER incorrect"
+msgstr "無效的 BER"
 
 #: src/err-codes.h:164
 msgid "Element not found"
-msgstr "Élément non trouvé"
+msgstr "找不到元素"
 
 #: src/err-codes.h:165
 msgid "Identifier not found"
-msgstr "Identifiant non trouvé"
+msgstr "找不到識別符"
 
 #: src/err-codes.h:166
 msgid "Invalid tag"
-msgstr "Balise incorrecte"
+msgstr "無效的標籤"
 
 #: src/err-codes.h:167
 msgid "Invalid length"
-msgstr "Longueur incorrecte"
+msgstr "無效的長度"
 
 #: src/err-codes.h:168
 msgid "Invalid key info"
-msgstr "Informations de clef incorrectes"
+msgstr "無效的金鑰資訊"
 
 #: src/err-codes.h:169
 msgid "Unexpected tag"
-msgstr "Balise inattendue"
+msgstr "未預期的標籤"
 
 #: src/err-codes.h:170
 msgid "Not DER encoded"
-msgstr "Non encodé DER"
+msgstr "未經 DER 編碼"
 
 #: src/err-codes.h:171
 msgid "No CMS object"
-msgstr "Pas d'objet CMS"
+msgstr "不是 CMS 物件"
 
 #: src/err-codes.h:172
 msgid "Invalid CMS object"
-msgstr "Objet CMS incorrect"
+msgstr "無效的 CMS 物件"
 
 #: src/err-codes.h:173
 msgid "Unknown CMS object"
-msgstr "Objet CMS inconnu"
+msgstr "未知的 CMS 物件"
 
 #: src/err-codes.h:174
 msgid "Unsupported CMS object"
-msgstr "Objet CMS non pris en charge"
+msgstr "未支援的 CMS 物件"
 
 #: src/err-codes.h:175
 msgid "Unsupported encoding"
-msgstr "Codage non pris en charge"
+msgstr "未支援的編碼"
 
 #: src/err-codes.h:176
 msgid "Unsupported CMS version"
-msgstr "Version de CMS non prise en charge"
+msgstr "未支援的 CMS 版本"
 
 #: src/err-codes.h:177
 msgid "Unknown algorithm"
-msgstr "Algorithme inconnu"
+msgstr "未知的演算法"
 
 #: src/err-codes.h:178
 msgid "Invalid crypto engine"
-msgstr "Moteur de chiffrement incorrect"
+msgstr "無效的密碼法引擎"
 
 #: src/err-codes.h:179
 msgid "Public key not trusted"
-msgstr "Pas de confiance dans la clef publique"
+msgstr "公鑰未信任"
 
 #: src/err-codes.h:180
 msgid "Decryption failed"
-msgstr "Échec de déchiffrement"
+msgstr "解密失敗"
 
 #: src/err-codes.h:181
 msgid "Key expired"
-msgstr "Clef expirée"
+msgstr "金鑰已逾期"
 
 #: src/err-codes.h:182
 msgid "Signature expired"
-msgstr "Signature expirée"
+msgstr "簽章已逾期"
 
 #: src/err-codes.h:183
 msgid "Encoding problem"
-msgstr "Problème d'encodage"
+msgstr "編碼問題"
 
 #: src/err-codes.h:184
 msgid "Invalid state"
-msgstr "État incorrect"
+msgstr "無效的狀態"
 
 #: src/err-codes.h:185
 msgid "Duplicated value"
-msgstr "Valeur dupliquée"
+msgstr "重複的值"
 
 #: src/err-codes.h:186
 msgid "Missing action"
-msgstr "Action manquante"
+msgstr "遺失行動"
 
 #: src/err-codes.h:187
 msgid "ASN.1 module not found"
-msgstr "Module ASN.1 non trouvé"
+msgstr "找不到 ASN.1 模組"
 
 #: src/err-codes.h:188
 msgid "Invalid OID string"
-msgstr "Chaîne OID incorrecte"
+msgstr "無效的 OID 字串"
 
 #: src/err-codes.h:189
 msgid "Invalid time"
-msgstr "Date incorrecte"
+msgstr "無效的時間"
 
 #: src/err-codes.h:190
 msgid "Invalid CRL object"
-msgstr "Objet CRL incorrect"
+msgstr "無效的 CRL 物件"
 
 #: src/err-codes.h:191
 msgid "Unsupported CRL version"
-msgstr "Version de CRL non prise en charge"
+msgstr "未支援的 CRL 版本"
 
 #: src/err-codes.h:192
 msgid "Invalid certificate object"
-msgstr "Objet de certificat incorrect"
+msgstr "無效的憑證物件"
 
 #: src/err-codes.h:193
 msgid "Unknown name"
-msgstr "Nom inconnu"
+msgstr "無效的名稱"
 
 #: src/err-codes.h:194
 msgid "A locale function failed"
-msgstr "Échec d'une fonction de paramètres régionaux (locale)"
+msgstr "本地化函數功能失敗"
 
 #: src/err-codes.h:195
 msgid "Not locked"
-msgstr "Non verrouillé"
+msgstr "未鎖定"
 
 #: src/err-codes.h:196
 msgid "Protocol violation"
-msgstr "Violation de protocole"
+msgstr "未依協定進行"
 
 #: src/err-codes.h:197
 msgid "Invalid MAC"
-msgstr "MAC incorrect"
+msgstr "無效的 MAC"
 
 #: src/err-codes.h:198
 msgid "Invalid request"
-msgstr "Requête incorrecte"
+msgstr "無效的請求"
 
 #: src/err-codes.h:199
 msgid "Unknown extension"
-msgstr "Extension inconnue"
+msgstr "未知的擴充"
 
 #: src/err-codes.h:200
 msgid "Unknown critical extension"
-msgstr "Extension critique inconnue"
+msgstr "未知的關鍵擴充"
 
 #: src/err-codes.h:201
 msgid "Locked"
-msgstr "Verrouillé"
+msgstr "已鎖定"
 
 #: src/err-codes.h:202
 msgid "Unknown option"
-msgstr "Option inconnue"
+msgstr "未知的選項"
 
 #: src/err-codes.h:203
 msgid "Unknown command"
-msgstr "Commande inconnue"
+msgstr "未知的指令"
 
 #: src/err-codes.h:204
 msgid "Not operational"
-msgstr "Non opérationnel"
+msgstr "無法操作"
 
 #: src/err-codes.h:205
 msgid "No passphrase given"
-msgstr "Aucune phrase secrète fournie"
+msgstr "沒有給定密語"
 
 #: src/err-codes.h:206
 msgid "No PIN given"
-msgstr "Aucun code personnel fourni"
+msgstr "沒有給定個人識別碼"
 
 #: src/err-codes.h:207
 msgid "Not enabled"
-msgstr "Non activé"
+msgstr "未啟用"
 
 #: src/err-codes.h:208
 msgid "No crypto engine"
-msgstr "Aucun moteur de chiffrement"
+msgstr "沒有密碼法引擎"
 
 #: src/err-codes.h:209
 msgid "Missing key"
-msgstr "Clef manquante"
+msgstr "遺失金鑰"
 
 #: src/err-codes.h:210
 msgid "Too many objects"
-msgstr "Trop d'objets"
+msgstr "太多物件"
 
 #: src/err-codes.h:211
 msgid "Limit reached"
-msgstr "Limite atteinte"
+msgstr "已達極限"
 
 #: src/err-codes.h:212
 msgid "Not initialized"
-msgstr "Non initialisé"
+msgstr "尚未初始化"
 
 #: src/err-codes.h:213
 msgid "Missing issuer certificate"
-msgstr "Certificat de l'émetteur manquant"
+msgstr "遺失發行者憑證"
 
 #: src/err-codes.h:214
 msgid "No keyserver available"
-msgstr "Aucun serveur de clefs disponible"
+msgstr "沒有可用的金鑰伺服器"
 
 #: src/err-codes.h:215
 msgid "Invalid elliptic curve"
-msgstr "Courbe elliptique incorrecte"
+msgstr "無效的橢圓曲線"
 
 #: src/err-codes.h:216
 msgid "Unknown elliptic curve"
-msgstr "Courbe elliptique inconnue"
+msgstr "未知的橢圓曲線"
 
 #: src/err-codes.h:217
 msgid "Duplicated key"
-msgstr "Clef dupliquée"
+msgstr "重複的金鑰"
 
 #: src/err-codes.h:218
 msgid "Ambiguous result"
-msgstr "Résultat ambigu"
+msgstr "模糊曖昧的結果"
 
 #: src/err-codes.h:219
 msgid "No crypto context"
-msgstr "Aucun contexte de chiffrement"
+msgstr "沒有密碼法脈絡"
 
 #: src/err-codes.h:220
 msgid "Wrong crypto context"
-msgstr "Contexte de chiffrement incorrect"
+msgstr "錯誤的密碼法脈絡"
 
 #: src/err-codes.h:221
 msgid "Bad crypto context"
-msgstr "Mauvais contexte de chiffrement"
+msgstr "不良的密碼法脈絡"
 
 #: src/err-codes.h:222
 msgid "Conflict in the crypto context"
-msgstr "Conflit dans le contexte de chiffrement"
+msgstr "密碼法脈絡衝突"
 
 #: src/err-codes.h:223
 msgid "Broken public key"
-msgstr "Clef publique cassée"
+msgstr "損毀的公鑰"
 
 #: src/err-codes.h:224
 msgid "Broken secret key"
-msgstr "Clef secrète cassée"
+msgstr "損毀的私鑰"
 
 #: src/err-codes.h:225
 msgid "Invalid MAC algorithm"
-msgstr "Algorithme MAC incorrect"
+msgstr "無效的 MAC 演算法"
 
 #: src/err-codes.h:226
 msgid "Operation fully cancelled"
-msgstr "Opération complètement annulée"
+msgstr "操作已完全取消"
 
 #: src/err-codes.h:227
 msgid "Operation not yet finished"
-msgstr "L'opération n'est pas encore terminée"
+msgstr "操作尚未完成"
 
 #: src/err-codes.h:228
 msgid "Buffer too short"
-msgstr "Tampon trop court"
+msgstr "緩衝區太短"
 
 #: src/err-codes.h:229
 msgid "Invalid length specifier in S-expression"
-msgstr "Longueur de spécificateur incorrecte dans l'expression symbolique"
+msgstr "S-表示式中的無效長度指定符"
 
 #: src/err-codes.h:230
 msgid "String too long in S-expression"
-msgstr "Chaîne trop longue dans l'expression symbolique"
+msgstr "S-表示式中的字串太長"
 
 #: src/err-codes.h:231
 msgid "Unmatched parentheses in S-expression"
-msgstr "Parenthèses non correspondantes dans l'expression symbolique"
+msgstr "S-表示式中的括號未成對"
 
 #: src/err-codes.h:232
 msgid "S-expression not canonical"
-msgstr "Expression symbolique non canonique"
+msgstr "S-表示式並非標準型"
 
 #: src/err-codes.h:233
 msgid "Bad character in S-expression"
-msgstr "Mauvais caractère dans l'expression symbolique"
+msgstr "S-表示式中有不良的字符"
 
 #: src/err-codes.h:234
 msgid "Bad quotation in S-expression"
-msgstr "Erreur de guillemets dans l'expression symbolique"
+msgstr "S-表示式中有不良的引號"
 
 #: src/err-codes.h:235
 msgid "Zero prefix in S-expression"
-msgstr "Préfixe nul dans l'expression symbolique"
+msgstr "S-表示式中零前綴"
 
 #: src/err-codes.h:236
 msgid "Nested display hints in S-expression"
-msgstr "Affichage imbriqué d'indications dans l'expression symbolique"
+msgstr "S-表示式中巢狀使用顯示提示符號"
 
 #: src/err-codes.h:237
 msgid "Unmatched display hints"
-msgstr "Affichage d'indications non correspondantes"
+msgstr "未成對的顯示提示符號"
 
 #: src/err-codes.h:238
 msgid "Unexpected reserved punctuation in S-expression"
-msgstr "Ponctuation réservée inattendue dans l'expression symbolique"
+msgstr "S-表示式中有未預期的保留符號"
 
 #: src/err-codes.h:239
 msgid "Bad hexadecimal character in S-expression"
-msgstr "Mauvais caractère hexadécimal dans l'expression symbolique"
+msgstr "S-表示式中有不良的十六進制字符"
 
 #: src/err-codes.h:240
 msgid "Odd hexadecimal numbers in S-expression"
-msgstr "Nombre hexadécimal impair dans l'expression symbolique"
+msgstr "S-表示式中有奇怪的十六進制數字"
 
 #: src/err-codes.h:241
 msgid "Bad octal character in S-expression"
-msgstr "Mauvais caractère octal dans l'expression symbolique"
+msgstr "S-表示式中有不良的八進制字符"
 
 #: src/err-codes.h:242
 msgid "Legacy key"
@@ -975,13 +976,13 @@ msgstr ""
 #, fuzzy
 #| msgid "Buffer too short"
 msgid "Request too short"
-msgstr "Tampon trop court"
+msgstr "緩衝區太短"
 
 #: src/err-codes.h:244
 #, fuzzy
 #| msgid "Line too long"
 msgid "Request too long"
-msgstr "Ligne trop longue"
+msgstr "列太長"
 
 #: src/err-codes.h:245
 msgid "Object is in termination state"
@@ -989,105 +990,103 @@ msgstr ""
 
 #: src/err-codes.h:246
 msgid "No certificate chain"
-msgstr "Aucune chaîne de certificat"
+msgstr "沒有憑證鏈"
 
 #: src/err-codes.h:247
 msgid "Certificate is too large"
-msgstr "Le certificat est trop grand"
+msgstr "憑證太大"
 
 #: src/err-codes.h:248
 msgid "Invalid record"
-msgstr "Enregistrement incorrect"
+msgstr "無效的紀錄"
 
 #: src/err-codes.h:249
 msgid "The MAC does not verify"
-msgstr "Le MAC ne peut pas être vérifié"
+msgstr "MAC 未驗證"
 
 #: src/err-codes.h:250
 msgid "Unexpected message"
-msgstr "Message inattendu"
+msgstr "未預期的訊息"
 
 #: src/err-codes.h:251
 msgid "Compression or decompression failed"
-msgstr "Échec de compression ou décompression"
+msgstr "壓縮或解壓縮失敗"
 
 #: src/err-codes.h:252
 msgid "A counter would wrap"
-msgstr "Un compteur devrait envelopper"
+msgstr "計數程式會疊加"
 
 #: src/err-codes.h:253
 msgid "Fatal alert message received"
-msgstr "Message d’alerte fatale reçu"
+msgstr "已收到嚴重警告訊息"
 
 #: src/err-codes.h:254
 msgid "No cipher algorithm"
-msgstr "Aucun algorithme de chiffrement"
+msgstr "沒有密碼演算法"
 
 #: src/err-codes.h:255
 msgid "Missing client certificate"
-msgstr "Certificat de client manquant"
+msgstr "遺失用戶端憑證"
 
 #: src/err-codes.h:256
 msgid "Close notification received"
-msgstr "Notification de fermeture reçue"
+msgstr "已收到關閉通知"
 
 #: src/err-codes.h:257
 msgid "Ticket expired"
-msgstr "Ticket expiré"
+msgstr "進入權已逾期"
 
 #: src/err-codes.h:258
 msgid "Bad ticket"
-msgstr "Mauvais ticket"
+msgstr "不良的進入權"
 
 #: src/err-codes.h:259
 msgid "Unknown identity"
-msgstr "Identité inconnue"
+msgstr "未知的身分"
 
 #: src/err-codes.h:260
 msgid "Bad certificate message in handshake"
-msgstr "Mauvais message de certificat dans l’initialisation"
+msgstr "交握中的不良憑證訊息"
 
 #: src/err-codes.h:261
 msgid "Bad certificate request message in handshake"
-msgstr "Mauvais message de demande de certificat dans l’initialisation"
+msgstr "交握中的不良憑證請求訊息"
 
 #: src/err-codes.h:262
 msgid "Bad certificate verify message in handshake"
-msgstr "Mauvais message de vérification de certificat dans l’initialisation"
+msgstr "交握中的不良憑證驗證訊息"
 
-# NOTE: s/messsage/message/
 #: src/err-codes.h:263
 msgid "Bad change cipher messsage in handshake"
-msgstr "Mauvais message de modification d’algorithme dans l’initialisation"
+msgstr "交握中的不良變更密碼法訊息"
 
 #: src/err-codes.h:264
 msgid "Bad client hello message in handshake"
-msgstr "Mauvais message de salut du client dans l’initialisation"
+msgstr "交握中的不良用戶端問候訊息"
 
 #: src/err-codes.h:265
 msgid "Bad server hello message in handshake"
-msgstr "Mauvais message de salut du serveur dans l’initialisation"
+msgstr "交握中的不良伺服器問候訊息"
 
-# NOTE: s/hanshake/handshake/
 #: src/err-codes.h:266
 msgid "Bad server hello done message in hanshake"
-msgstr "Mauvais message de fin de salut du serveur dans l’initialisation"
+msgstr "交握中的不良伺服器問候完成訊息"
 
 #: src/err-codes.h:267
 msgid "Bad finished message in handshake"
-msgstr "Mauvais message fini dans l’initialisation"
+msgstr "交握中的不良已完成訊息"
 
 #: src/err-codes.h:268
 msgid "Bad server key exchange message in handshake"
-msgstr "Mauvais message d’échange de clef du serveur dans l’initialisation"
+msgstr "交握中的不良伺服器金鑰交換訊息"
 
 #: src/err-codes.h:269
 msgid "Bad client key exchange message in handshake"
-msgstr "Mauvais message d’échange de clef du client dans l’initialisation"
+msgstr "交握中的不良用戶端金鑰交換訊息"
 
 #: src/err-codes.h:270
 msgid "Bogus string"
-msgstr "Chaîne erronée"
+msgstr "假造的字串"
 
 #: src/err-codes.h:271
 msgid "Forbidden"
@@ -1095,198 +1094,198 @@ msgstr ""
 
 #: src/err-codes.h:272
 msgid "Key disabled"
-msgstr "Clef désactivée"
+msgstr "金鑰已停用"
 
 #: src/err-codes.h:273
 msgid "Not possible with a card based key"
-msgstr "Impossible avec une clef basée sur carte"
+msgstr "不可能以卡片式金鑰進行"
 
 #: src/err-codes.h:274
 msgid "Invalid lock object"
-msgstr "Objet de verrouillage incorrect"
+msgstr "無效的鎖定物件"
 
 #: src/err-codes.h:275
 msgid "General IPC error"
-msgstr "Erreur générale IPC"
+msgstr "一般性的 IPC 錯誤"
 
 #: src/err-codes.h:276
 msgid "IPC accept call failed"
-msgstr "Échec de l'appel IPC accept"
+msgstr "IPC 接受叫用失敗"
 
 #: src/err-codes.h:277
 msgid "IPC connect call failed"
-msgstr "Échec de l'appel IPC connect"
+msgstr "IPC 連線叫用失敗"
 
 #: src/err-codes.h:278
 msgid "Invalid IPC response"
-msgstr "Réponse IPC incorrecte"
+msgstr "無效的 IPC 回應"
 
 #: src/err-codes.h:279
 msgid "Invalid value passed to IPC"
-msgstr "Valeur incorrecte passée à IPC"
+msgstr "遞送至 IPC 的值無效"
 
 #: src/err-codes.h:280
 msgid "Incomplete line passed to IPC"
-msgstr "Ligne incomplète transmise à IPC"
+msgstr "遞送至 IPC 的列不完整"
 
 #: src/err-codes.h:281
 msgid "Line passed to IPC too long"
-msgstr "Ligne trop longue transmise à IPC"
+msgstr "遞送至 IPC 的列太長"
 
 #: src/err-codes.h:282
 msgid "Nested IPC commands"
-msgstr "Commandes IPC imbriquées"
+msgstr "巢狀 IPC 指令"
 
 #: src/err-codes.h:283
 msgid "No data callback in IPC"
-msgstr "Aucune donnée de rappel dans IPC"
+msgstr "IPC 中沒有資料回呼"
 
 #: src/err-codes.h:284
 msgid "No inquire callback in IPC"
-msgstr "Aucune requête de rappel dans IPC"
+msgstr "IPC 中沒有查詢回呼"
 
 #: src/err-codes.h:285
 msgid "Not an IPC server"
-msgstr "Pas un serveur IPC"
+msgstr "不是 IPC 伺服器"
 
 #: src/err-codes.h:286
 msgid "Not an IPC client"
-msgstr "Pas un client IPC"
+msgstr "不是 IPC 用戶端"
 
 #: src/err-codes.h:287
 msgid "Problem starting IPC server"
-msgstr "Problème au démarrage du serveur IPC"
+msgstr "啟動 IPC 伺服器時發生問題"
 
 #: src/err-codes.h:288
 msgid "IPC read error"
-msgstr "Erreur de lecture IPC"
+msgstr "IPC 讀取錯誤"
 
 #: src/err-codes.h:289
 msgid "IPC write error"
-msgstr "Erreur d'écriture IPC"
+msgstr "IPC 寫入錯誤"
 
 #: src/err-codes.h:290
 msgid "Too much data for IPC layer"
-msgstr "Trop de données pour la couche IPC"
+msgstr "IPC 層有太多資料"
 
 #: src/err-codes.h:291
 msgid "Unexpected IPC command"
-msgstr "Commande IPC inattendue"
+msgstr "未預期的 IPC 指令"
 
 #: src/err-codes.h:292
 msgid "Unknown IPC command"
-msgstr "Commande IPC inconnue"
+msgstr "未知的 IPC 指令"
 
 #: src/err-codes.h:293
 msgid "IPC syntax error"
-msgstr "Erreur de syntaxe IPC"
+msgstr "IPC 語法錯誤"
 
 #: src/err-codes.h:294
 msgid "IPC call has been cancelled"
-msgstr "L'appel IPC a été annulé"
+msgstr "IPC 叫用已取消"
 
 #: src/err-codes.h:295
 msgid "No input source for IPC"
-msgstr "Aucune source d'entrée pour IPC"
+msgstr "沒有 IPC 的輸入來源"
 
 #: src/err-codes.h:296
 msgid "No output source for IPC"
-msgstr "Aucune source de sortie pour IPC"
+msgstr "沒有 IPC 的輸出來源"
 
 #: src/err-codes.h:297
 msgid "IPC parameter error"
-msgstr "Erreur de paramètre IPC"
+msgstr "IPC 參數錯誤"
 
 #: src/err-codes.h:298
 msgid "Unknown IPC inquire"
-msgstr "Requête IPC inconnue"
+msgstr "未知的 IPC 查詢"
 
 #: src/err-codes.h:299
 msgid "User defined error code 1"
-msgstr "Code d'erreur 1 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 1"
 
 #: src/err-codes.h:300
 msgid "User defined error code 2"
-msgstr "Code d'erreur 2 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 2"
 
 #: src/err-codes.h:301
 msgid "User defined error code 3"
-msgstr "Code d'erreur 3 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 3"
 
 #: src/err-codes.h:302
 msgid "User defined error code 4"
-msgstr "Code d'erreur 4 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 4"
 
 #: src/err-codes.h:303
 msgid "User defined error code 5"
-msgstr "Code d'erreur 5 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 5"
 
 #: src/err-codes.h:304
 msgid "User defined error code 6"
-msgstr "Code d'erreur 6 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 6"
 
 #: src/err-codes.h:305
 msgid "User defined error code 7"
-msgstr "Code d'erreur 7 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 7"
 
 #: src/err-codes.h:306
 msgid "User defined error code 8"
-msgstr "Code d'erreur 8 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 8"
 
 #: src/err-codes.h:307
 msgid "User defined error code 9"
-msgstr "Code d'erreur 9 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 9"
 
 #: src/err-codes.h:308
 msgid "User defined error code 10"
-msgstr "Code d'erreur 10 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 10"
 
 #: src/err-codes.h:309
 msgid "User defined error code 11"
-msgstr "Code d'erreur 11 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 11"
 
 #: src/err-codes.h:310
 msgid "User defined error code 12"
-msgstr "Code d'erreur 12 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 12"
 
 #: src/err-codes.h:311
 msgid "User defined error code 13"
-msgstr "Code d'erreur 13 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 13"
 
 #: src/err-codes.h:312
 msgid "User defined error code 14"
-msgstr "Code d'erreur 14 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 14"
 
 #: src/err-codes.h:313
 msgid "User defined error code 15"
-msgstr "Code d'erreur 15 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 15"
 
 #: src/err-codes.h:314
 msgid "User defined error code 16"
-msgstr "Code d'erreur 16 défini par l'utilisateur"
+msgstr "使用者定義錯誤代碼 16"
 
 #: src/err-codes.h:315
 msgid "System error w/o errno"
-msgstr "Erreur système sans numéro"
+msgstr "系統錯誤但是沒有 errno"
 
 #: src/err-codes.h:316
 msgid "Unknown system error"
-msgstr "Erreur système inconnue"
+msgstr "未知的系統錯誤"
 
 #: src/err-codes.h:317
 msgid "End of file"
-msgstr "Fin de fichier"
+msgstr "檔案結尾"
 
 #: src/err-codes.h:318
 msgid "Unknown error code"
-msgstr "Code d'erreur inconnu"
+msgstr "未知的錯誤代碼"
 
 #: src/gpg-error.c:388
 #, c-format
 msgid "Usage: %s GPG-ERROR [...]\n"
-msgstr "Utilisation : %s GPG-ERROR [...]\n"
+msgstr "用法: %s GPG-ERROR [...]\n"
 
 #: src/gpg-error.c:444
 #, c-format
 msgid "%s: warning: could not recognize %s\n"
-msgstr "%s : attention : impossible de reconnaître %s\n"
+msgstr "%s: 警告: 無法辨識 %s\n"

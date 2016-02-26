@@ -1,3 +1,67 @@
+2015-01-26  Werner Koch  <wk@gnupg.org>
+
+	Release 1.18.
+	* configure.ac: Set LT version to C14/A14/R0.
+
+	po: Update German translation.
+
+2015-01-22  Werner Koch  <wk@gnupg.org>
+
+	Add GPG_ERR_LEGACY_KEY.
+
+2015-01-05  Werner Koch  <wk@gnupg.org>
+
+	Avoid false warning about uninitialized var.
+	* src/gpg-error.c (get_err_from_str): Init SAVED_CHAR.
+
+	build: Update to gettext 0.19.
+	* po/Makefile.in.in (MSGMERGE): Remove --previous.
+	* po/Makevars (MSGMERGE_OPTIONS): Add --previous.
+
+	build: Require automake 1.14.
+	* configure.ac (AM_INIT_AUTOMAKE): Add serial-tests.
+	* tests/Makefile.am (INCLUDES): Replace by AM_CPPFLAGS.
+
+2014-12-28  Werner Koch  <wk@gnupg.org>
+
+	Add GPG_ERR_REQUEST_TOO_SHORT and GPG_ERR_REQUEST_TOO_LONG.
+
+2014-12-15  Werner Koch  <wk@gnupg.org>
+
+	Fix commit 754a987.
+	* Makefile.am (DISTCHECK_CONFIGURE_FLAGS): New.
+	(AUTOMAKE_OPTIONS): Move options to ...
+	* configure.ac (AM_INIT_AUTOMAKE): .. here.
+	(BUILD_DOC): Fix commit 754a987.
+
+	Add configure option --disable-doc.
+	* Makefile.am (doc) [!BUILD_DOC]: Do not recurse into doc/.
+	* configure.ac (BUILD_DOC): New am_conditional and new option.
+
+	Add GPG_ERR_OBJ_TERM_STATE.
+
+2014-12-03  Werner Koch  <wk@gnupg.org>
+
+	Add GPG_ERR_FORBIDDEN.
+
+2014-11-26  Мирослав Николић  <miroslavnikolic@rocketmail.com>
+
+	po: Add Serbian translation.
+
+2014-10-25  Daniel Kahn Gillmor  <dkg@fifthhorseman.net>
+
+	Add new lock-obj-pub for mips64el-unknown-linux-gnuabi64.
+	* src/syscfg/lock-obj-pub.mips64el-unknown-linux-gnuabi64.h: New.
+	* src/Makefile.am (lock_obj_pub): Add.
+
+2014-10-23  Daniel Kahn Gillmor  <dkg@fifthhorseman.net>
+
+	add lock-obj header for or1k-unknown-linux-gnu.
+	* src/syscfg/lock-obj-pub.or1k-unknown-linux-gnu.h: new
+
+	add lock-obj for new arch triplet for x86.
+	* src/sysconfig/lock-obj-pub.i586-pc-linux-gnu.h: New.
+
 2014-10-15  Werner Koch  <wk@gnupg.org>
 
 	Release 1.17.

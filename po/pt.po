@@ -1,27 +1,26 @@
-# French translation of Libgpg-error
-# Copyright (C) 2005, 2011, 2012, 2014 Free Software Foundation, Inc.
+# Portuguese translations for libgpg-error package.
+# Copyright (C) 2014 g10 Code GmbH
 # This file is distributed under the same license as the libgpg-error package.
 #
-# Stephane Roy <sroy@j2n.net>, 2005.
-# David Prévot <david@tilapin.org>, 2011, 2012, 2014.
+# paulo <paulo.jorge.tome@gmail.com>, 2014.
 msgid ""
 msgstr ""
-"Project-Id-Version: libgpg-error-1.17\n"
+"Project-Id-Version: libgpg-error 1.17\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
 "POT-Creation-Date: 2015-01-26 10:35+0100\n"
-"PO-Revision-Date: 2014-11-01 22:07-0400\n"
-"Last-Translator: David Prévot <david@tilapin.org>\n"
-"Language-Team: French <traduc@traduc.org>\n"
-"Language: fr\n"
+"PO-Revision-Date: 2014-11-24 02:32+0000\n"
+"Last-Translator: Paulo Tomé <paulo.jorge.tome@gmail.com>\n"
+"Language-Team: Portuguese <traduz@debian.pt.org>\n"
+"Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Lokalize 1.5\n"
-"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Lokalize 1.4\n"
 
 #: src/err-sources.h:28
 msgid "Unspecified source"
-msgstr "Source non indiquée"
+msgstr "Fonte não especificada"
 
 #: src/err-sources.h:29
 msgid "gcrypt"
@@ -37,7 +36,7 @@ msgstr "GpgSM"
 
 #: src/err-sources.h:32
 msgid "GPG Agent"
-msgstr "Agent GPG"
+msgstr "Agente GPG"
 
 #: src/err-sources.h:33
 msgid "Pinentry"
@@ -89,283 +88,283 @@ msgstr "TLS"
 
 #: src/err-sources.h:45
 msgid "Any source"
-msgstr "N'importe quelle source"
+msgstr "Qualquer fonte"
 
 #: src/err-sources.h:46
 msgid "User defined source 1"
-msgstr "Source 1 définie par l'utilisateur"
+msgstr "Fonte definida pelo utilizador 1"
 
 #: src/err-sources.h:47
 msgid "User defined source 2"
-msgstr "Source 2 définie par l'utilisateur"
+msgstr "Fonte definida pelo utilizador 2"
 
 #: src/err-sources.h:48
 msgid "User defined source 3"
-msgstr "Source 3 définie par l'utilisateur"
+msgstr "Fonte definida pelo utilizador 3"
 
 #: src/err-sources.h:49
 msgid "User defined source 4"
-msgstr "Source 4 définie par l'utilisateur"
+msgstr "Fonte definida pelo utilizador 4"
 
 #: src/err-sources.h:50
 msgid "Unknown source"
-msgstr "Source inconnue"
+msgstr "Fonte não conhecida"
 
 #: src/err-codes.h:28
 msgid "Success"
-msgstr "Réussite"
+msgstr "Sucesso"
 
 #: src/err-codes.h:29
 msgid "General error"
-msgstr "Erreur générale"
+msgstr "Erro genérico"
 
 #: src/err-codes.h:30
 msgid "Unknown packet"
-msgstr "Paquet inconnu"
+msgstr "Pacote desconhecido"
 
 #: src/err-codes.h:31
 msgid "Unknown version in packet"
-msgstr "Version inconnue dans le paquet"
+msgstr "Versão desconhecida no pacote"
 
 #: src/err-codes.h:32
 msgid "Invalid public key algorithm"
-msgstr "Algorithme à clef publique incorrect"
+msgstr "Algoritmo de chave pública inválido"
 
 #: src/err-codes.h:33
 msgid "Invalid digest algorithm"
-msgstr "Algorithme de hachage incorrect"
+msgstr "Algoritmo de resumo inválido"
 
 #: src/err-codes.h:34
 msgid "Bad public key"
-msgstr "Mauvaise clef publique"
+msgstr "Chave pública errada"
 
 #: src/err-codes.h:35
 msgid "Bad secret key"
-msgstr "Mauvaise clef secrète"
+msgstr "Chave secreta errada"
 
 #: src/err-codes.h:36
 msgid "Bad signature"
-msgstr "Mauvaise signature"
+msgstr "Assinatura errada"
 
 #: src/err-codes.h:37
 msgid "No public key"
-msgstr "Pas de clef publique"
+msgstr "Sem chave pública"
 
 #: src/err-codes.h:38
 msgid "Checksum error"
-msgstr "Erreur de somme de contrôle"
+msgstr "Soma de verificação errada"
 
 #: src/err-codes.h:39
 msgid "Bad passphrase"
-msgstr "Mauvaise phrase secrète"
+msgstr "Senha errada"
 
 #: src/err-codes.h:40
 msgid "Invalid cipher algorithm"
-msgstr "Algorithme de chiffrement incorrect"
+msgstr "Algoritmo de cifra inválido"
 
 #: src/err-codes.h:41
 msgid "Keyring open"
-msgstr "Porte-clefs ouvert"
+msgstr "Chaveiro aberto"
 
 #: src/err-codes.h:42
 msgid "Invalid packet"
-msgstr "Paquet incorrect"
+msgstr "Pacote inválido"
 
 #: src/err-codes.h:43
 msgid "Invalid armor"
-msgstr "Armure incorrecte"
+msgstr "Armadura inválida"
 
 #: src/err-codes.h:44
 msgid "No user ID"
-msgstr "Pas d'identité"
+msgstr "Sem identificador de utilizador"
 
 #: src/err-codes.h:45
 msgid "No secret key"
-msgstr "Pas de clef secrète"
+msgstr "Sem chave secreta"
 
 #: src/err-codes.h:46
 msgid "Wrong secret key used"
-msgstr "Mauvaise clef secrète utilisée"
+msgstr "Utilizada chave secreta errada"
 
 #: src/err-codes.h:47
 msgid "Bad session key"
-msgstr "Mauvaise clef de session"
+msgstr "Chave de sessão errada"
 
 #: src/err-codes.h:48
 msgid "Unknown compression algorithm"
-msgstr "Algorithme de compression inconnu"
+msgstr "Algoritmo de compressão desconhecido"
 
 #: src/err-codes.h:49
 msgid "Number is not prime"
-msgstr "Ce nombre n'est pas premier"
+msgstr "O número não é primo"
 
 #: src/err-codes.h:50
 msgid "Invalid encoding method"
-msgstr "Méthode d'encodage incorrecte"
+msgstr "Método de codificação errado"
 
 #: src/err-codes.h:51
 msgid "Invalid encryption scheme"
-msgstr "Schéma de chiffrement incorrect"
+msgstr "Esquema de encriptação errado"
 
 #: src/err-codes.h:52
 msgid "Invalid signature scheme"
-msgstr "Schéma de signature incorrect"
+msgstr "Esquema de assinatura inválido"
 
 #: src/err-codes.h:53
 msgid "Invalid attribute"
-msgstr "Attribut incorrect"
+msgstr "Atributo inválido"
 
 #: src/err-codes.h:54
 msgid "No value"
-msgstr "Pas de valeur"
+msgstr "Sem valor"
 
 #: src/err-codes.h:55
 msgid "Not found"
-msgstr "Non trouvé"
+msgstr "Não encontrado"
 
 #: src/err-codes.h:56
 msgid "Value not found"
-msgstr "Valeur non trouvée"
+msgstr "Valor não encontrado"
 
 #: src/err-codes.h:57
 msgid "Syntax error"
-msgstr "Erreur de syntaxe"
+msgstr "Erro de sintaxe"
 
 #: src/err-codes.h:58
 msgid "Bad MPI value"
-msgstr "Mauvaise valeur MPI"
+msgstr "Valor de MPI errado"
 
 #: src/err-codes.h:59
 msgid "Invalid passphrase"
-msgstr "Phrase secrète incorrecte"
+msgstr "Senha inválida"
 
 #: src/err-codes.h:60
 msgid "Invalid signature class"
-msgstr "Classe de signature incorrecte"
+msgstr "Classe de assinatura inválida"
 
 #: src/err-codes.h:61
 msgid "Resources exhausted"
-msgstr "Ressources épuisées"
+msgstr "Recursos esgotados"
 
 #: src/err-codes.h:62
 msgid "Invalid keyring"
-msgstr "Porte-clefs incorrect"
+msgstr "Chaveiro inválido"
 
 #: src/err-codes.h:63
 msgid "Trust DB error"
-msgstr "Erreur de la base de confiance"
+msgstr "Erro na Base de Dados de confiança"
 
 #: src/err-codes.h:64
 msgid "Bad certificate"
-msgstr "Mauvais certificat"
+msgstr "Certificado errado"
 
 #: src/err-codes.h:65
 msgid "Invalid user ID"
-msgstr "Identité incorrecte"
+msgstr "Identificador de utilizador errado"
 
 #: src/err-codes.h:66
 msgid "Unexpected error"
-msgstr "Erreur inattendue"
+msgstr "Erro inesperado"
 
 #: src/err-codes.h:67
 msgid "Time conflict"
-msgstr "Conflit temporel"
+msgstr "Conflito temporal"
 
 #: src/err-codes.h:68
 msgid "Keyserver error"
-msgstr "Erreur du serveur de clefs"
+msgstr "Erro no servidor de chaves"
 
 #: src/err-codes.h:69
 msgid "Wrong public key algorithm"
-msgstr "Mauvais algorithme à clef publique"
+msgstr "Algoritmo da chave pública errado"
 
 #: src/err-codes.h:70
 msgid "Tribute to D. A."
-msgstr "Hommage à D. A."
+msgstr "Tributo a D. A."
 
 #: src/err-codes.h:71
 msgid "Weak encryption key"
-msgstr "Clef de chiffrement faible"
+msgstr "Chave de encriptação fraca"
 
 #: src/err-codes.h:72
 msgid "Invalid key length"
-msgstr "Longueur de clef incorrecte"
+msgstr "Comprimento da chave inválido"
 
 #: src/err-codes.h:73
 msgid "Invalid argument"
-msgstr "Argument incorrect"
+msgstr "Argumento inválido"
 
 #: src/err-codes.h:74
 msgid "Syntax error in URI"
-msgstr "Erreur de syntaxe dans l'URI"
+msgstr "Erro de sintaxe no URI"
 
 #: src/err-codes.h:75
 msgid "Invalid URI"
-msgstr "URI incorrecte"
+msgstr "URI inválido"
 
 #: src/err-codes.h:76
 msgid "Network error"
-msgstr "Erreur réseau"
+msgstr "Erro de rede"
 
 #: src/err-codes.h:77
 msgid "Unknown host"
-msgstr "Hôte inconnu"
+msgstr "Anfitrião desconhecido"
 
 #: src/err-codes.h:78
 msgid "Selftest failed"
-msgstr "Échec de l'autotest"
+msgstr "Auto teste falhou"
 
 #: src/err-codes.h:79
 msgid "Data not encrypted"
-msgstr "Données non chiffrées"
+msgstr "Dados não encriptados"
 
 #: src/err-codes.h:80
 msgid "Data not processed"
-msgstr "Données non traitées"
+msgstr "Dados não processados"
 
 #: src/err-codes.h:81
 msgid "Unusable public key"
-msgstr "Clef publique inutilisable"
+msgstr "Chave pública inutilizável"
 
 #: src/err-codes.h:82
 msgid "Unusable secret key"
-msgstr "Clef privée inutilisable"
+msgstr "Chave secreta inutilizável"
 
 #: src/err-codes.h:83
 msgid "Invalid value"
-msgstr "Valeur incorrecte"
+msgstr "Valor inválido"
 
 #: src/err-codes.h:84
 msgid "Bad certificate chain"
-msgstr "Mauvaise chaîne de certificat"
+msgstr "Cadeia de certificados errada"
 
 #: src/err-codes.h:85
 msgid "Missing certificate"
-msgstr "Certificat manquant"
+msgstr "Certificado em falta"
 
 #: src/err-codes.h:86
 msgid "No data"
-msgstr "Pas de données"
+msgstr "Não existem dados"
 
 #: src/err-codes.h:87
 msgid "Bug"
-msgstr "Bogue"
+msgstr "Erro"
 
 #: src/err-codes.h:88
 msgid "Not supported"
-msgstr "Non pris en charge"
+msgstr "Não suportado"
 
 #: src/err-codes.h:89
 msgid "Invalid operation code"
-msgstr "Code d'opération incorrect"
+msgstr "Código de operação inválido"
 
 #: src/err-codes.h:90
 msgid "Timeout"
-msgstr "Délai d'attente dépassé"
+msgstr "Tempo limite"
 
 #: src/err-codes.h:91
 msgid "Internal error"
-msgstr "Erreur interne"
+msgstr "Erro interno"
 
 #: src/err-codes.h:92
 msgid "EOF (gcrypt)"
@@ -373,599 +372,599 @@ msgstr "EOF (gcrypt)"
 
 #: src/err-codes.h:93
 msgid "Invalid object"
-msgstr "Objet incorrect"
+msgstr "Objecto inválido"
 
 #: src/err-codes.h:94
 msgid "Provided object is too short"
-msgstr "L'objet fourni est trop petit"
+msgstr "O objecto fornecido é demasiado curto"
 
 #: src/err-codes.h:95
 msgid "Provided object is too large"
-msgstr "L'objet fourni est trop grand"
+msgstr "O objecto fornecido é demasiado grande"
 
 #: src/err-codes.h:96
 msgid "Missing item in object"
-msgstr "Élément manquant dans l'objet"
+msgstr "Item em falta no objecto"
 
 #: src/err-codes.h:97
 msgid "Not implemented"
-msgstr "Non implémenté"
+msgstr "Não implementado"
 
 #: src/err-codes.h:98
 msgid "Conflicting use"
-msgstr "Utilisation conflictuelle"
+msgstr "Utilização em conflito"
 
 #: src/err-codes.h:99
 msgid "Invalid cipher mode"
-msgstr "Mode de chiffrement incorrect"
+msgstr "Modo de cifra inválido"
 
 #: src/err-codes.h:100
 msgid "Invalid flag"
-msgstr "Option incorrecte"
+msgstr "Flag inválido"
 
 #: src/err-codes.h:101
 msgid "Invalid handle"
-msgstr "Gestion incorrecte"
+msgstr "Identificador inválido"
 
 #: src/err-codes.h:102
 msgid "Result truncated"
-msgstr "Résultat tronqué"
+msgstr "Resultado truncado"
 
 #: src/err-codes.h:103
 msgid "Incomplete line"
-msgstr "Ligne incomplète"
+msgstr "Linha incompleta"
 
 #: src/err-codes.h:104
 msgid "Invalid response"
-msgstr "Réponse incorrecte"
+msgstr "Resposta inválida"
 
 #: src/err-codes.h:105
 msgid "No agent running"
-msgstr "Pas d'agent en cours d'exécution"
+msgstr "Nenhum agente em execução"
 
 #: src/err-codes.h:106
 msgid "Agent error"
-msgstr "Erreur d'agent"
+msgstr "Erro no agente"
 
 #: src/err-codes.h:107
 msgid "Invalid data"
-msgstr "Données incorrectes"
+msgstr "Dados inválidos"
 
 #: src/err-codes.h:108
 msgid "Unspecific Assuan server fault"
-msgstr "Erreur générale du serveur Assuan"
+msgstr "Falha não especificada no servidor Assuan"
 
 #: src/err-codes.h:109
 msgid "General Assuan error"
-msgstr "Erreur générale Assuan"
+msgstr "Erro Assuan genérico"
 
 #: src/err-codes.h:110
 msgid "Invalid session key"
-msgstr "Clef de session incorrecte"
+msgstr "Chave de sessão inválida"
 
 #: src/err-codes.h:111
 msgid "Invalid S-expression"
-msgstr "Expression symbolique incorrecte"
+msgstr "Expressão simbólica inválida"
 
 #: src/err-codes.h:112
 msgid "Unsupported algorithm"
-msgstr "Algorithme non pris en charge"
+msgstr "Algoritmo não suportado"
 
 #: src/err-codes.h:113
 msgid "No pinentry"
-msgstr "Pas de pinentry"
+msgstr "Sem pinentry"
 
 #: src/err-codes.h:114
 msgid "pinentry error"
-msgstr "Erreur de pinentry"
+msgstr "Erro no pinentry"
 
 #: src/err-codes.h:115
 msgid "Bad PIN"
-msgstr "Mauvais code personnel"
+msgstr "PIN errado"
 
 #: src/err-codes.h:116
 msgid "Invalid name"
-msgstr "Nom incorrect"
+msgstr "Nome inválido"
 
 #: src/err-codes.h:117
 msgid "Bad data"
-msgstr "Mauvaises données"
+msgstr "Dados errados"
 
 #: src/err-codes.h:118
 msgid "Invalid parameter"
-msgstr "Paramètre incorrect"
+msgstr "Parâmetro inválido"
 
 #: src/err-codes.h:119
 msgid "Wrong card"
-msgstr "Mauvaise carte"
+msgstr "Cartão errado"
 
 #: src/err-codes.h:120
 msgid "No dirmngr"
-msgstr "Pas de dirmngr"
+msgstr "Sem dirmngr"
 
 #: src/err-codes.h:121
 msgid "dirmngr error"
-msgstr "Erreur de dirmngr"
+msgstr "Erro no dirmngr"
 
 #: src/err-codes.h:122
 msgid "Certificate revoked"
-msgstr "Certificat révoqué"
+msgstr "Certificado revogado"
 
 #: src/err-codes.h:123
 msgid "No CRL known"
-msgstr "Pas de CRL connu"
+msgstr "Sem CRL conhecido"
 
 #: src/err-codes.h:124
 msgid "CRL too old"
-msgstr "CRL trop ancien"
+msgstr "CRL muito velho"
 
 #: src/err-codes.h:125
 msgid "Line too long"
-msgstr "Ligne trop longue"
+msgstr "Linha demasiado longa"
 
 #: src/err-codes.h:126
 msgid "Not trusted"
-msgstr "Pas de confiance"
+msgstr "Não é de confiança"
 
 #: src/err-codes.h:127
 msgid "Operation cancelled"
-msgstr "Opération annulée"
+msgstr "Operação cancelada"
 
 #: src/err-codes.h:128
 msgid "Bad CA certificate"
-msgstr "Mauvais certificat de l'autorité de certification"
+msgstr "Certificado BA errado"
 
 #: src/err-codes.h:129
 msgid "Certificate expired"
-msgstr "Certificat expiré"
+msgstr "Certificado expirou"
 
 #: src/err-codes.h:130
 msgid "Certificate too young"
-msgstr "Certificat trop récent"
+msgstr "Certificado demasiado novo"
 
 #: src/err-codes.h:131
 msgid "Unsupported certificate"
-msgstr "Certificat non pris en charge"
+msgstr "Certificado não suportado"
 
 #: src/err-codes.h:132
 msgid "Unknown S-expression"
-msgstr "Expression symbolique inconnue"
+msgstr "Expressão simbólica desconhecida"
 
 #: src/err-codes.h:133
 msgid "Unsupported protection"
-msgstr "Protection non prise en charge"
+msgstr "Protecção não suportada"
 
 #: src/err-codes.h:134
 msgid "Corrupted protection"
-msgstr "Protection corrompue"
+msgstr "Protecção corrompida"
 
 #: src/err-codes.h:135
 msgid "Ambiguous name"
-msgstr "Nom ambigu"
+msgstr "Nome ambíguo"
 
 #: src/err-codes.h:136
 msgid "Card error"
-msgstr "Erreur de carte"
+msgstr "Erro de cartão"
 
 #: src/err-codes.h:137
 msgid "Card reset required"
-msgstr "Réinitialisation de la carte nécessaire"
+msgstr "Reinicialização de cartão necessária"
 
 #: src/err-codes.h:138
 msgid "Card removed"
-msgstr "Carte enlevée"
+msgstr "Cartão removido"
 
 #: src/err-codes.h:139
 msgid "Invalid card"
-msgstr "Carte incorrecte"
+msgstr "Cartão inválido"
 
 #: src/err-codes.h:140
 msgid "Card not present"
-msgstr "Carte absente"
+msgstr "Cartão não presente"
 
 #: src/err-codes.h:141
 msgid "No PKCS15 application"
-msgstr "Application non PKCS15"
+msgstr "Sem aplicação PKCS15"
 
 #: src/err-codes.h:142
 msgid "Not confirmed"
-msgstr "Non confirmé"
+msgstr "Não confirmado"
 
 #: src/err-codes.h:143
 msgid "Configuration error"
-msgstr "Erreur de configuration"
+msgstr "Erro de configuração"
 
 #: src/err-codes.h:144
 msgid "No policy match"
-msgstr "Aucune correspondance de politique"
+msgstr "Sem correspondência de política"
 
 #: src/err-codes.h:145
 msgid "Invalid index"
-msgstr "Indice incorrect"
+msgstr "Índice inválido"
 
 #: src/err-codes.h:146
 msgid "Invalid ID"
-msgstr "Identifiant incorrect"
+msgstr "Identificador inválido"
 
 #: src/err-codes.h:147
 msgid "No SmartCard daemon"
-msgstr "Pas de démon SmartCard"
+msgstr "Sem demónio de SmartCard"
 
 #: src/err-codes.h:148
 msgid "SmartCard daemon error"
-msgstr "Erreur de démon SmartCard"
+msgstr "Erro no demónio de SmartCard"
 
 #: src/err-codes.h:149
 msgid "Unsupported protocol"
-msgstr "Protocole non pris en charge"
+msgstr "Protocolo não suportado"
 
 #: src/err-codes.h:150
 msgid "Bad PIN method"
-msgstr "Mauvaise méthode de code personnel"
+msgstr "Método de PIN errado"
 
 #: src/err-codes.h:151
 msgid "Card not initialized"
-msgstr "Carte non initialisée"
+msgstr "Cartão não inicializado"
 
 #: src/err-codes.h:152
 msgid "Unsupported operation"
-msgstr "Opération non prise en charge"
+msgstr "Operação não suportada"
 
 #: src/err-codes.h:153
 msgid "Wrong key usage"
-msgstr "Mauvaise utilisation de la clef"
+msgstr "Utilização de chave errada"
 
 #: src/err-codes.h:154
 msgid "Nothing found"
-msgstr "Rien de trouvé"
+msgstr "Nada encontrado"
 
 #: src/err-codes.h:155
 msgid "Wrong blob type"
-msgstr "Mauvais type de blob"
+msgstr "Tipo de blob errado"
 
 #: src/err-codes.h:156
 msgid "Missing value"
-msgstr "Valeur manquante"
+msgstr "Valor em falta"
 
 #: src/err-codes.h:157
 msgid "Hardware problem"
-msgstr "Problème matériel"
+msgstr "Problema de hardware"
 
 #: src/err-codes.h:158
 msgid "PIN blocked"
-msgstr "Code personnel bloqué"
+msgstr "PIN bloqueado"
 
 #: src/err-codes.h:159
 msgid "Conditions of use not satisfied"
-msgstr "Conditions d'utilisation non satisfaites"
+msgstr "Condições de utilização não satisfeitas"
 
 #: src/err-codes.h:160
 msgid "PINs are not synced"
-msgstr "Les codes personnels ne sont pas synchrones"
+msgstr "PINs não estão sincronizados"
 
 #: src/err-codes.h:161
 msgid "Invalid CRL"
-msgstr "CRL incorrect"
+msgstr "CRL inválido"
 
 #: src/err-codes.h:162
 msgid "BER error"
-msgstr "Erreur de BER"
+msgstr "Erro de BER"
 
 #: src/err-codes.h:163
 msgid "Invalid BER"
-msgstr "BER incorrect"
+msgstr "BER inválido"
 
 #: src/err-codes.h:164
 msgid "Element not found"
-msgstr "Élément non trouvé"
+msgstr "Elemento não encontrado"
 
 #: src/err-codes.h:165
 msgid "Identifier not found"
-msgstr "Identifiant non trouvé"
+msgstr "Identificador não encontrado"
 
 #: src/err-codes.h:166
 msgid "Invalid tag"
-msgstr "Balise incorrecte"
+msgstr "Etiqueta inválida"
 
 #: src/err-codes.h:167
 msgid "Invalid length"
-msgstr "Longueur incorrecte"
+msgstr "Comprimento inválido"
 
 #: src/err-codes.h:168
 msgid "Invalid key info"
-msgstr "Informations de clef incorrectes"
+msgstr "Informação de chave errada"
 
 #: src/err-codes.h:169
 msgid "Unexpected tag"
-msgstr "Balise inattendue"
+msgstr "Etiqueta inesperada"
 
 #: src/err-codes.h:170
 msgid "Not DER encoded"
-msgstr "Non encodé DER"
+msgstr "Não codificado através de DER"
 
 #: src/err-codes.h:171
 msgid "No CMS object"
-msgstr "Pas d'objet CMS"
+msgstr "Sem objecto CMS"
 
 #: src/err-codes.h:172
 msgid "Invalid CMS object"
-msgstr "Objet CMS incorrect"
+msgstr "Objecto CMS inválido"
 
 #: src/err-codes.h:173
 msgid "Unknown CMS object"
-msgstr "Objet CMS inconnu"
+msgstr "Objecto CMS desconhecido"
 
 #: src/err-codes.h:174
 msgid "Unsupported CMS object"
-msgstr "Objet CMS non pris en charge"
+msgstr "Objecto CMS não suportado"
 
 #: src/err-codes.h:175
 msgid "Unsupported encoding"
-msgstr "Codage non pris en charge"
+msgstr "Codificação não suportada"
 
 #: src/err-codes.h:176
 msgid "Unsupported CMS version"
-msgstr "Version de CMS non prise en charge"
+msgstr "Versão de CMS não suportada"
 
 #: src/err-codes.h:177
 msgid "Unknown algorithm"
-msgstr "Algorithme inconnu"
+msgstr "Algoritmo desconhecido"
 
 #: src/err-codes.h:178
 msgid "Invalid crypto engine"
-msgstr "Moteur de chiffrement incorrect"
+msgstr "Motor de encriptação inválido"
 
 #: src/err-codes.h:179
 msgid "Public key not trusted"
-msgstr "Pas de confiance dans la clef publique"
+msgstr "Chave pública não é de confiança"
 
 #: src/err-codes.h:180
 msgid "Decryption failed"
-msgstr "Échec de déchiffrement"
+msgstr "Desencriptação falhada"
 
 #: src/err-codes.h:181
 msgid "Key expired"
-msgstr "Clef expirée"
+msgstr "Chave expirada"
 
 #: src/err-codes.h:182
 msgid "Signature expired"
-msgstr "Signature expirée"
+msgstr "Assinatura expirada"
 
 #: src/err-codes.h:183
 msgid "Encoding problem"
-msgstr "Problème d'encodage"
+msgstr "Problema de codificação"
 
 #: src/err-codes.h:184
 msgid "Invalid state"
-msgstr "État incorrect"
+msgstr "Estado inválido"
 
 #: src/err-codes.h:185
 msgid "Duplicated value"
-msgstr "Valeur dupliquée"
+msgstr "Valor duplicado"
 
 #: src/err-codes.h:186
 msgid "Missing action"
-msgstr "Action manquante"
+msgstr "Acção em falta"
 
 #: src/err-codes.h:187
 msgid "ASN.1 module not found"
-msgstr "Module ASN.1 non trouvé"
+msgstr "Módulo ASN.1 não encontrado"
 
 #: src/err-codes.h:188
 msgid "Invalid OID string"
-msgstr "Chaîne OID incorrecte"
+msgstr "Sequência OID inválida"
 
 #: src/err-codes.h:189
 msgid "Invalid time"
-msgstr "Date incorrecte"
+msgstr "Tempo inválido"
 
 #: src/err-codes.h:190
 msgid "Invalid CRL object"
-msgstr "Objet CRL incorrect"
+msgstr "Objecto CRL inválido"
 
 #: src/err-codes.h:191
 msgid "Unsupported CRL version"
-msgstr "Version de CRL non prise en charge"
+msgstr "Versão CRL não suportada"
 
 #: src/err-codes.h:192
 msgid "Invalid certificate object"
-msgstr "Objet de certificat incorrect"
+msgstr "Objecto de certificado inválido"
 
 #: src/err-codes.h:193
 msgid "Unknown name"
-msgstr "Nom inconnu"
+msgstr "Nome desconhecido"
 
 #: src/err-codes.h:194
 msgid "A locale function failed"
-msgstr "Échec d'une fonction de paramètres régionaux (locale)"
+msgstr "Uma função de localização falhou"
 
 #: src/err-codes.h:195
 msgid "Not locked"
-msgstr "Non verrouillé"
+msgstr "Não trancado"
 
 #: src/err-codes.h:196
 msgid "Protocol violation"
-msgstr "Violation de protocole"
+msgstr "Violação de protocolo"
 
 #: src/err-codes.h:197
 msgid "Invalid MAC"
-msgstr "MAC incorrect"
+msgstr "MAC inválido"
 
 #: src/err-codes.h:198
 msgid "Invalid request"
-msgstr "Requête incorrecte"
+msgstr "Pedido inválido"
 
 #: src/err-codes.h:199
 msgid "Unknown extension"
-msgstr "Extension inconnue"
+msgstr "Extensão desconhecida"
 
 #: src/err-codes.h:200
 msgid "Unknown critical extension"
-msgstr "Extension critique inconnue"
+msgstr "Extensão crítica desconhecida"
 
 #: src/err-codes.h:201
 msgid "Locked"
-msgstr "Verrouillé"
+msgstr "Trancado"
 
 #: src/err-codes.h:202
 msgid "Unknown option"
-msgstr "Option inconnue"
+msgstr "Opção desconhecida"
 
 #: src/err-codes.h:203
 msgid "Unknown command"
-msgstr "Commande inconnue"
+msgstr "Comando desconhecido"
 
 #: src/err-codes.h:204
 msgid "Not operational"
-msgstr "Non opérationnel"
+msgstr "Não operacional"
 
 #: src/err-codes.h:205
 msgid "No passphrase given"
-msgstr "Aucune phrase secrète fournie"
+msgstr "Nenhuma senha dada"
 
 #: src/err-codes.h:206
 msgid "No PIN given"
-msgstr "Aucun code personnel fourni"
+msgstr "Sem PIN dado"
 
 #: src/err-codes.h:207
 msgid "Not enabled"
-msgstr "Non activé"
+msgstr "Não habilitado"
 
 #: src/err-codes.h:208
 msgid "No crypto engine"
-msgstr "Aucun moteur de chiffrement"
+msgstr "Sem motor de encriptação"
 
 #: src/err-codes.h:209
 msgid "Missing key"
-msgstr "Clef manquante"
+msgstr "Chave em falta"
 
 #: src/err-codes.h:210
 msgid "Too many objects"
-msgstr "Trop d'objets"
+msgstr "Demasiados objectos"
 
 #: src/err-codes.h:211
 msgid "Limit reached"
-msgstr "Limite atteinte"
+msgstr "Limite atingido"
 
 #: src/err-codes.h:212
 msgid "Not initialized"
-msgstr "Non initialisé"
+msgstr "Não inicializado"
 
 #: src/err-codes.h:213
 msgid "Missing issuer certificate"
-msgstr "Certificat de l'émetteur manquant"
+msgstr "Certificado do emissor em falta"
 
 #: src/err-codes.h:214
 msgid "No keyserver available"
-msgstr "Aucun serveur de clefs disponible"
+msgstr "Sem servidor de chaves disponível"
 
 #: src/err-codes.h:215
 msgid "Invalid elliptic curve"
-msgstr "Courbe elliptique incorrecte"
+msgstr "Curva elíptica inválida"
 
 #: src/err-codes.h:216
 msgid "Unknown elliptic curve"
-msgstr "Courbe elliptique inconnue"
+msgstr "Curva elíptica desconhecida"
 
 #: src/err-codes.h:217
 msgid "Duplicated key"
-msgstr "Clef dupliquée"
+msgstr "Chave duplicada"
 
 #: src/err-codes.h:218
 msgid "Ambiguous result"
-msgstr "Résultat ambigu"
+msgstr "Resultado ambíguo"
 
 #: src/err-codes.h:219
 msgid "No crypto context"
-msgstr "Aucun contexte de chiffrement"
+msgstr "Sem contexto de encriptação"
 
 #: src/err-codes.h:220
 msgid "Wrong crypto context"
-msgstr "Contexte de chiffrement incorrect"
+msgstr "Contexto de encriptação errado"
 
 #: src/err-codes.h:221
 msgid "Bad crypto context"
-msgstr "Mauvais contexte de chiffrement"
+msgstr "Contexto de encriptação inválido"
 
 #: src/err-codes.h:222
 msgid "Conflict in the crypto context"
-msgstr "Conflit dans le contexte de chiffrement"
+msgstr "Conflito no contexto de encriptação"
 
 #: src/err-codes.h:223
 msgid "Broken public key"
-msgstr "Clef publique cassée"
+msgstr "Chave pública quebrada"
 
 #: src/err-codes.h:224
 msgid "Broken secret key"
-msgstr "Clef secrète cassée"
+msgstr "Chave secreta quebrada"
 
 #: src/err-codes.h:225
 msgid "Invalid MAC algorithm"
-msgstr "Algorithme MAC incorrect"
+msgstr "Algoritmo MAC inválido"
 
 #: src/err-codes.h:226
 msgid "Operation fully cancelled"
-msgstr "Opération complètement annulée"
+msgstr "Operação totalmente cancelada"
 
 #: src/err-codes.h:227
 msgid "Operation not yet finished"
-msgstr "L'opération n'est pas encore terminée"
+msgstr "Operação ainda não completada"
 
 #: src/err-codes.h:228
 msgid "Buffer too short"
-msgstr "Tampon trop court"
+msgstr "Buffer demasiado curto"
 
 #: src/err-codes.h:229
 msgid "Invalid length specifier in S-expression"
-msgstr "Longueur de spécificateur incorrecte dans l'expression symbolique"
+msgstr "Especificador de comprimento inválido na expressão simbólica"
 
 #: src/err-codes.h:230
 msgid "String too long in S-expression"
-msgstr "Chaîne trop longue dans l'expression symbolique"
+msgstr "Sequência de caracteres demasiado longa na expressão simbólica"
 
 #: src/err-codes.h:231
 msgid "Unmatched parentheses in S-expression"
-msgstr "Parenthèses non correspondantes dans l'expression symbolique"
+msgstr "Parênteses não correspondidos na expressão simbólica"
 
 #: src/err-codes.h:232
 msgid "S-expression not canonical"
-msgstr "Expression symbolique non canonique"
+msgstr "Expressão simbólica não canónica"
 
 #: src/err-codes.h:233
 msgid "Bad character in S-expression"
-msgstr "Mauvais caractère dans l'expression symbolique"
+msgstr "Carácter errado na expressão simbólica"
 
 #: src/err-codes.h:234
 msgid "Bad quotation in S-expression"
-msgstr "Erreur de guillemets dans l'expression symbolique"
+msgstr "Plicas erradas na expressão simbólica"
 
 #: src/err-codes.h:235
 msgid "Zero prefix in S-expression"
-msgstr "Préfixe nul dans l'expression symbolique"
+msgstr "Prefixo zero na expressão simbólica"
 
 #: src/err-codes.h:236
 msgid "Nested display hints in S-expression"
-msgstr "Affichage imbriqué d'indications dans l'expression symbolique"
+msgstr "Dicas de exibição aninhadas na expressão simbólica"
 
 #: src/err-codes.h:237
 msgid "Unmatched display hints"
-msgstr "Affichage d'indications non correspondantes"
+msgstr "Dicas de exibição não correspondidas"
 
 #: src/err-codes.h:238
 msgid "Unexpected reserved punctuation in S-expression"
-msgstr "Ponctuation réservée inattendue dans l'expression symbolique"
+msgstr "Pontuação reservada não esperada na expressão simbólica"
 
 #: src/err-codes.h:239
 msgid "Bad hexadecimal character in S-expression"
-msgstr "Mauvais caractère hexadécimal dans l'expression symbolique"
+msgstr "Carácter hexadecimal errado na expressão simbólica"
 
 #: src/err-codes.h:240
 msgid "Odd hexadecimal numbers in S-expression"
-msgstr "Nombre hexadécimal impair dans l'expression symbolique"
+msgstr "Números hexadecimais ímpares na expressão simbólica"
 
 #: src/err-codes.h:241
 msgid "Bad octal character in S-expression"
-msgstr "Mauvais caractère octal dans l'expression symbolique"
+msgstr "Carácter octal errado na expressão simbólica"
 
 #: src/err-codes.h:242
 msgid "Legacy key"
@@ -975,13 +974,13 @@ msgstr ""
 #, fuzzy
 #| msgid "Buffer too short"
 msgid "Request too short"
-msgstr "Tampon trop court"
+msgstr "Buffer demasiado curto"
 
 #: src/err-codes.h:244
 #, fuzzy
 #| msgid "Line too long"
 msgid "Request too long"
-msgstr "Ligne trop longue"
+msgstr "Linha demasiado longa"
 
 #: src/err-codes.h:245
 msgid "Object is in termination state"
@@ -989,105 +988,103 @@ msgstr ""
 
 #: src/err-codes.h:246
 msgid "No certificate chain"
-msgstr "Aucune chaîne de certificat"
+msgstr "Sem cadeia de certificados"
 
 #: src/err-codes.h:247
 msgid "Certificate is too large"
-msgstr "Le certificat est trop grand"
+msgstr "Certificado é demasiado grande"
 
 #: src/err-codes.h:248
 msgid "Invalid record"
-msgstr "Enregistrement incorrect"
+msgstr "Registo inválido"
 
 #: src/err-codes.h:249
 msgid "The MAC does not verify"
-msgstr "Le MAC ne peut pas être vérifié"
+msgstr "O MAC não se verifica"
 
 #: src/err-codes.h:250
 msgid "Unexpected message"
-msgstr "Message inattendu"
+msgstr "Mensagem inesperada"
 
 #: src/err-codes.h:251
 msgid "Compression or decompression failed"
-msgstr "Échec de compression ou décompression"
+msgstr "Compressão ou descompressão falhada"
 
 #: src/err-codes.h:252
 msgid "A counter would wrap"
-msgstr "Un compteur devrait envelopper"
+msgstr "Um contador daria a volta"
 
 #: src/err-codes.h:253
 msgid "Fatal alert message received"
-msgstr "Message d’alerte fatale reçu"
+msgstr "Mensagem de alerta fatal recebida"
 
 #: src/err-codes.h:254
 msgid "No cipher algorithm"
-msgstr "Aucun algorithme de chiffrement"
+msgstr "Algoritmo de criptografia inexistente"
 
 #: src/err-codes.h:255
 msgid "Missing client certificate"
-msgstr "Certificat de client manquant"
+msgstr "Certificado cliente em falta"
 
 #: src/err-codes.h:256
 msgid "Close notification received"
-msgstr "Notification de fermeture reçue"
+msgstr "Notificação de encerramento recebida"
 
 #: src/err-codes.h:257
 msgid "Ticket expired"
-msgstr "Ticket expiré"
+msgstr "Ticket expirou"
 
 #: src/err-codes.h:258
 msgid "Bad ticket"
-msgstr "Mauvais ticket"
+msgstr "Ticket errado"
 
 #: src/err-codes.h:259
 msgid "Unknown identity"
-msgstr "Identité inconnue"
+msgstr "Identidade desconhecida"
 
 #: src/err-codes.h:260
 msgid "Bad certificate message in handshake"
-msgstr "Mauvais message de certificat dans l’initialisation"
+msgstr "Mensagem de certificado errada no handshake"
 
 #: src/err-codes.h:261
 msgid "Bad certificate request message in handshake"
-msgstr "Mauvais message de demande de certificat dans l’initialisation"
+msgstr "Mensagem de pedido de certificado errada no handshake"
 
 #: src/err-codes.h:262
 msgid "Bad certificate verify message in handshake"
-msgstr "Mauvais message de vérification de certificat dans l’initialisation"
+msgstr "Mensagem de verificação de certificado errada no handshake"
 
-# NOTE: s/messsage/message/
 #: src/err-codes.h:263
 msgid "Bad change cipher messsage in handshake"
-msgstr "Mauvais message de modification d’algorithme dans l’initialisation"
+msgstr "Mensagem de alteração de certificado errada no handshake"
 
 #: src/err-codes.h:264
 msgid "Bad client hello message in handshake"
-msgstr "Mauvais message de salut du client dans l’initialisation"
+msgstr "Mensagem de hello do cliente errada no handshake"
 
 #: src/err-codes.h:265
 msgid "Bad server hello message in handshake"
-msgstr "Mauvais message de salut du serveur dans l’initialisation"
+msgstr "Mensagem de hello do servidor errada no handshake"
 
-# NOTE: s/hanshake/handshake/
 #: src/err-codes.h:266
 msgid "Bad server hello done message in hanshake"
-msgstr "Mauvais message de fin de salut du serveur dans l’initialisation"
+msgstr "Mensagem de hello done do servidor errada no handshake"
 
 #: src/err-codes.h:267
 msgid "Bad finished message in handshake"
-msgstr "Mauvais message fini dans l’initialisation"
+msgstr "Mensagem de conclusão errada no handshake"
 
 #: src/err-codes.h:268
 msgid "Bad server key exchange message in handshake"
-msgstr "Mauvais message d’échange de clef du serveur dans l’initialisation"
+msgstr "Mensagem de troca de chaves do servidor errada no handshake"
 
 #: src/err-codes.h:269
 msgid "Bad client key exchange message in handshake"
-msgstr "Mauvais message d’échange de clef du client dans l’initialisation"
+msgstr "Mensagem de troca de chaves do cliente errada no handshake"
 
 #: src/err-codes.h:270
 msgid "Bogus string"
-msgstr "Chaîne erronée"
+msgstr "Sequência de caracteres adulterada"
 
 #: src/err-codes.h:271
 msgid "Forbidden"
@@ -1095,198 +1092,198 @@ msgstr ""
 
 #: src/err-codes.h:272
 msgid "Key disabled"
-msgstr "Clef désactivée"
+msgstr "Chave desabilitada"
 
 #: src/err-codes.h:273
 msgid "Not possible with a card based key"
-msgstr "Impossible avec une clef basée sur carte"
+msgstr "Não possível com uma chave baseada num cartão"
 
 #: src/err-codes.h:274
 msgid "Invalid lock object"
-msgstr "Objet de verrouillage incorrect"
+msgstr "Objecto de tranca inválido"
 
 #: src/err-codes.h:275
 msgid "General IPC error"
-msgstr "Erreur générale IPC"
+msgstr "Erro genérico de IPC"
 
 #: src/err-codes.h:276
 msgid "IPC accept call failed"
-msgstr "Échec de l'appel IPC accept"
+msgstr "Chamada de aceitação de IPC falhada"
 
 #: src/err-codes.h:277
 msgid "IPC connect call failed"
-msgstr "Échec de l'appel IPC connect"
+msgstr "Chamada de conexão de IPC falhada"
 
 #: src/err-codes.h:278
 msgid "Invalid IPC response"
-msgstr "Réponse IPC incorrecte"
+msgstr "Resposta de IPC inválida"
 
 #: src/err-codes.h:279
 msgid "Invalid value passed to IPC"
-msgstr "Valeur incorrecte passée à IPC"
+msgstr "Valor inválido passado ao IPC"
 
 #: src/err-codes.h:280
 msgid "Incomplete line passed to IPC"
-msgstr "Ligne incomplète transmise à IPC"
+msgstr "Linha inválida passada ao IPC"
 
 #: src/err-codes.h:281
 msgid "Line passed to IPC too long"
-msgstr "Ligne trop longue transmise à IPC"
+msgstr "Linha passada ao IPC demasiado longa"
 
 #: src/err-codes.h:282
 msgid "Nested IPC commands"
-msgstr "Commandes IPC imbriquées"
+msgstr "Comandos IPC aninhados"
 
 #: src/err-codes.h:283
 msgid "No data callback in IPC"
-msgstr "Aucune donnée de rappel dans IPC"
+msgstr "Sem retorno de chamada de dados no IPC"
 
 #: src/err-codes.h:284
 msgid "No inquire callback in IPC"
-msgstr "Aucune requête de rappel dans IPC"
+msgstr "Sem retorno de chamada de inquirição no IPC"
 
 #: src/err-codes.h:285
 msgid "Not an IPC server"
-msgstr "Pas un serveur IPC"
+msgstr "Não é um servidor IPC"
 
 #: src/err-codes.h:286
 msgid "Not an IPC client"
-msgstr "Pas un client IPC"
+msgstr "Não é um cliente IPC"
 
 #: src/err-codes.h:287
 msgid "Problem starting IPC server"
-msgstr "Problème au démarrage du serveur IPC"
+msgstr "Problema na iniciação do servidor IPC"
 
 #: src/err-codes.h:288
 msgid "IPC read error"
-msgstr "Erreur de lecture IPC"
+msgstr "Erro de leitura de IPC"
 
 #: src/err-codes.h:289
 msgid "IPC write error"
-msgstr "Erreur d'écriture IPC"
+msgstr "Erro de escrita de IPC"
 
 #: src/err-codes.h:290
 msgid "Too much data for IPC layer"
-msgstr "Trop de données pour la couche IPC"
+msgstr "Demasiados dados para a camada IPC"
 
 #: src/err-codes.h:291
 msgid "Unexpected IPC command"
-msgstr "Commande IPC inattendue"
+msgstr "Comando IPC inesperado"
 
 #: src/err-codes.h:292
 msgid "Unknown IPC command"
-msgstr "Commande IPC inconnue"
+msgstr "Comando IPC desconhecido"
 
 #: src/err-codes.h:293
 msgid "IPC syntax error"
-msgstr "Erreur de syntaxe IPC"
+msgstr "Erro de sintaxe IPC"
 
 #: src/err-codes.h:294
 msgid "IPC call has been cancelled"
-msgstr "L'appel IPC a été annulé"
+msgstr "Chamada de IPC foi cancelada"
 
 #: src/err-codes.h:295
 msgid "No input source for IPC"
-msgstr "Aucune source d'entrée pour IPC"
+msgstr "Sem fonte de entrada para o IPC"
 
 #: src/err-codes.h:296
 msgid "No output source for IPC"
-msgstr "Aucune source de sortie pour IPC"
+msgstr "Nenhuma fonte de saída para IPC"
 
 #: src/err-codes.h:297
 msgid "IPC parameter error"
-msgstr "Erreur de paramètre IPC"
+msgstr "Erro de parâmetro IPC"
 
 #: src/err-codes.h:298
 msgid "Unknown IPC inquire"
-msgstr "Requête IPC inconnue"
+msgstr "Inquirição IPC desconhecida"
 
 #: src/err-codes.h:299
 msgid "User defined error code 1"
-msgstr "Code d'erreur 1 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 1"
 
 #: src/err-codes.h:300
 msgid "User defined error code 2"
-msgstr "Code d'erreur 2 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 2"
 
 #: src/err-codes.h:301
 msgid "User defined error code 3"
-msgstr "Code d'erreur 3 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 3"
 
 #: src/err-codes.h:302
 msgid "User defined error code 4"
-msgstr "Code d'erreur 4 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 4"
 
 #: src/err-codes.h:303
 msgid "User defined error code 5"
-msgstr "Code d'erreur 5 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 5"
 
 #: src/err-codes.h:304
 msgid "User defined error code 6"
-msgstr "Code d'erreur 6 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 6"
 
 #: src/err-codes.h:305
 msgid "User defined error code 7"
-msgstr "Code d'erreur 7 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 7"
 
 #: src/err-codes.h:306
 msgid "User defined error code 8"
-msgstr "Code d'erreur 8 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 8"
 
 #: src/err-codes.h:307
 msgid "User defined error code 9"
-msgstr "Code d'erreur 9 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 9"
 
 #: src/err-codes.h:308
 msgid "User defined error code 10"
-msgstr "Code d'erreur 10 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 10"
 
 #: src/err-codes.h:309
 msgid "User defined error code 11"
-msgstr "Code d'erreur 11 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 11"
 
 #: src/err-codes.h:310
 msgid "User defined error code 12"
-msgstr "Code d'erreur 12 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 12"
 
 #: src/err-codes.h:311
 msgid "User defined error code 13"
-msgstr "Code d'erreur 13 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 13"
 
 #: src/err-codes.h:312
 msgid "User defined error code 14"
-msgstr "Code d'erreur 14 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 14"
 
 #: src/err-codes.h:313
 msgid "User defined error code 15"
-msgstr "Code d'erreur 15 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 15"
 
 #: src/err-codes.h:314
 msgid "User defined error code 16"
-msgstr "Code d'erreur 16 défini par l'utilisateur"
+msgstr "Código de erro definido pelo utilizador 16"
 
 #: src/err-codes.h:315
 msgid "System error w/o errno"
-msgstr "Erreur système sans numéro"
+msgstr "Erro de sistema sem errno"
 
 #: src/err-codes.h:316
 msgid "Unknown system error"
-msgstr "Erreur système inconnue"
+msgstr "Erro de sistema desconhecido"
 
 #: src/err-codes.h:317
 msgid "End of file"
-msgstr "Fin de fichier"
+msgstr "Fim do ficheiro"
 
 #: src/err-codes.h:318
 msgid "Unknown error code"
-msgstr "Code d'erreur inconnu"
+msgstr "Código de erro desconhecido"
 
 #: src/gpg-error.c:388
 #, c-format
 msgid "Usage: %s GPG-ERROR [...]\n"
-msgstr "Utilisation : %s GPG-ERROR [...]\n"
+msgstr "Utilização: %s GPG-ERROR [...]\n"
 
 #: src/gpg-error.c:444
 #, c-format
 msgid "%s: warning: could not recognize %s\n"
-msgstr "%s : attention : impossible de reconnaître %s\n"
+msgstr "%s: aviso: não consegui reconhecer %s\n"
