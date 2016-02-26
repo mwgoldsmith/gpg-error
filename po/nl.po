@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgpg-error 1.10\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
-"POT-Creation-Date: 2015-04-10 19:02+0200\n"
+"POT-Creation-Date: 2015-08-26 08:58+0200\n"
 "PO-Revision-Date: 2014-11-17 00:16+0100\n"
 "Last-Translator: Freek de Kruijf <f.de.kruijf@gmail.com>\n"
 "Language-Team: Dutch <vertaling@vrijschrift.org>\n"
@@ -1721,7 +1721,7 @@ msgstr "Onbekende foutcode"
 msgid "Usage: %s GPG-ERROR [...]\n"
 msgstr "Gebruik: %s GPG-ERROR [...]\n"
 
-#: src/gpg-error.c:501
+#: src/gpg-error.c:511
 #, c-format
 msgid "%s: warning: could not recognize %s\n"
 msgstr "%s: waarschuwing: kon %s niet herkennen\n"

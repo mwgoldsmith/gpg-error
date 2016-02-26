@@ -2,13 +2,13 @@
 # Copyright (C) 2012 Free Software Foundation, Inc.
 # This file is distributed under the same license as the libgpg-error package.
 #
-# Yuri Chornoivan <yurchor@ukr.net>, 2012, 2014.
+# Yuri Chornoivan <yurchor@ukr.net>, 2012, 2014, 2015.
 msgid ""
 msgstr ""
 "Project-Id-Version: libgpg-error 1.7\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
-"POT-Creation-Date: 2015-04-10 19:02+0200\n"
-"PO-Revision-Date: 2014-11-15 19:40+0200\n"
+"POT-Creation-Date: 2015-08-26 08:58+0200\n"
+"PO-Revision-Date: 2015-07-12 16:21+0300\n"
 "Last-Translator: Yuri Chornoivan <yurchor@ukr.net>\n"
 "Language-Team: Ukrainian <translation-team-uk@lists.sourceforge.net>\n"
 "Language: uk\n"
@@ -968,23 +968,19 @@ msgstr "Помилковий вісімковий символ у S-виразі
 
 #: src/err-codes.h:242
 msgid "Legacy key"
-msgstr ""
+msgstr "Застарілий ключ"
 
 #: src/err-codes.h:243
-#, fuzzy
-#| msgid "Buffer too short"
 msgid "Request too short"
-msgstr "Занадто короткий буфер"
+msgstr "Занадто короткий запит"
 
 #: src/err-codes.h:244
-#, fuzzy
-#| msgid "Line too long"
 msgid "Request too long"
-msgstr "Рядок надто довгий"
+msgstr "Надто довгий запит"
 
 #: src/err-codes.h:245
 msgid "Object is in termination state"
-msgstr ""
+msgstr "Об’єкт перебуває у стані переривання"
 
 #: src/err-codes.h:246
 msgid "No certificate chain"
@@ -1097,7 +1093,7 @@ msgstr "Фіктивний рядок"
 
 #: src/err-codes.h:271
 msgid "Forbidden"
-msgstr ""
+msgstr "Заборонено"
 
 #: src/err-codes.h:272
 msgid "Key disabled"
@@ -1208,442 +1204,328 @@ msgid "Unknown IPC inquire"
 msgstr "Невідомий запит IPC"
 
 #: src/err-codes.h:299
-#, fuzzy
-#| msgid "General IPC error"
 msgid "General LDAP error"
-msgstr "Загальна помилка IPC"
+msgstr "Загальна помилка LDAP"
 
 #: src/err-codes.h:300
-#, fuzzy
-#| msgid "General error"
 msgid "General LDAP attribute error"
-msgstr "Загальна помилка"
+msgstr "Загальна помилка атрибута LDAP"
 
 #: src/err-codes.h:301
-#, fuzzy
-#| msgid "General error"
 msgid "General LDAP name error"
-msgstr "Загальна помилка"
+msgstr "Загальна помилка назви LDAP"
 
 #: src/err-codes.h:302
-#, fuzzy
-#| msgid "General Assuan error"
 msgid "General LDAP security error"
-msgstr "Загальна помилка бібліотеки Assuan"
+msgstr "Загальна помилка захисту LDAP"
 
 #: src/err-codes.h:303
-#, fuzzy
-#| msgid "General error"
 msgid "General LDAP service error"
-msgstr "Загальна помилка"
+msgstr "Загальна помилка служби LDAP"
 
 #: src/err-codes.h:304
-#, fuzzy
-#| msgid "General Assuan error"
 msgid "General LDAP update error"
-msgstr "Загальна помилка бібліотеки Assuan"
+msgstr "Загальна помилка оновлення LDAP"
 
 #: src/err-codes.h:305
 msgid "Experimental LDAP error code"
-msgstr ""
+msgstr "Експериментальний код помилки LDAP"
 
 #: src/err-codes.h:306
-#, fuzzy
-#| msgid "IPC write error"
 msgid "Private LDAP error code"
-msgstr "Помилка запису IPC"
+msgstr "Код конфіденційної помилки LDAP"
 
 #: src/err-codes.h:307
-#, fuzzy
-#| msgid "General IPC error"
 msgid "Other general LDAP error"
-msgstr "Загальна помилка IPC"
+msgstr "Інша загальна помилка LDAP"
 
 #: src/err-codes.h:308
-#, fuzzy
-#| msgid "IPC connect call failed"
 msgid "LDAP connecting failed (X)"
-msgstr "Помилка з’єднувального виклику IPC"
+msgstr "Не вдалося з’єднатися із LDAP (X)"
 
 #: src/err-codes.h:309
-#, fuzzy
-#| msgid "General error"
 msgid "LDAP referral limit exceeded"
-msgstr "Загальна помилка"
+msgstr "Перевищення обмежень щодо спрямовування у LDAP"
 
 #: src/err-codes.h:310
 msgid "LDAP client loop"
-msgstr ""
+msgstr "Циклічний клієнт LDAP"
 
 #: src/err-codes.h:311
-#, fuzzy
-#| msgid "Card reset required"
 msgid "No LDAP results returned"
-msgstr "Надіслано запит на скидання картки"
+msgstr "Не повернуто результатів LDAP"
 
 #: src/err-codes.h:312
-#, fuzzy
-#| msgid "Element not found"
 msgid "LDAP control not found"
-msgstr "Елемента не знайдено"
+msgstr "Не знайдено керування LDAP"
 
 #: src/err-codes.h:313
-#, fuzzy
-#| msgid "Not supported"
 msgid "Not supported by LDAP"
-msgstr "Не підтримується"
+msgstr "Не підтримується LDAP"
 
 #: src/err-codes.h:314
-#, fuzzy
-#| msgid "Unexpected error"
 msgid "LDAP connect error"
-msgstr "Неочікувана помилка"
+msgstr "Помилка з’єднання LDAP"
 
 #: src/err-codes.h:315
 msgid "Out of memory in LDAP"
-msgstr ""
+msgstr "Не вистачає пам’яті у LDAP"
 
 #: src/err-codes.h:316
 msgid "Bad parameter to an LDAP routine"
-msgstr ""
+msgstr "Помилковий параметр підпрограми LDAP"
 
 #: src/err-codes.h:317
-#, fuzzy
-#| msgid "Unsupported operation"
 msgid "User cancelled LDAP operation"
-msgstr "Непідтримувана дія"
+msgstr "Дію LDAP скасовано користувачем"
 
 #: src/err-codes.h:318
-#, fuzzy
-#| msgid "Bad certificate"
 msgid "Bad LDAP search filter"
-msgstr "Помилковий сертифікат"
+msgstr "Помилковий фільтр пошуку LDAP"
 
 #: src/err-codes.h:319
-#, fuzzy
-#| msgid "Unknown extension"
 msgid "Unknown LDAP authentication method"
-msgstr "Невідоме розширення"
+msgstr "Невідомий спосіб розпізнавання LDAP"
 
 #: src/err-codes.h:320
-#, fuzzy
-#| msgid "Timeout"
 msgid "Timeout in LDAP"
-msgstr "Час очікування"
+msgstr "Перевищення часу очікування у LDAP"
 
 #: src/err-codes.h:321
-#, fuzzy
-#| msgid "dirmngr error"
 msgid "LDAP decoding error"
-msgstr "Помилка dirmngr"
+msgstr "Помилка декодування LDAP"
 
 #: src/err-codes.h:322
-#, fuzzy
-#| msgid "dirmngr error"
 msgid "LDAP encoding error"
-msgstr "Помилка dirmngr"
+msgstr "Помилка кодування LDAP"
 
 #: src/err-codes.h:323
-#, fuzzy
-#| msgid "IPC read error"
 msgid "LDAP local error"
-msgstr "Помилка читання IPC"
+msgstr "Локальна помилка LDAP"
 
 #: src/err-codes.h:324
-#, fuzzy
-#| msgid "Not an IPC server"
 msgid "Cannot contact LDAP server"
-msgstr "Не є сервером IPC"
+msgstr "Не вдалося встановити зв’язок із сервером LDAP"
 
 #: src/err-codes.h:325
-#, fuzzy
-#| msgid "Success"
 msgid "LDAP success"
-msgstr "Виконано"
+msgstr "Успіх LDAP"
 
 #: src/err-codes.h:326
-#, fuzzy
-#| msgid "Configuration error"
 msgid "LDAP operations error"
-msgstr "Помилка налаштування"
+msgstr "Помилка дій LDAP"
 
 #: src/err-codes.h:327
-#, fuzzy
-#| msgid "Protocol violation"
 msgid "LDAP protocol error"
-msgstr "Порушення протоколу"
+msgstr "Помилка протоколу LDAP"
 
 #: src/err-codes.h:328
 msgid "Time limit exceeded in LDAP"
-msgstr ""
+msgstr "Перевищено час очікування у LDAP"
 
 #: src/err-codes.h:329
 msgid "Size limit exceeded in LDAP"
-msgstr ""
+msgstr "Перевищено обмеження на розмір у LDAP"
 
 #: src/err-codes.h:330
 msgid "LDAP compare false"
-msgstr ""
+msgstr "Порівняння LDAP: не збігаються"
 
 #: src/err-codes.h:331
 msgid "LDAP compare true"
-msgstr ""
+msgstr "Порівняння LDAP: збігаються"
 
 #: src/err-codes.h:332
-#, fuzzy
-#| msgid "Unknown extension"
 msgid "LDAP authentication method not supported"
-msgstr "Невідоме розширення"
+msgstr "Підтримки методу розпізнавання LDAP не передбачено"
 
 #: src/err-codes.h:333
 msgid "Strong(er) LDAP authentication required"
-msgstr ""
+msgstr "Потрібен потужніший спосіб розпізнавання LDAP"
 
 #: src/err-codes.h:334
-#, fuzzy
-#| msgid "Fatal alert message received"
 msgid "Partial LDAP results+referral received"
-msgstr "Отримано критичне попереджувальне повідомлення"
+msgstr "Отримано часткові результати і спрямування LDAP"
 
 #: src/err-codes.h:335
-#, fuzzy
-#| msgid "General error"
 msgid "LDAP referral"
-msgstr "Загальна помилка"
+msgstr "Спрямування LDAP"
 
 #: src/err-codes.h:336
 msgid "Administrative LDAP limit exceeded"
-msgstr ""
+msgstr "Перевищено адміністративне обмеження LDAP"
 
 #: src/err-codes.h:337
 msgid "Critical LDAP extension is unavailable"
-msgstr ""
+msgstr "Недоступне критичне розширення LDAP"
 
 #: src/err-codes.h:338
-#, fuzzy
-#| msgid "Card reset required"
 msgid "Confidentiality required by LDAP"
-msgstr "Надіслано запит на скидання картки"
+msgstr "Конфіденційно потрібне LDAP"
 
 #: src/err-codes.h:339
 msgid "LDAP SASL bind in progress"
-msgstr ""
+msgstr "Виконуємо прив’язування SASL LDAP"
 
 #: src/err-codes.h:340
 msgid "No such LDAP attribute"
-msgstr ""
+msgstr "Немає такого атрибута LDAP"
 
 #: src/err-codes.h:341
-#, fuzzy
-#| msgid "Invalid attribute"
 msgid "Undefined LDAP attribute type"
-msgstr "Некоректний атрибут"
+msgstr "Невизначний тип атрибута LDAP"
 
 #: src/err-codes.h:342
-#, fuzzy
-#| msgid "Unsupported protection"
 msgid "Inappropriate matching in LDAP"
-msgstr "Непідтримуваний захист"
+msgstr "Неприйнятна відповідність у LDAP"
 
 #: src/err-codes.h:343
-#, fuzzy
-#| msgid "Protocol violation"
 msgid "Constraint violation in LDAP"
-msgstr "Порушення протоколу"
+msgstr "Порушення обмежень у LDAP"
 
 #: src/err-codes.h:344
 msgid "LDAP type or value exists"
-msgstr ""
+msgstr "Тип або значення LDAP існує"
 
 #: src/err-codes.h:345
-#, fuzzy
-#| msgid "Invalid state"
 msgid "Invalid syntax in LDAP"
-msgstr "Некоректний стан"
+msgstr "Некоректний синтаксис у LDAP"
 
 #: src/err-codes.h:346
-#, fuzzy
-#| msgid "No CMS object"
 msgid "No such LDAP object"
-msgstr "Немає об’єкта CMS"
+msgstr "Немає такого об’єкта LDAP"
 
 #: src/err-codes.h:347
-#, fuzzy
-#| msgid "Hardware problem"
 msgid "LDAP alias problem"
-msgstr "Апаратні проблеми"
+msgstr "Проблема псевдоніма LDAP"
 
 #: src/err-codes.h:348
-#, fuzzy
-#| msgid "Invalid state"
 msgid "Invalid DN syntax in LDAP"
-msgstr "Некоректний стан"
+msgstr "Некоректний синтаксис DN у LDAP"
 
 #: src/err-codes.h:349
 msgid "LDAP entry is a leaf"
-msgstr ""
+msgstr "Запис LDAP є листком"
 
 #: src/err-codes.h:350
-#, fuzzy
-#| msgid "Encoding problem"
 msgid "LDAP alias dereferencing problem"
-msgstr "Проблема з кодуванням"
+msgstr "Проблемі з скасування прив’язки псевдоніма LDAP"
 
 #: src/err-codes.h:351
 msgid "LDAP proxy authorization failure (X)"
-msgstr ""
+msgstr "Помилка уповноваження проксі LDAP (X)"
 
 #: src/err-codes.h:352
-#, fuzzy
-#| msgid "Unsupported protection"
 msgid "Inappropriate LDAP authentication"
-msgstr "Непідтримуваний захист"
+msgstr "Неприйнятне розпізнавання LDAP"
 
 #: src/err-codes.h:353
-#, fuzzy
-#| msgid "Invalid card"
 msgid "Invalid LDAP credentials"
-msgstr "Некоректна картка"
+msgstr "Некоректні реєстраційні дані LDAP"
 
 #: src/err-codes.h:354
 msgid "Insufficient access for LDAP"
-msgstr ""
+msgstr "Недостатні права доступу до LDAP"
 
 #: src/err-codes.h:355
 msgid "LDAP server is busy"
-msgstr ""
+msgstr "Сервер LDAP зайнято виконанням завдання"
 
 #: src/err-codes.h:356
-#, fuzzy
-#| msgid "No keyserver available"
 msgid "LDAP server is unavailable"
-msgstr "Немає доступних серверів ключів"
+msgstr "Сервер LDAP недоступний"
 
 #: src/err-codes.h:357
 msgid "LDAP server is unwilling to perform"
-msgstr ""
+msgstr "Сервер LDAP не бажає працювати"
 
 #: src/err-codes.h:358
 msgid "Loop detected by LDAP"
-msgstr ""
+msgstr "LDAP виявлено цикл"
 
 #: src/err-codes.h:359
-#, fuzzy
-#| msgid "Missing action"
 msgid "LDAP naming violation"
-msgstr "Не вистачає дії"
+msgstr "Порушення іменування LDAP"
 
 #: src/err-codes.h:360
-#, fuzzy
-#| msgid "Protocol violation"
 msgid "LDAP object class violation"
-msgstr "Порушення протоколу"
+msgstr "Порушення класу об’єктів LDAP"
 
 #: src/err-codes.h:361
-#, fuzzy
-#| msgid "Operation not yet finished"
 msgid "LDAP operation not allowed on non-leaf"
-msgstr "Виконання дії ще не завершено"
+msgstr "Дію LDAP не дозволено для об’єктів, які не є листками"
 
 #: src/err-codes.h:362
-#, fuzzy
-#| msgid "Operation cancelled"
 msgid "LDAP operation not allowed on RDN"
-msgstr "Дію скасовано"
+msgstr "Дію LDAP не дозволено над RDN"
 
 #: src/err-codes.h:363
 msgid "Already exists (LDAP)"
-msgstr ""
+msgstr "Вже існує (LDAP)"
 
 #: src/err-codes.h:364
 msgid "Cannot modify LDAP object class"
-msgstr ""
+msgstr "Не вдалося змінити клас об’єкта LDAP"
 
 #: src/err-codes.h:365
-#, fuzzy
-#| msgid "Line too long"
 msgid "LDAP results too large"
-msgstr "Рядок надто довгий"
+msgstr "Результати LDAP є надто великими"
 
 #: src/err-codes.h:366
-#, fuzzy
-#| msgid "Operation cancelled"
 msgid "LDAP operation affects multiple DSAs"
-msgstr "Дію скасовано"
+msgstr "Дія LDAP стосується декількох DSA"
 
 #: src/err-codes.h:367
 msgid "Virtual LDAP list view error"
-msgstr ""
+msgstr "Помилка перегляду списку віртуальної LDAP"
 
 #: src/err-codes.h:368
-#, fuzzy
-#| msgid "General IPC error"
 msgid "Other LDAP error"
-msgstr "Загальна помилка IPC"
+msgstr "Інша помилка LDAP"
 
 #: src/err-codes.h:369
-#, fuzzy
-#| msgid "Resources exhausted"
 msgid "Resources exhausted in LCUP"
-msgstr "Вичерпано ресурси"
+msgstr "Вичерпано ресурси у LCUP"
 
 #: src/err-codes.h:370
-#, fuzzy
-#| msgid "Protocol violation"
 msgid "Security violation in LCUP"
-msgstr "Порушення протоколу"
+msgstr "Порушення захисту у LCUP"
 
 #: src/err-codes.h:371
-#, fuzzy
-#| msgid "Invalid state"
 msgid "Invalid data in LCUP"
-msgstr "Некоректний стан"
+msgstr "Некоректні дані у LCUP"
 
 #: src/err-codes.h:372
-#, fuzzy
-#| msgid "Unsupported certificate"
 msgid "Unsupported scheme in LCUP"
-msgstr "Непідтримуваний сертифікат"
+msgstr "Непідтримувана схема у LCUP"
 
 #: src/err-codes.h:373
-#, fuzzy
-#| msgid "Card reset required"
 msgid "Reload required in LCUP"
-msgstr "Надіслано запит на скидання картки"
+msgstr "Потрібне перезавантаження у LCUP"
 
 #: src/err-codes.h:374
-#, fuzzy
-#| msgid "Success"
 msgid "LDAP cancelled"
-msgstr "Виконано"
+msgstr "LDAP скасовано"
 
 #: src/err-codes.h:375
-#, fuzzy
-#| msgid "Not operational"
 msgid "No LDAP operation to cancel"
-msgstr "Використання неможливе"
+msgstr "Немає дії LDAP для скасовування"
 
 #: src/err-codes.h:376
-#, fuzzy
-#| msgid "Not operational"
 msgid "Too late to cancel LDAP"
-msgstr "Використання неможливе"
+msgstr "Запізно для скасовування LDAP"
 
 #: src/err-codes.h:377
-#, fuzzy
-#| msgid "Not an IPC server"
 msgid "Cannot cancel LDAP"
-msgstr "Не є сервером IPC"
+msgstr "Не вдалося скасувати LDAP"
 
 #: src/err-codes.h:378
-#, fuzzy
-#| msgid "Decryption failed"
 msgid "LDAP assertion failed"
-msgstr "Спроба розшифрування зазнала невдачі"
+msgstr "Помилка оцінки LDAP"
 
 #: src/err-codes.h:379
 msgid "Proxied authorization denied by LDAP"
-msgstr ""
+msgstr "Уповноваження за допомогою проксі заборонено LDAP"
 
 #: src/err-codes.h:380
 msgid "User defined error code 1"
@@ -1730,7 +1612,7 @@ msgstr "Помилка з невідомим кодом"
 msgid "Usage: %s GPG-ERROR [...]\n"
 msgstr "Користування: %s ПОМИЛКА-GPG [...]\n"
 
-#: src/gpg-error.c:501
+#: src/gpg-error.c:511
 #, c-format
 msgid "%s: warning: could not recognize %s\n"
 msgstr "%s: попередження: не вдалося розпізнати %s\n"

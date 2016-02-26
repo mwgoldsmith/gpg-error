@@ -1,15 +1,15 @@
 # Japanese messages for GnuPG libgpg-error
-# Copyright (C) 2010, 2012, 2014 Free Software Foundation, Inc.
+# Copyright (C) 2010, 2012, 2014, 2015 Free Software Foundation, Inc.
 # This file is distributed under the same license as the libgpg-error package.
 # Yasuaki Taniguchi <yasuakit@gmail.com>, 2010.
 # Takeshi Hamasaki <hmatrjp@users.sourceforge.jp>, 2012.
-# NIIBE Yutaka <gniibe@fsij.org>, 2014.
+# NIIBE Yutaka <gniibe@fsij.org>, 2014, 2015.
 msgid ""
 msgstr ""
-"Project-Id-Version: libgpg-error 1.17\n"
+"Project-Id-Version: libgpg-error 1.19\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
-"POT-Creation-Date: 2015-04-10 19:02+0200\n"
-"PO-Revision-Date: 2014-11-18 10:03+0900\n"
+"POT-Creation-Date: 2015-08-26 08:58+0200\n"
+"PO-Revision-Date: 2015-04-14 16:35+0900\n"
 "Last-Translator: NIIBE Yutaka <gniibe@fsij.org>\n"
 "Language-Team: none\n"
 "Language: ja\n"
@@ -116,7 +116,7 @@ msgstr "成功です"
 
 #: src/err-codes.h:29
 msgid "General error"
-msgstr "一般的なエラーです"
+msgstr "一般エラーです"
 
 #: src/err-codes.h:30
 msgid "Unknown packet"
@@ -436,7 +436,7 @@ msgstr "不特定な Assuan サーバ失敗です"
 
 #: src/err-codes.h:109
 msgid "General Assuan error"
-msgstr "一般的な Assuan エラーです"
+msgstr "一般Assuan エラーです"
 
 #: src/err-codes.h:110
 msgid "Invalid session key"
@@ -968,23 +968,19 @@ msgstr "S式に間違った8進キャラクタがあります"
 
 #: src/err-codes.h:242
 msgid "Legacy key"
-msgstr ""
+msgstr "レガシーな鍵"
 
 #: src/err-codes.h:243
-#, fuzzy
-#| msgid "Buffer too short"
 msgid "Request too short"
-msgstr "バッファが短すぎます"
+msgstr "リクエストが短すぎます"
 
 #: src/err-codes.h:244
-#, fuzzy
-#| msgid "Line too long"
 msgid "Request too long"
-msgstr "行が長すぎます"
+msgstr "リクエストが長すぎます"
 
 #: src/err-codes.h:245
 msgid "Object is in termination state"
-msgstr ""
+msgstr "オブジェクトは終了状態です"
 
 #: src/err-codes.h:246
 msgid "No certificate chain"
@@ -1088,7 +1084,7 @@ msgstr "おかしな文字列です"
 
 #: src/err-codes.h:271
 msgid "Forbidden"
-msgstr ""
+msgstr "禁止"
 
 #: src/err-codes.h:272
 msgid "Key disabled"
@@ -1104,19 +1100,19 @@ msgstr "無効なロック・オブジェクトです"
 
 #: src/err-codes.h:275
 msgid "General IPC error"
-msgstr "一般的なIPCエラーです"
+msgstr "一般IPCエラーです"
 
 #: src/err-codes.h:276
 msgid "IPC accept call failed"
-msgstr "IPC accept 呼び出しに失敗"
+msgstr "IPC accept呼び出しに失敗"
 
 #: src/err-codes.h:277
 msgid "IPC connect call failed"
-msgstr "IPC connect 呼び出しに失敗しました"
+msgstr "IPC connect呼び出しに失敗しました"
 
 #: src/err-codes.h:278
 msgid "Invalid IPC response"
-msgstr "無効な IPC 応答です"
+msgstr "無効なIPC応答です"
 
 #: src/err-codes.h:279
 msgid "Invalid value passed to IPC"
@@ -1136,7 +1132,7 @@ msgstr "IPCコマンドが入れ子になっています"
 
 #: src/err-codes.h:283
 msgid "No data callback in IPC"
-msgstr "IPC でデータのコールバックがありません"
+msgstr "IPCでデータのコールバックがありません"
 
 #: src/err-codes.h:284
 msgid "No inquire callback in IPC"
@@ -1144,11 +1140,11 @@ msgstr "IPCで問い合わせコールバックがありません"
 
 #: src/err-codes.h:285
 msgid "Not an IPC server"
-msgstr "IPC サーバではありません"
+msgstr "IPCサーバではありません"
 
 #: src/err-codes.h:286
 msgid "Not an IPC client"
-msgstr "IPC クライアントではありません"
+msgstr "IPCクライアントではありません"
 
 #: src/err-codes.h:287
 msgid "Problem starting IPC server"
@@ -1156,485 +1152,371 @@ msgstr "IPCサーバの開始に問題が発生しました"
 
 #: src/err-codes.h:288
 msgid "IPC read error"
-msgstr "IPC 読み取りエラー"
+msgstr "IPC読み取りエラー"
 
 #: src/err-codes.h:289
 msgid "IPC write error"
-msgstr "IPC 書き込みエラー"
+msgstr "IPC書き込みエラー"
 
 #: src/err-codes.h:290
 msgid "Too much data for IPC layer"
-msgstr "IPC レイヤにデータが多すぎです"
+msgstr "IPCレイヤにデータが多すぎです"
 
 #: src/err-codes.h:291
 msgid "Unexpected IPC command"
-msgstr "予期しない IPC コマンドです"
+msgstr "予期しないIPCコマンドです"
 
 #: src/err-codes.h:292
 msgid "Unknown IPC command"
-msgstr "不明な IPC コマンドです"
+msgstr "不明なIPCコマンドです"
 
 #: src/err-codes.h:293
 msgid "IPC syntax error"
-msgstr "IPC 構文エラーです"
+msgstr "IPC構文エラーです"
 
 #: src/err-codes.h:294
 msgid "IPC call has been cancelled"
-msgstr "IPC 呼び出しがキャンセルされました"
+msgstr "IPC呼び出しがキャンセルされました"
 
 #: src/err-codes.h:295
 msgid "No input source for IPC"
-msgstr "IPC に対する入力ソースがありません"
+msgstr "IPCに対する入力ソースがありません"
 
 #: src/err-codes.h:296
 msgid "No output source for IPC"
-msgstr "IPC に対する出力ソースがありません"
+msgstr "IPCに対する出力ソースがありません"
 
 #: src/err-codes.h:297
 msgid "IPC parameter error"
-msgstr "IPC パラメータエラーです"
+msgstr "IPCパラメータエラーです"
 
 #: src/err-codes.h:298
 msgid "Unknown IPC inquire"
-msgstr "不明な IPC 問い合わせです"
+msgstr "不明なIPC問い合わせです"
 
 #: src/err-codes.h:299
-#, fuzzy
-#| msgid "General IPC error"
 msgid "General LDAP error"
-msgstr "一般的なIPCエラーです"
+msgstr "一般LDAPエラーです"
 
 #: src/err-codes.h:300
-#, fuzzy
-#| msgid "General error"
 msgid "General LDAP attribute error"
-msgstr "一般的なエラーです"
+msgstr "一般LDAP属性エラーです"
 
 #: src/err-codes.h:301
-#, fuzzy
-#| msgid "General error"
 msgid "General LDAP name error"
-msgstr "一般的なエラーです"
+msgstr "一般LDAPエラーです"
 
 #: src/err-codes.h:302
-#, fuzzy
-#| msgid "General Assuan error"
 msgid "General LDAP security error"
-msgstr "一般的な Assuan エラーです"
+msgstr "一般Assuanエラーです"
 
 #: src/err-codes.h:303
-#, fuzzy
-#| msgid "General error"
 msgid "General LDAP service error"
-msgstr "一般的なエラーです"
+msgstr "一般LDAPサーバエラーです"
 
 #: src/err-codes.h:304
-#, fuzzy
-#| msgid "General Assuan error"
 msgid "General LDAP update error"
-msgstr "一般的な Assuan エラーです"
+msgstr "一般LDAP更新エラーです"
 
 #: src/err-codes.h:305
 msgid "Experimental LDAP error code"
-msgstr ""
+msgstr "実験的LDAPエラーコード"
 
 #: src/err-codes.h:306
-#, fuzzy
-#| msgid "IPC write error"
 msgid "Private LDAP error code"
-msgstr "IPC 書き込みエラー"
+msgstr "プライベートLDAPエラーコード"
 
 #: src/err-codes.h:307
-#, fuzzy
-#| msgid "General IPC error"
 msgid "Other general LDAP error"
-msgstr "一般的なIPCエラーです"
+msgstr "その他の一般LDAPエラーです"
 
 #: src/err-codes.h:308
-#, fuzzy
-#| msgid "IPC connect call failed"
 msgid "LDAP connecting failed (X)"
-msgstr "IPC connect 呼び出しに失敗しました"
+msgstr "LDAP接続が失敗しました (X)"
 
 #: src/err-codes.h:309
-#, fuzzy
-#| msgid "General error"
 msgid "LDAP referral limit exceeded"
-msgstr "一般的なエラーです"
+msgstr "LDAP参照制限を越えました"
 
 #: src/err-codes.h:310
 msgid "LDAP client loop"
-msgstr ""
+msgstr "LDAPクライアントのループ"
 
 #: src/err-codes.h:311
-#, fuzzy
-#| msgid "Card reset required"
 msgid "No LDAP results returned"
-msgstr "カードリセットが必要です"
+msgstr "LDAPの結果が返されませんでした"
 
 #: src/err-codes.h:312
-#, fuzzy
-#| msgid "Element not found"
 msgid "LDAP control not found"
-msgstr "要素が見つかりませんでした"
+msgstr "LDAP制御が見つかりませんでした"
 
 #: src/err-codes.h:313
-#, fuzzy
-#| msgid "Not supported"
 msgid "Not supported by LDAP"
-msgstr "サポートされていません"
+msgstr "LDAPでサポートされていません"
 
 #: src/err-codes.h:314
-#, fuzzy
-#| msgid "Unexpected error"
 msgid "LDAP connect error"
-msgstr "予期しないエラーです"
+msgstr "LDAP connectエラーです"
 
 #: src/err-codes.h:315
 msgid "Out of memory in LDAP"
-msgstr ""
+msgstr "LDAPでメモリがなくなりました"
 
 #: src/err-codes.h:316
 msgid "Bad parameter to an LDAP routine"
-msgstr ""
+msgstr "LDAPルーチンに対する不正なパラメータです"
 
 #: src/err-codes.h:317
-#, fuzzy
-#| msgid "Unsupported operation"
 msgid "User cancelled LDAP operation"
-msgstr "サポートされていない操作です"
+msgstr "ユーザがLDAP操作をキャンセルしました"
 
 #: src/err-codes.h:318
-#, fuzzy
-#| msgid "Bad certificate"
 msgid "Bad LDAP search filter"
-msgstr "誤った証明書です"
+msgstr "誤ったLDAP検索フィルタです"
 
 #: src/err-codes.h:319
-#, fuzzy
-#| msgid "Unknown extension"
 msgid "Unknown LDAP authentication method"
-msgstr "未知の拡張子"
+msgstr "不明のLDAP認証方式です"
 
 #: src/err-codes.h:320
-#, fuzzy
-#| msgid "Timeout"
 msgid "Timeout in LDAP"
-msgstr "タイムアウトです"
+msgstr "LDAPでタイムアウトです"
 
 #: src/err-codes.h:321
-#, fuzzy
-#| msgid "dirmngr error"
 msgid "LDAP decoding error"
-msgstr "dirmngr のエラー"
+msgstr "LDAPデコードのエラー"
 
 #: src/err-codes.h:322
-#, fuzzy
-#| msgid "dirmngr error"
 msgid "LDAP encoding error"
-msgstr "dirmngr のエラー"
+msgstr "LDAPエンコードのエラー"
 
 #: src/err-codes.h:323
-#, fuzzy
-#| msgid "IPC read error"
 msgid "LDAP local error"
-msgstr "IPC 読み取りエラー"
+msgstr "LDAPローカルエラー"
 
 #: src/err-codes.h:324
-#, fuzzy
-#| msgid "Not an IPC server"
 msgid "Cannot contact LDAP server"
-msgstr "IPC サーバではありません"
+msgstr "LDAPサーバに連絡できません"
 
 #: src/err-codes.h:325
-#, fuzzy
-#| msgid "Success"
 msgid "LDAP success"
-msgstr "成功です"
+msgstr "LDAP成功です"
 
 #: src/err-codes.h:326
-#, fuzzy
-#| msgid "Configuration error"
 msgid "LDAP operations error"
-msgstr "設定のエラーです"
+msgstr "LDAP操作エラーです"
 
 #: src/err-codes.h:327
-#, fuzzy
-#| msgid "Protocol violation"
 msgid "LDAP protocol error"
-msgstr "プロトコル違反"
+msgstr "LDAPプロトコル違反"
 
 #: src/err-codes.h:328
 msgid "Time limit exceeded in LDAP"
-msgstr ""
+msgstr "LDAPで時間制限を越えました"
 
 #: src/err-codes.h:329
 msgid "Size limit exceeded in LDAP"
-msgstr ""
+msgstr "LDAPでサイズ制限を越えました"
 
 #: src/err-codes.h:330
 msgid "LDAP compare false"
-msgstr ""
+msgstr "LDAP比較 偽"
 
 #: src/err-codes.h:331
 msgid "LDAP compare true"
-msgstr ""
+msgstr "LDAP比較 真"
 
 #: src/err-codes.h:332
-#, fuzzy
-#| msgid "Unknown extension"
 msgid "LDAP authentication method not supported"
-msgstr "未知の拡張子"
+msgstr "LDAP認証方式はサポートされません"
 
 #: src/err-codes.h:333
 msgid "Strong(er) LDAP authentication required"
-msgstr ""
+msgstr "強いLDAP認証が必要です"
 
 #: src/err-codes.h:334
-#, fuzzy
-#| msgid "Fatal alert message received"
 msgid "Partial LDAP results+referral received"
-msgstr "致命的な警告メッセージを受信しました"
+msgstr "部分的LDAP結果/参照を受信しました"
 
 #: src/err-codes.h:335
-#, fuzzy
-#| msgid "General error"
 msgid "LDAP referral"
-msgstr "一般的なエラーです"
+msgstr "LDAP参照"
 
 #: src/err-codes.h:336
 msgid "Administrative LDAP limit exceeded"
-msgstr ""
+msgstr "管理LDAP制限を越えました"
 
 #: src/err-codes.h:337
 msgid "Critical LDAP extension is unavailable"
-msgstr ""
+msgstr "クリティカルなLDAP拡張が利用可能ではありません"
 
 #: src/err-codes.h:338
-#, fuzzy
-#| msgid "Card reset required"
 msgid "Confidentiality required by LDAP"
-msgstr "カードリセットが必要です"
+msgstr "LDAPにより秘匿性が必要です"
 
 #: src/err-codes.h:339
 msgid "LDAP SASL bind in progress"
-msgstr ""
+msgstr "LDAP SASLバインドが進んでいます"
 
 #: src/err-codes.h:340
 msgid "No such LDAP attribute"
-msgstr ""
+msgstr "そのようなLDAP属性がありません"
 
 #: src/err-codes.h:341
-#, fuzzy
-#| msgid "Invalid attribute"
 msgid "Undefined LDAP attribute type"
-msgstr "無効な属性です"
+msgstr "未定義のLDAP属性型です"
 
 #: src/err-codes.h:342
-#, fuzzy
-#| msgid "Unsupported protection"
 msgid "Inappropriate matching in LDAP"
-msgstr "サポートされていない防護です"
+msgstr "LDAPの不適切なマッチングです"
 
 #: src/err-codes.h:343
-#, fuzzy
-#| msgid "Protocol violation"
 msgid "Constraint violation in LDAP"
-msgstr "プロトコル違反"
+msgstr "LDAP制約違反です"
 
 #: src/err-codes.h:344
 msgid "LDAP type or value exists"
-msgstr ""
+msgstr "LDAP型あるいは値が存在します"
 
 #: src/err-codes.h:345
-#, fuzzy
-#| msgid "Invalid state"
 msgid "Invalid syntax in LDAP"
-msgstr "無効な状態です"
+msgstr "LDAPの無効な構文です"
 
 #: src/err-codes.h:346
-#, fuzzy
-#| msgid "No CMS object"
 msgid "No such LDAP object"
-msgstr "CMS オブジェクトではありません"
+msgstr "そのようなLDAPオブジェクトはありません"
 
 #: src/err-codes.h:347
-#, fuzzy
-#| msgid "Hardware problem"
 msgid "LDAP alias problem"
-msgstr "ハードウェアの問題です"
+msgstr "LDAPエイリアスの問題です"
 
 #: src/err-codes.h:348
-#, fuzzy
-#| msgid "Invalid state"
 msgid "Invalid DN syntax in LDAP"
-msgstr "無効な状態です"
+msgstr "LDAPの無効なDN構文状態です"
 
 #: src/err-codes.h:349
 msgid "LDAP entry is a leaf"
-msgstr ""
+msgstr "LDAPエントリがリーフです"
 
 #: src/err-codes.h:350
-#, fuzzy
-#| msgid "Encoding problem"
 msgid "LDAP alias dereferencing problem"
-msgstr "符号化に問題があります"
+msgstr "LDAPエイリアスのデレファレンス問題です"
 
 #: src/err-codes.h:351
 msgid "LDAP proxy authorization failure (X)"
-msgstr ""
+msgstr "LDAPプロキシの認証失敗です(X)"
 
 #: src/err-codes.h:352
-#, fuzzy
-#| msgid "Unsupported protection"
 msgid "Inappropriate LDAP authentication"
-msgstr "サポートされていない防護です"
+msgstr "不適切なLDAP認証です"
 
 #: src/err-codes.h:353
-#, fuzzy
-#| msgid "Invalid card"
 msgid "Invalid LDAP credentials"
-msgstr "無効なカードです"
+msgstr "無効なLDAPクレデンシャルです"
 
 #: src/err-codes.h:354
 msgid "Insufficient access for LDAP"
-msgstr ""
+msgstr "LDAPの不十分なアクセスです"
 
 #: src/err-codes.h:355
 msgid "LDAP server is busy"
-msgstr ""
+msgstr "LDAPサーバがビジーです"
 
 #: src/err-codes.h:356
-#, fuzzy
-#| msgid "No keyserver available"
 msgid "LDAP server is unavailable"
-msgstr "キーサーバが利用可能ではありません"
+msgstr "LDAPサーバが利用可能ではありません"
 
 #: src/err-codes.h:357
 msgid "LDAP server is unwilling to perform"
-msgstr ""
+msgstr "LDAPサーバが実行を進めたくありません"
 
 #: src/err-codes.h:358
 msgid "Loop detected by LDAP"
-msgstr ""
+msgstr "LDAPでループが検出されました"
 
 #: src/err-codes.h:359
-#, fuzzy
-#| msgid "Missing action"
 msgid "LDAP naming violation"
-msgstr "アクションが欠如しています"
+msgstr "LDAP名前違反です"
 
 #: src/err-codes.h:360
-#, fuzzy
-#| msgid "Protocol violation"
 msgid "LDAP object class violation"
-msgstr "プロトコル違反"
+msgstr "LDAPオブジェクトクラス違反です"
 
 #: src/err-codes.h:361
-#, fuzzy
-#| msgid "Operation not yet finished"
 msgid "LDAP operation not allowed on non-leaf"
-msgstr "操作がまだ終了していません"
+msgstr "LDAP操作は非リーフには許されません"
 
 #: src/err-codes.h:362
-#, fuzzy
-#| msgid "Operation cancelled"
 msgid "LDAP operation not allowed on RDN"
-msgstr "操作がキャンセルされました"
+msgstr "LDAP操作はRDNには許されません"
 
 #: src/err-codes.h:363
 msgid "Already exists (LDAP)"
-msgstr ""
+msgstr "既に存在します (LDAP)"
 
 #: src/err-codes.h:364
 msgid "Cannot modify LDAP object class"
-msgstr ""
+msgstr "LDAPオブジェクト・クラスを修正できません"
 
 #: src/err-codes.h:365
-#, fuzzy
-#| msgid "Line too long"
 msgid "LDAP results too large"
-msgstr "行が長すぎます"
+msgstr "LDAP結果が大きすぎます"
 
 #: src/err-codes.h:366
-#, fuzzy
-#| msgid "Operation cancelled"
 msgid "LDAP operation affects multiple DSAs"
-msgstr "操作がキャンセルされました"
+msgstr "LDAP操作は複数のDSAに関与します"
 
 #: src/err-codes.h:367
 msgid "Virtual LDAP list view error"
-msgstr ""
+msgstr "バーチャルLDAPリストviewエラー"
 
 #: src/err-codes.h:368
-#, fuzzy
-#| msgid "General IPC error"
 msgid "Other LDAP error"
-msgstr "一般的なIPCエラーです"
+msgstr "その他のLDAPエラーです"
 
 #: src/err-codes.h:369
-#, fuzzy
-#| msgid "Resources exhausted"
 msgid "Resources exhausted in LCUP"
-msgstr "資源を使い果たしました"
+msgstr "LCUPで資源を使い果たしました"
 
 #: src/err-codes.h:370
-#, fuzzy
-#| msgid "Protocol violation"
 msgid "Security violation in LCUP"
-msgstr "プロトコル違反"
+msgstr "LCUPのセキュリティ違反"
 
 #: src/err-codes.h:371
-#, fuzzy
-#| msgid "Invalid state"
 msgid "Invalid data in LCUP"
-msgstr "無効な状態です"
+msgstr "LCUPの無効なデータです"
 
 #: src/err-codes.h:372
-#, fuzzy
-#| msgid "Unsupported certificate"
 msgid "Unsupported scheme in LCUP"
-msgstr "サポートされていない証明書です"
+msgstr "LCUPのサポートされていないスキームです"
 
 #: src/err-codes.h:373
-#, fuzzy
-#| msgid "Card reset required"
 msgid "Reload required in LCUP"
-msgstr "カードリセットが必要です"
+msgstr "LCUPでリロードが必要です"
 
 #: src/err-codes.h:374
-#, fuzzy
-#| msgid "Success"
 msgid "LDAP cancelled"
-msgstr "成功です"
+msgstr "LDAPがキャンセルされました"
 
 #: src/err-codes.h:375
-#, fuzzy
-#| msgid "Not operational"
 msgid "No LDAP operation to cancel"
-msgstr "操作できません"
+msgstr "キャンセルするLDAP操作がありません"
 
 #: src/err-codes.h:376
-#, fuzzy
-#| msgid "Not operational"
 msgid "Too late to cancel LDAP"
-msgstr "操作できません"
+msgstr "LDAPをキャンセルするには遅すぎます"
 
 #: src/err-codes.h:377
-#, fuzzy
-#| msgid "Not an IPC server"
 msgid "Cannot cancel LDAP"
-msgstr "IPC サーバではありません"
+msgstr "LDAPをキャンセルできません"
 
 #: src/err-codes.h:378
-#, fuzzy
-#| msgid "Decryption failed"
 msgid "LDAP assertion failed"
-msgstr "復号に失敗しました"
+msgstr "LDAPアサーションに失敗しました"
 
 #: src/err-codes.h:379
 msgid "Proxied authorization denied by LDAP"
-msgstr ""
+msgstr "LDAPでプロキシの認証が拒否されました"
 
 #: src/err-codes.h:380
 msgid "User defined error code 1"
@@ -1721,32 +1603,7 @@ msgstr "不明なエラーコード"
 msgid "Usage: %s GPG-ERROR [...]\n"
 msgstr "使用法: %s GPG-ERROR [...]\n"
 
-#: src/gpg-error.c:501
+#: src/gpg-error.c:511
 #, c-format
 msgid "%s: warning: could not recognize %s\n"
 msgstr "%s: 警告: %s を認識できませんでした\n"
-
-#, fuzzy
-#~| msgid "Resources exhausted"
-#~ msgid "LCUP Resources exhausted"
-#~ msgstr "資源を使い果たしました"
-
-#, fuzzy
-#~| msgid "Invalid data"
-#~ msgid "LCUP Invalid data"
-#~ msgstr "無効なデータです"
-
-#, fuzzy
-#~| msgid "Decryption failed"
-#~ msgid "Assertion failed in lDAP"
-#~ msgstr "復号に失敗しました"
-
-#, fuzzy
-#~| msgid "General error"
-#~ msgid "LDAP Other general error"
-#~ msgstr "一般的なエラーです"
-
-#, fuzzy
-#~| msgid "dirmngr error"
-#~ msgid "Encoding error"
-#~ msgstr "dirmngr のエラー"

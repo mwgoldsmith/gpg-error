@@ -1,3 +1,64 @@
+2015-08-26  Werner Koch  <wk@gnupg.org>
+
+	Release 1.20.
+	* configure.ac: Set LT version to C16/A16/R0.
+
+	Add new version macros.
+	* src/gpg-error.h.in (GPGRT_VERSION): New.
+	(GPGRT_VERSION_NUMBER): New.
+	(GPG_ERROR_VERSION, GPG_ERROR_VERSION_NUMBER): Move to top of file.
+
+	Add macro GPGRT_INLINE and avoid -Wundef warnings.
+	* src/gpg-error.h.in (GPG_ERR_INLINE): Use #if defined for possible
+	undefined macros to avoid warnign with GCC's -Wundef option.
+	(GPGRT_INLINE): New.
+
+2015-08-26  Yuri Chornoivan  <yurchor@ukr.net>
+
+	Update Ukrainian translation.
+
+2015-08-25  Werner Koch  <wk@gnupg.org>
+
+	Make configure option --disable-build-timestamp the default.
+	* configure.ac (BUILD_TIMESTAMP): Set to "<none>" by default.
+
+	w32: Make sure the setmode is called.
+	* src/estream.c (HAVE_DOSISH_SYSTEM): Define if needed.
+
+2015-07-27  Werner Koch  <wk@gnupg.org>
+
+	Add option --lib-version to the gpg-error tool.
+	* src/gpg-error.c (main): Add new option.
+
+2015-07-24  Werner Koch  <wk@gnupg.org>
+
+	Add new public macros for GCC attributes.
+	* src/gpg-error.h.in (GPGRT_GCC_VERSION): New.
+	(GPGRT_ATTR_NORETURN, GPGRT_ATTR_PRINTF, GPGRT_ATTR_NR_PRINTF): New.
+	(GPGRT_ATTR_FORMAT_ARG, GPGRT_ATTR_SENTINEL): New.
+	(GPGRT_ATTR_USED, GPGRT_ATTR_UNUSED, GPGRT_ATTR_DEPRECATED): New.
+	(GPGRT_ATTR_PURE, GPGRT_ATTR_MALLOC): New.
+	(GPGRT_HAVE_MACRO_FUNCTION, GPGRT_HAVE_PRAGMA_GCC_PUSH): New.
+	(_GPGRT_GCC_A_PRINTF): Replace GPGRT_ATTR_PRINTF.
+
+2015-06-15  Werner Koch  <wk@gnupg.org>
+
+	Allow building with --disable-threads.
+	* src/posix-lock-obj.h (LOCK_ABI_NOT_AVAILABLE): New.
+	(LOCK_ABI_VERSION): Define depending on USE_POSIX_THREADS.
+	(_gpgrt_lock_t) [!USE_POSIX_THREADS]: Do not define the union.
+	* src/gen-posix-lock-obj.c: Take care of USE_POSIX_THREADS.
+	* src/posix-lock.c (_gpgrt_lock_init, _gpgrt_lock_lock)
+	(_gpgrt_lock_trylock, _gpgrt_lock_unlock)
+	(_gpgrt_lock_destroy): Return success for a no-threads version.
+	* tests/t-lock.c: Disable tests if threads are not available.
+	* src/mkheader.c (main): Add NO-THREADS to the printed comment.
+	* configure.ac: Show NO-TRHEADS in the final summary.
+
+2015-04-14  NIIBE Yutaka  <gniibe@fsij.org>
+
+	po: Update Japanese translation.
+
 2015-04-10  Werner Koch  <wk@gnupg.org>
 
 	Release 1.19.

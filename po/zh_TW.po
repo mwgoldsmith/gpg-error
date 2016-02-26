@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgpg-error 1.17\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
-"POT-Creation-Date: 2015-04-10 19:02+0200\n"
+"POT-Creation-Date: 2015-08-26 08:58+0200\n"
 "PO-Revision-Date: 2014-11-17 21:25+0800\n"
 "Last-Translator: Jedi Lin <Jedi@Jedi.org>\n"
 "Language-Team: Chinese (traditional) <zh-l10n@linux.org.tw>\n"
@@ -1723,7 +1723,7 @@ msgstr "未知的錯誤代碼"
 msgid "Usage: %s GPG-ERROR [...]\n"
 msgstr "用法: %s GPG-ERROR [...]\n"
 
-#: src/gpg-error.c:501
+#: src/gpg-error.c:511
 #, c-format
 msgid "%s: warning: could not recognize %s\n"
 msgstr "%s: 警告: 無法辨識 %s\n"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgpg-error\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
-"POT-Creation-Date: 2015-04-10 19:02+0200\n"
+"POT-Creation-Date: 2015-08-26 08:58+0200\n"
 "PO-Revision-Date: 2014-11-17 09:06+0100\n"
 "Last-Translator: Milo Casagrande <milo@milo.name>\n"
 "Language-Team: Italian <tp@lists.linux.it>\n"
@@ -1720,7 +1720,7 @@ msgstr "Codice di errore sconosciuto"
 msgid "Usage: %s GPG-ERROR [...]\n"
 msgstr "Uso: %s GPG-ERROR [...]\n"
 
-#: src/gpg-error.c:501
+#: src/gpg-error.c:511
 #, c-format
 msgid "%s: warning: could not recognize %s\n"
 msgstr "%s: avviso: impossibile riconoscere %s\n"
