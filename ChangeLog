@@ -1,3 +1,40 @@
+2014-09-11  Werner Koch  <wk@gnupg.org>
+
+	Release 1.15.
+	* configure.ac: Set LT version to C12/A12/R1.
+
+	Fix build problems with non-gmake (ie. AIX).
+	* src/Makefile.am: Do not distribute gpg-error.h.
+	(lock-obj-pub.native.h): Prepend a "./" to match the dependency.
+
+	Fix problems with ssize_t and off_t.
+	* configure.ac (AC_SYS_LARGEFILE): New.
+	(AC_CHECK_HEADERS): Check for stdint.h.
+	(AC_CHECK_SIZEOF): Add for int, long and long long.
+	(REPLACEMENT_FOR_OFF_T): New ac_define.
+	* src/mkheader.c (have_stdint_h, have_w32_system, have_w64_system)
+	(replacement_for_off_type, stdint_h_included): New.
+	(xfree, xstrdup): New.
+	(parse_config_h): New.
+	(write_special): Support "define:gpgrt_off_t", "define:gpgrt_ssize_t",
+	"api_ssize_t" tags.
+	(main): Add config.h arg.  Call parse_config_h.  Fix substitute code.
+	* src/Makefile.am (gpg-error.h): Pass config.h to mkheader.
+
+	* src/gpg-error.h.in: Include definitions for gpgrt_ssize_t and
+	gpgrt_off_t.  Let mkheader insert ssize_t keywords.  Chnage all off_t
+	to gpgrt_off_t.
+	* src/estream.c: Change all off_t to gpgrt_off_t.  Chnage all ssize_t
+	to gpgrt_ssize_t.
+	* src/visibility.c (gpgrt_fseeko): Use gpgrt_off_t.
+	(gpgrt_ftello): Ditto.
+	(gpgrt_getline): Use gpgrt_ssize_t.
+	(gpgrt_read_line): Ditto.
+
+	Fix compiler warning for w32.
+	* src/syscfg/lock-obj-pub.mingw32.h (GPGRT_LOCK_INITIALIZER): Add
+	mssing braces.
+
 2014-09-08  Werner Koch  <wk@gnupg.org>
 
 	Release 1.14.

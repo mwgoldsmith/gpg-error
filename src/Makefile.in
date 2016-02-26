@@ -86,9 +86,8 @@ bin_PROGRAMS = gpg-error$(EXEEXT)
 @HAVE_W32_SYSTEM_FALSE@	$(am__DEPENDENCIES_2)
 @CROSS_COMPILING_FALSE@am__append_1 = ./lock-obj-pub.native.h
 subdir = src
-DIST_COMMON = README $(include_HEADERS) $(srcdir)/Makefile.am \
-	$(srcdir)/Makefile.in $(srcdir)/gpg-error-config.in \
-	$(srcdir)/versioninfo.rc.in
+DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
+	$(srcdir)/gpg-error-config.in $(srcdir)/versioninfo.rc.in
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/autobuild.m4 \
 	$(top_srcdir)/m4/estream.m4 $(top_srcdir)/m4/gettext.m4 \
@@ -139,7 +138,7 @@ am__installdirs = "$(DESTDIR)$(libdir)" "$(DESTDIR)$(bindir)" \
 LTLIBRARIES = $(lib_LTLIBRARIES)
 @HAVE_W32_SYSTEM_TRUE@am__DEPENDENCIES_1 = versioninfo.lo
 am__DEPENDENCIES_2 =
-am__libgpg_error_la_SOURCES_DIST = gpg-error.h gettext.h posix-lock.c \
+am__libgpg_error_la_SOURCES_DIST = gettext.h posix-lock.c \
 	posix-lock-obj.h posix-thread.c w32-gettext.c w32-lock.c \
 	w32-lock-obj.h w32-thread.c gpgrt-int.h init.c init.h \
 	version.c lock.h thread.h estream.c estream-printf.c \
@@ -156,7 +155,9 @@ am_libgpg_error_la_OBJECTS = $(am__objects_1) libgpg_error_la-init.lo \
 	libgpg_error_la-strerror.lo libgpg_error_la-code-to-errno.lo \
 	libgpg_error_la-code-from-errno.lo \
 	libgpg_error_la-visibility.lo
-libgpg_error_la_OBJECTS = $(am_libgpg_error_la_OBJECTS)
+nodist_libgpg_error_la_OBJECTS =
+libgpg_error_la_OBJECTS = $(am_libgpg_error_la_OBJECTS) \
+	$(nodist_libgpg_error_la_OBJECTS)
 AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
@@ -202,8 +203,8 @@ am__v_CCLD_0 = @echo "  CCLD  " $@;
 AM_V_GEN = $(am__v_GEN_@AM_V@)
 am__v_GEN_ = $(am__v_GEN_@AM_DEFAULT_V@)
 am__v_GEN_0 = @echo "  GEN   " $@;
-SOURCES = $(libgpg_error_la_SOURCES) gen-posix-lock-obj.c \
-	gen-w32-lock-obj.c $(gpg_error_SOURCES)
+SOURCES = $(libgpg_error_la_SOURCES) $(nodist_libgpg_error_la_SOURCES) \
+	gen-posix-lock-obj.c gen-w32-lock-obj.c $(gpg_error_SOURCES)
 DIST_SOURCES = $(am__libgpg_error_la_SOURCES_DIST) \
 	gen-posix-lock-obj.c gen-w32-lock-obj.c $(gpg_error_SOURCES)
 am__can_run_installinfo = \
@@ -212,7 +213,7 @@ am__can_run_installinfo = \
     *) (install-info --version) >/dev/null 2>&1;; \
   esac
 DATA = $(m4data_DATA)
-HEADERS = $(include_HEADERS)
+HEADERS = $(nodist_include_HEADERS)
 ETAGS = etags
 CTAGS = ctags
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
@@ -398,7 +399,7 @@ lock_obj_pub = \
 	syscfg/lock-obj-pub.mingw32.h
 
 lib_LTLIBRARIES = libgpg-error.la
-include_HEADERS = gpg-error.h
+nodist_include_HEADERS = gpg-error.h
 bin_SCRIPTS = gpg-error-config
 m4datadir = $(datadir)/aclocal
 m4data_DATA = gpg-error.m4
@@ -458,12 +459,13 @@ libgpg_error_la_LDFLAGS = \
   -version-info \
   @LIBGPG_ERROR_LT_CURRENT@:@LIBGPG_ERROR_LT_REVISION@:@LIBGPG_ERROR_LT_AGE@
 
-libgpg_error_la_SOURCES = gpg-error.h gettext.h $(arch_sources) \
+libgpg_error_la_SOURCES = gettext.h $(arch_sources) \
 	gpgrt-int.h init.c init.h version.c lock.h thread.h \
 	estream.c estream-printf.c estream-printf.h \
 	strsource.c strerror.c code-to-errno.c code-from-errno.c \
 	visibility.c visibility.h
 
+nodist_libgpg_error_la_SOURCES = gpg-error.h
 
 # libgpg_error_la_DEPENDENCIES = \
 #        $(srcdir)/gpg-error.vers
@@ -870,9 +872,9 @@ uninstall-m4dataDATA:
 	@list='$(m4data_DATA)'; test -n "$(m4datadir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
 	dir='$(DESTDIR)$(m4datadir)'; $(am__uninstall_files_from_dir)
-install-includeHEADERS: $(include_HEADERS)
+install-nodist_includeHEADERS: $(nodist_include_HEADERS)
 	@$(NORMAL_INSTALL)
-	@list='$(include_HEADERS)'; test -n "$(includedir)" || list=; \
+	@list='$(nodist_include_HEADERS)'; test -n "$(includedir)" || list=; \
 	if test -n "$$list"; then \
 	  echo " $(MKDIR_P) '$(DESTDIR)$(includedir)'"; \
 	  $(MKDIR_P) "$(DESTDIR)$(includedir)" || exit 1; \
@@ -886,9 +888,9 @@ install-includeHEADERS: $(include_HEADERS)
 	  $(INSTALL_HEADER) $$files "$(DESTDIR)$(includedir)" || exit $$?; \
 	done
 
-uninstall-includeHEADERS:
+uninstall-nodist_includeHEADERS:
 	@$(NORMAL_UNINSTALL)
-	@list='$(include_HEADERS)'; test -n "$(includedir)" || list=; \
+	@list='$(nodist_include_HEADERS)'; test -n "$(includedir)" || list=; \
 	files=`for p in $$list; do echo $$p; done | sed -e 's|^.*/||'`; \
 	dir='$(DESTDIR)$(includedir)'; $(am__uninstall_files_from_dir)
 
@@ -1041,8 +1043,8 @@ info: info-am
 
 info-am:
 
-install-data-am: install-data-local install-includeHEADERS \
-	install-m4dataDATA
+install-data-am: install-data-local install-m4dataDATA \
+	install-nodist_includeHEADERS
 
 install-dvi: install-dvi-am
 
@@ -1090,8 +1092,8 @@ ps: ps-am
 ps-am:
 
 uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
-	uninstall-includeHEADERS uninstall-libLTLIBRARIES \
-	uninstall-m4dataDATA
+	uninstall-libLTLIBRARIES uninstall-m4dataDATA \
+	uninstall-nodist_includeHEADERS
 
 .MAKE: all check install install-am install-strip
 
@@ -1103,16 +1105,16 @@ uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
 	install-binPROGRAMS install-binSCRIPTS install-data \
 	install-data-am install-data-local install-dvi install-dvi-am \
 	install-exec install-exec-am install-html install-html-am \
-	install-includeHEADERS install-info install-info-am \
-	install-libLTLIBRARIES install-m4dataDATA install-man \
+	install-info install-info-am install-libLTLIBRARIES \
+	install-m4dataDATA install-man install-nodist_includeHEADERS \
 	install-pdf install-pdf-am install-ps install-ps-am \
 	install-strip installcheck installcheck-am installdirs \
 	maintainer-clean maintainer-clean-generic mostlyclean \
 	mostlyclean-compile mostlyclean-generic mostlyclean-libtool \
 	pdf pdf-am ps ps-am tags uninstall uninstall-am \
 	uninstall-binPROGRAMS uninstall-binSCRIPTS \
-	uninstall-includeHEADERS uninstall-libLTLIBRARIES \
-	uninstall-m4dataDATA
+	uninstall-libLTLIBRARIES uninstall-m4dataDATA \
+	uninstall-nodist_includeHEADERS
 
 
 @HAVE_W32_SYSTEM_TRUE@.rc.lo:
@@ -1199,15 +1201,16 @@ errnos-sym.h: Makefile mkstrtable.awk errnos.in
 mkheader: mkheader.c Makefile
 	$(CC_FOR_BUILD) -g -O0 -I. -I$(srcdir) -o $@ $(srcdir)/mkheader.c
 
-@CROSS_COMPILING_FALSE@lock-obj-pub.native.h: Makefile gen-posix-lock-obj posix-lock-obj.h
+@CROSS_COMPILING_FALSE@./lock-obj-pub.native.h: Makefile gen-posix-lock-obj posix-lock-obj.h
 @CROSS_COMPILING_FALSE@	./gen-posix-lock-obj >$@
 
 # We also depend on versioninfo.rc because that is build by
 # config.status and thus has up-to-date version numbers.
-gpg-error.h: Makefile mkheader $(parts_of_gpg_error_h) versioninfo.rc
+gpg-error.h: Makefile mkheader $(parts_of_gpg_error_h) \
+             versioninfo.rc ../config.h
 	$(pre_mkheader_cmds)
 	./mkheader $(host_os) $(host_triplet)  $(srcdir)/gpg-error.h.in \
-                   $(PACKAGE_VERSION) $(VERSION_NUMBER) >$@
+                   ../config.h $(PACKAGE_VERSION) $(VERSION_NUMBER) >$@
 
 install-data-local:
 @HAVE_W32CE_SYSTEM_TRUE@	-$(MKDIR_P) "$(DESTDIR)$(includedir)/gpg-extra"
