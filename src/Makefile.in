@@ -944,6 +944,7 @@ uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
 @HAVE_W32_SYSTEM_TRUE@	$(LTRCCOMPILE) -i "$<" -o "$@"
 
 @HAVE_W32_SYSTEM_TRUE@install-def-file: gpg-error.def
+@HAVE_W32_SYSTEM_TRUE@	-$(INSTALL) -d $(DESTDIR)$(libdir)
 @HAVE_W32_SYSTEM_TRUE@	$(INSTALL) gpg-error.def $(DESTDIR)$(libdir)/gpg-error.def
 
 @HAVE_W32_SYSTEM_TRUE@uninstall-def-file:

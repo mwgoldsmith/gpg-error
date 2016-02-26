@@ -216,6 +216,12 @@ static const char msgstr[] =
   gettext_noop ("Unknown elliptic curve") "\0"
   gettext_noop ("Duplicated key") "\0"
   gettext_noop ("Ambiguous result") "\0"
+  gettext_noop ("No crypto context") "\0"
+  gettext_noop ("Wrong crypto context") "\0"
+  gettext_noop ("Bad crypto context") "\0"
+  gettext_noop ("Conflict in the crypto context") "\0"
+  gettext_noop ("Broken public key") "\0"
+  gettext_noop ("Broken secret key") "\0"
   gettext_noop ("Operation fully cancelled") "\0"
   gettext_noop ("Operation not yet finished") "\0"
   gettext_noop ("Buffer too short") "\0"
@@ -471,76 +477,82 @@ static const int msgidx[] =
     3270,
     3285,
     3302,
-    3328,
-    3355,
-    3372,
-    3413,
-    3445,
-    3483,
-    3510,
-    3540,
+    3320,
+    3341,
+    3360,
+    3391,
+    3409,
+    3427,
+    3453,
+    3480,
+    3497,
+    3538,
     3570,
-    3598,
+    3608,
     3635,
-    3659,
-    3707,
-    3749,
-    3789,
-    3825,
-    3843,
-    3866,
-    3890,
-    3911,
-    3939,
-    3969,
-    3997,
-    4017,
-    4041,
-    4068,
-    4086,
-    4104,
-    4132,
-    4147,
-    4163,
-    4191,
-    4214,
-    4234,
-    4251,
-    4279,
-    4303,
-    4328,
-    4348,
-    4368,
-    4394,
-    4420,
-    4446,
-    4472,
-    4498,
-    4524,
-    4550,
-    4576,
-    4602,
-    4629,
-    4656,
-    4683,
-    4710,
-    4737,
-    4764,
-    4791,
-    4814,
+    3665,
+    3695,
+    3723,
+    3760,
+    3784,
+    3832,
+    3874,
+    3914,
+    3950,
+    3968,
+    3991,
+    4015,
+    4036,
+    4064,
+    4094,
+    4122,
+    4142,
+    4166,
+    4193,
+    4211,
+    4229,
+    4257,
+    4272,
+    4288,
+    4316,
+    4339,
+    4359,
+    4376,
+    4404,
+    4428,
+    4453,
+    4473,
+    4493,
+    4519,
+    4545,
+    4571,
+    4597,
+    4623,
+    4649,
+    4675,
+    4701,
+    4727,
+    4754,
+    4781,
+    4808,
     4835,
-    4847
+    4862,
+    4889,
+    4916,
+    4939,
+    4960,
+    4972
   };
 
 static GPG_ERR_INLINE int
 msgidxof (int code)
 {
   return (0 ? 0
-  : ((code >= 0) && (code <= 190)) ? (code - 0)
-  : ((code >= 198) && (code <= 213)) ? (code - 7)
-  : ((code >= 257) && (code <= 271)) ? (code - 50)
-  : ((code >= 273) && (code <= 281)) ? (code - 51)
-  : ((code >= 1024) && (code <= 1039)) ? (code - 793)
-  : ((code >= 16381) && (code <= 16383)) ? (code - 16134)
-  : 16384 - 16134);
+  : ((code >= 0) && (code <= 196)) ? (code - 0)
+  : ((code >= 198) && (code <= 213)) ? (code - 1)
+  : ((code >= 257) && (code <= 271)) ? (code - 44)
+  : ((code >= 273) && (code <= 281)) ? (code - 45)
+  : ((code >= 1024) && (code <= 1039)) ? (code - 787)
+  : ((code >= 16381) && (code <= 16383)) ? (code - 16128)
+  : 16384 - 16128);
 }

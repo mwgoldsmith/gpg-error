@@ -411,6 +411,10 @@ sed_make_literal_regex='s,[].[^$\\*\/],\\&,g'
 # (escaped) backslashes.  A very naive implementation.
 lt_sed_naive_backslashify='s|\\\\*|\\|g;s|/|\\|g;s|\\|\\\\|g'
 
+# Sed substitution to remove simple comments and empty
+# lines from a Windows .def file.
+sed_uncomment_deffile='/^;/d; /^[ ]*$/d'
+
 # Re-`\' parameter expansions in output of double_quote_subst that were
 # `\'-ed in input to the same.  If an odd number of `\' preceded a '$'
 # in input to double_quote_subst, that '$' was protected from expansion.
@@ -6762,6 +6766,11 @@ func_mode_link ()
 	    elif test -n "$soname_spec"; then
 	      # bleh windows
 	      case $host in
+              x86_64-*mingw32*)
+                func_arith $current - $age
+		major=$func_arith_result
+		versuffix="6-$major"
+		;;
 	      *cygwin* | mingw* | *cegcc*)
 	        func_arith $current - $age
 		major=$func_arith_result
@@ -7495,6 +7504,14 @@ func_mode_link ()
 	  func_arith $current - $age
 	  major=$func_arith_result
 	  versuffix="-$major"
+          case $host in
+          x86_64-*mingw32*)
+             versuffix="6-$major"
+             ;;
+          *)
+             versuffix="-$major"
+             ;;
+          esac
 	  ;;
 
 	*)
@@ -8143,7 +8160,7 @@ EOF
 	cygwin* | mingw* | cegcc*)
 	  if test -n "$export_symbols" && test -z "$export_symbols_regex"; then
 	    # exporting using user supplied symfile
-	    if test "x`$SED 1q $export_symbols`" != xEXPORTS; then
+	    if test "x`$SED "$sed_uncomment_deffile" $export_symbols | $SED 1q`" != xEXPORTS; then
 	      # and it's NOT already a .def file. Must figure out
 	      # which of the given symbols are data symbols and tag
 	      # them as such. So, trigger use of export_symbols_cmds.

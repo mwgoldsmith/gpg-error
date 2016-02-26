@@ -1,3 +1,35 @@
+2013-06-24  Werner Koch  <wk@gnupg.org>
+
+	Release 1.12.
+	* configure.ac: Set LT version to C10/A10/R0.
+
+	Update German translation.
+
+2013-06-17  Werner Koch  <wk@gnupg.org>
+
+	Add hack to have different names for 64 bit Windows DLLs.
+	* ltmain.sh: Prefix the SO number for W64 with a "6".
+
+	Support building for w64.
+
+2013-05-23  Werner Koch  <wk@gnupg.org>
+
+	w32: Fix installing of .def file.
+	* src/Makefile.am (install-def-file): Create libdir first.
+
+	Fix libtool 2.4.2 to correctly detect .def files.
+	* ltmain.sh (sed_uncomment_deffile): New.
+	(orig_export_symbols): Uncomment def file before testing for EXPORTS.
+	* m4/libtool.m4: Do the same for the generated code.
+
+2013-04-11  Werner Koch  <wk@gnupg.org>
+
+	Add GPG_ERR_*CRYPT_CTX* and GPG_ERR_BROKEN_*KEY.
+	* src/err-codes.h.in (GPG_ERR_NO_CRYPT_CTX): New.
+	(GPG_ERR_WRONG_CRYPT_CTX, GPG_ERR_BAD_CRYPT_CTX): New.
+	(GPG_ERR_CRYPT_CTX_CONFLICT): New.
+	(GPG_ERR_BROKEN_PUBKEY, GPG_ERR_BROKEN_SECKEY): New.
+
 2013-02-25  Werner Koch  <wk@gnupg.org>
 
 	Release 1.11.
