@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: libgpg-error 1.20\n"
+"Project-Id-Version: libgpg-error 1.21\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
-"POT-Creation-Date: 2015-08-26 08:58+0200\n"
+"POT-Creation-Date: 2015-12-12 13:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -966,634 +966,654 @@ msgid "Bad octal character in S-expression"
 msgstr ""
 
 #: src/err-codes.h:242
-msgid "Legacy key"
+msgid "Server indicated a failure"
 msgstr ""
 
 #: src/err-codes.h:243
-msgid "Request too short"
+msgid "No name"
 msgstr ""
 
 #: src/err-codes.h:244
-msgid "Request too long"
+msgid "No key"
 msgstr ""
 
 #: src/err-codes.h:245
-msgid "Object is in termination state"
+msgid "Legacy key"
 msgstr ""
 
 #: src/err-codes.h:246
-msgid "No certificate chain"
+msgid "Request too short"
 msgstr ""
 
 #: src/err-codes.h:247
-msgid "Certificate is too large"
+msgid "Request too long"
 msgstr ""
 
 #: src/err-codes.h:248
-msgid "Invalid record"
+msgid "Object is in termination state"
 msgstr ""
 
 #: src/err-codes.h:249
-msgid "The MAC does not verify"
+msgid "No certificate chain"
 msgstr ""
 
 #: src/err-codes.h:250
-msgid "Unexpected message"
+msgid "Certificate is too large"
 msgstr ""
 
 #: src/err-codes.h:251
-msgid "Compression or decompression failed"
+msgid "Invalid record"
 msgstr ""
 
 #: src/err-codes.h:252
-msgid "A counter would wrap"
+msgid "The MAC does not verify"
 msgstr ""
 
 #: src/err-codes.h:253
-msgid "Fatal alert message received"
+msgid "Unexpected message"
 msgstr ""
 
 #: src/err-codes.h:254
-msgid "No cipher algorithm"
+msgid "Compression or decompression failed"
 msgstr ""
 
 #: src/err-codes.h:255
-msgid "Missing client certificate"
+msgid "A counter would wrap"
 msgstr ""
 
 #: src/err-codes.h:256
-msgid "Close notification received"
+msgid "Fatal alert message received"
 msgstr ""
 
 #: src/err-codes.h:257
-msgid "Ticket expired"
+msgid "No cipher algorithm"
 msgstr ""
 
 #: src/err-codes.h:258
-msgid "Bad ticket"
+msgid "Missing client certificate"
 msgstr ""
 
 #: src/err-codes.h:259
-msgid "Unknown identity"
+msgid "Close notification received"
 msgstr ""
 
 #: src/err-codes.h:260
-msgid "Bad certificate message in handshake"
+msgid "Ticket expired"
 msgstr ""
 
 #: src/err-codes.h:261
-msgid "Bad certificate request message in handshake"
+msgid "Bad ticket"
 msgstr ""
 
 #: src/err-codes.h:262
-msgid "Bad certificate verify message in handshake"
+msgid "Unknown identity"
 msgstr ""
 
 #: src/err-codes.h:263
-msgid "Bad change cipher messsage in handshake"
+msgid "Bad certificate message in handshake"
 msgstr ""
 
 #: src/err-codes.h:264
-msgid "Bad client hello message in handshake"
+msgid "Bad certificate request message in handshake"
 msgstr ""
 
 #: src/err-codes.h:265
-msgid "Bad server hello message in handshake"
+msgid "Bad certificate verify message in handshake"
 msgstr ""
 
 #: src/err-codes.h:266
-msgid "Bad server hello done message in hanshake"
+msgid "Bad change cipher messsage in handshake"
 msgstr ""
 
 #: src/err-codes.h:267
-msgid "Bad finished message in handshake"
+msgid "Bad client hello message in handshake"
 msgstr ""
 
 #: src/err-codes.h:268
-msgid "Bad server key exchange message in handshake"
+msgid "Bad server hello message in handshake"
 msgstr ""
 
 #: src/err-codes.h:269
-msgid "Bad client key exchange message in handshake"
+msgid "Bad server hello done message in hanshake"
 msgstr ""
 
 #: src/err-codes.h:270
-msgid "Bogus string"
+msgid "Bad finished message in handshake"
 msgstr ""
 
 #: src/err-codes.h:271
-msgid "Forbidden"
+msgid "Bad server key exchange message in handshake"
 msgstr ""
 
 #: src/err-codes.h:272
-msgid "Key disabled"
+msgid "Bad client key exchange message in handshake"
 msgstr ""
 
 #: src/err-codes.h:273
-msgid "Not possible with a card based key"
+msgid "Bogus string"
 msgstr ""
 
 #: src/err-codes.h:274
-msgid "Invalid lock object"
+msgid "Forbidden"
 msgstr ""
 
 #: src/err-codes.h:275
-msgid "General IPC error"
+msgid "Key disabled"
 msgstr ""
 
 #: src/err-codes.h:276
-msgid "IPC accept call failed"
+msgid "Not possible with a card based key"
 msgstr ""
 
 #: src/err-codes.h:277
-msgid "IPC connect call failed"
+msgid "Invalid lock object"
 msgstr ""
 
 #: src/err-codes.h:278
-msgid "Invalid IPC response"
+msgid "True"
 msgstr ""
 
 #: src/err-codes.h:279
-msgid "Invalid value passed to IPC"
+msgid "False"
 msgstr ""
 
 #: src/err-codes.h:280
-msgid "Incomplete line passed to IPC"
+msgid "General IPC error"
 msgstr ""
 
 #: src/err-codes.h:281
-msgid "Line passed to IPC too long"
+msgid "IPC accept call failed"
 msgstr ""
 
 #: src/err-codes.h:282
-msgid "Nested IPC commands"
+msgid "IPC connect call failed"
 msgstr ""
 
 #: src/err-codes.h:283
-msgid "No data callback in IPC"
+msgid "Invalid IPC response"
 msgstr ""
 
 #: src/err-codes.h:284
-msgid "No inquire callback in IPC"
+msgid "Invalid value passed to IPC"
 msgstr ""
 
 #: src/err-codes.h:285
-msgid "Not an IPC server"
+msgid "Incomplete line passed to IPC"
 msgstr ""
 
 #: src/err-codes.h:286
-msgid "Not an IPC client"
+msgid "Line passed to IPC too long"
 msgstr ""
 
 #: src/err-codes.h:287
-msgid "Problem starting IPC server"
+msgid "Nested IPC commands"
 msgstr ""
 
 #: src/err-codes.h:288
-msgid "IPC read error"
+msgid "No data callback in IPC"
 msgstr ""
 
 #: src/err-codes.h:289
-msgid "IPC write error"
+msgid "No inquire callback in IPC"
 msgstr ""
 
 #: src/err-codes.h:290
-msgid "Too much data for IPC layer"
+msgid "Not an IPC server"
 msgstr ""
 
 #: src/err-codes.h:291
-msgid "Unexpected IPC command"
+msgid "Not an IPC client"
 msgstr ""
 
 #: src/err-codes.h:292
-msgid "Unknown IPC command"
+msgid "Problem starting IPC server"
 msgstr ""
 
 #: src/err-codes.h:293
-msgid "IPC syntax error"
+msgid "IPC read error"
 msgstr ""
 
 #: src/err-codes.h:294
-msgid "IPC call has been cancelled"
+msgid "IPC write error"
 msgstr ""
 
 #: src/err-codes.h:295
-msgid "No input source for IPC"
+msgid "Too much data for IPC layer"
 msgstr ""
 
 #: src/err-codes.h:296
-msgid "No output source for IPC"
+msgid "Unexpected IPC command"
 msgstr ""
 
 #: src/err-codes.h:297
-msgid "IPC parameter error"
+msgid "Unknown IPC command"
 msgstr ""
 
 #: src/err-codes.h:298
-msgid "Unknown IPC inquire"
+msgid "IPC syntax error"
 msgstr ""
 
 #: src/err-codes.h:299
-msgid "General LDAP error"
+msgid "IPC call has been cancelled"
 msgstr ""
 
 #: src/err-codes.h:300
-msgid "General LDAP attribute error"
+msgid "No input source for IPC"
 msgstr ""
 
 #: src/err-codes.h:301
-msgid "General LDAP name error"
+msgid "No output source for IPC"
 msgstr ""
 
 #: src/err-codes.h:302
-msgid "General LDAP security error"
+msgid "IPC parameter error"
 msgstr ""
 
 #: src/err-codes.h:303
-msgid "General LDAP service error"
+msgid "Unknown IPC inquire"
 msgstr ""
 
 #: src/err-codes.h:304
-msgid "General LDAP update error"
+msgid "General LDAP error"
 msgstr ""
 
 #: src/err-codes.h:305
-msgid "Experimental LDAP error code"
+msgid "General LDAP attribute error"
 msgstr ""
 
 #: src/err-codes.h:306
-msgid "Private LDAP error code"
+msgid "General LDAP name error"
 msgstr ""
 
 #: src/err-codes.h:307
-msgid "Other general LDAP error"
+msgid "General LDAP security error"
 msgstr ""
 
 #: src/err-codes.h:308
-msgid "LDAP connecting failed (X)"
+msgid "General LDAP service error"
 msgstr ""
 
 #: src/err-codes.h:309
-msgid "LDAP referral limit exceeded"
+msgid "General LDAP update error"
 msgstr ""
 
 #: src/err-codes.h:310
-msgid "LDAP client loop"
+msgid "Experimental LDAP error code"
 msgstr ""
 
 #: src/err-codes.h:311
-msgid "No LDAP results returned"
+msgid "Private LDAP error code"
 msgstr ""
 
 #: src/err-codes.h:312
-msgid "LDAP control not found"
+msgid "Other general LDAP error"
 msgstr ""
 
 #: src/err-codes.h:313
-msgid "Not supported by LDAP"
+msgid "LDAP connecting failed (X)"
 msgstr ""
 
 #: src/err-codes.h:314
-msgid "LDAP connect error"
+msgid "LDAP referral limit exceeded"
 msgstr ""
 
 #: src/err-codes.h:315
-msgid "Out of memory in LDAP"
+msgid "LDAP client loop"
 msgstr ""
 
 #: src/err-codes.h:316
-msgid "Bad parameter to an LDAP routine"
+msgid "No LDAP results returned"
 msgstr ""
 
 #: src/err-codes.h:317
-msgid "User cancelled LDAP operation"
+msgid "LDAP control not found"
 msgstr ""
 
 #: src/err-codes.h:318
-msgid "Bad LDAP search filter"
+msgid "Not supported by LDAP"
 msgstr ""
 
 #: src/err-codes.h:319
-msgid "Unknown LDAP authentication method"
+msgid "LDAP connect error"
 msgstr ""
 
 #: src/err-codes.h:320
-msgid "Timeout in LDAP"
+msgid "Out of memory in LDAP"
 msgstr ""
 
 #: src/err-codes.h:321
-msgid "LDAP decoding error"
+msgid "Bad parameter to an LDAP routine"
 msgstr ""
 
 #: src/err-codes.h:322
-msgid "LDAP encoding error"
+msgid "User cancelled LDAP operation"
 msgstr ""
 
 #: src/err-codes.h:323
-msgid "LDAP local error"
+msgid "Bad LDAP search filter"
 msgstr ""
 
 #: src/err-codes.h:324
-msgid "Cannot contact LDAP server"
+msgid "Unknown LDAP authentication method"
 msgstr ""
 
 #: src/err-codes.h:325
-msgid "LDAP success"
+msgid "Timeout in LDAP"
 msgstr ""
 
 #: src/err-codes.h:326
-msgid "LDAP operations error"
+msgid "LDAP decoding error"
 msgstr ""
 
 #: src/err-codes.h:327
-msgid "LDAP protocol error"
+msgid "LDAP encoding error"
 msgstr ""
 
 #: src/err-codes.h:328
-msgid "Time limit exceeded in LDAP"
+msgid "LDAP local error"
 msgstr ""
 
 #: src/err-codes.h:329
-msgid "Size limit exceeded in LDAP"
+msgid "Cannot contact LDAP server"
 msgstr ""
 
 #: src/err-codes.h:330
-msgid "LDAP compare false"
+msgid "LDAP success"
 msgstr ""
 
 #: src/err-codes.h:331
-msgid "LDAP compare true"
+msgid "LDAP operations error"
 msgstr ""
 
 #: src/err-codes.h:332
-msgid "LDAP authentication method not supported"
+msgid "LDAP protocol error"
 msgstr ""
 
 #: src/err-codes.h:333
-msgid "Strong(er) LDAP authentication required"
+msgid "Time limit exceeded in LDAP"
 msgstr ""
 
 #: src/err-codes.h:334
-msgid "Partial LDAP results+referral received"
+msgid "Size limit exceeded in LDAP"
 msgstr ""
 
 #: src/err-codes.h:335
-msgid "LDAP referral"
+msgid "LDAP compare false"
 msgstr ""
 
 #: src/err-codes.h:336
-msgid "Administrative LDAP limit exceeded"
+msgid "LDAP compare true"
 msgstr ""
 
 #: src/err-codes.h:337
-msgid "Critical LDAP extension is unavailable"
+msgid "LDAP authentication method not supported"
 msgstr ""
 
 #: src/err-codes.h:338
-msgid "Confidentiality required by LDAP"
+msgid "Strong(er) LDAP authentication required"
 msgstr ""
 
 #: src/err-codes.h:339
-msgid "LDAP SASL bind in progress"
+msgid "Partial LDAP results+referral received"
 msgstr ""
 
 #: src/err-codes.h:340
-msgid "No such LDAP attribute"
+msgid "LDAP referral"
 msgstr ""
 
 #: src/err-codes.h:341
-msgid "Undefined LDAP attribute type"
+msgid "Administrative LDAP limit exceeded"
 msgstr ""
 
 #: src/err-codes.h:342
-msgid "Inappropriate matching in LDAP"
+msgid "Critical LDAP extension is unavailable"
 msgstr ""
 
 #: src/err-codes.h:343
-msgid "Constraint violation in LDAP"
+msgid "Confidentiality required by LDAP"
 msgstr ""
 
 #: src/err-codes.h:344
-msgid "LDAP type or value exists"
+msgid "LDAP SASL bind in progress"
 msgstr ""
 
 #: src/err-codes.h:345
-msgid "Invalid syntax in LDAP"
+msgid "No such LDAP attribute"
 msgstr ""
 
 #: src/err-codes.h:346
-msgid "No such LDAP object"
+msgid "Undefined LDAP attribute type"
 msgstr ""
 
 #: src/err-codes.h:347
-msgid "LDAP alias problem"
+msgid "Inappropriate matching in LDAP"
 msgstr ""
 
 #: src/err-codes.h:348
-msgid "Invalid DN syntax in LDAP"
+msgid "Constraint violation in LDAP"
 msgstr ""
 
 #: src/err-codes.h:349
-msgid "LDAP entry is a leaf"
+msgid "LDAP type or value exists"
 msgstr ""
 
 #: src/err-codes.h:350
-msgid "LDAP alias dereferencing problem"
+msgid "Invalid syntax in LDAP"
 msgstr ""
 
 #: src/err-codes.h:351
-msgid "LDAP proxy authorization failure (X)"
+msgid "No such LDAP object"
 msgstr ""
 
 #: src/err-codes.h:352
-msgid "Inappropriate LDAP authentication"
+msgid "LDAP alias problem"
 msgstr ""
 
 #: src/err-codes.h:353
-msgid "Invalid LDAP credentials"
+msgid "Invalid DN syntax in LDAP"
 msgstr ""
 
 #: src/err-codes.h:354
-msgid "Insufficient access for LDAP"
+msgid "LDAP entry is a leaf"
 msgstr ""
 
 #: src/err-codes.h:355
-msgid "LDAP server is busy"
+msgid "LDAP alias dereferencing problem"
 msgstr ""
 
 #: src/err-codes.h:356
-msgid "LDAP server is unavailable"
+msgid "LDAP proxy authorization failure (X)"
 msgstr ""
 
 #: src/err-codes.h:357
-msgid "LDAP server is unwilling to perform"
+msgid "Inappropriate LDAP authentication"
 msgstr ""
 
 #: src/err-codes.h:358
-msgid "Loop detected by LDAP"
+msgid "Invalid LDAP credentials"
 msgstr ""
 
 #: src/err-codes.h:359
-msgid "LDAP naming violation"
+msgid "Insufficient access for LDAP"
 msgstr ""
 
 #: src/err-codes.h:360
-msgid "LDAP object class violation"
+msgid "LDAP server is busy"
 msgstr ""
 
 #: src/err-codes.h:361
-msgid "LDAP operation not allowed on non-leaf"
+msgid "LDAP server is unavailable"
 msgstr ""
 
 #: src/err-codes.h:362
-msgid "LDAP operation not allowed on RDN"
+msgid "LDAP server is unwilling to perform"
 msgstr ""
 
 #: src/err-codes.h:363
-msgid "Already exists (LDAP)"
+msgid "Loop detected by LDAP"
 msgstr ""
 
 #: src/err-codes.h:364
-msgid "Cannot modify LDAP object class"
+msgid "LDAP naming violation"
 msgstr ""
 
 #: src/err-codes.h:365
-msgid "LDAP results too large"
+msgid "LDAP object class violation"
 msgstr ""
 
 #: src/err-codes.h:366
-msgid "LDAP operation affects multiple DSAs"
+msgid "LDAP operation not allowed on non-leaf"
 msgstr ""
 
 #: src/err-codes.h:367
-msgid "Virtual LDAP list view error"
+msgid "LDAP operation not allowed on RDN"
 msgstr ""
 
 #: src/err-codes.h:368
-msgid "Other LDAP error"
+msgid "Already exists (LDAP)"
 msgstr ""
 
 #: src/err-codes.h:369
-msgid "Resources exhausted in LCUP"
+msgid "Cannot modify LDAP object class"
 msgstr ""
 
 #: src/err-codes.h:370
-msgid "Security violation in LCUP"
+msgid "LDAP results too large"
 msgstr ""
 
 #: src/err-codes.h:371
-msgid "Invalid data in LCUP"
+msgid "LDAP operation affects multiple DSAs"
 msgstr ""
 
 #: src/err-codes.h:372
-msgid "Unsupported scheme in LCUP"
+msgid "Virtual LDAP list view error"
 msgstr ""
 
 #: src/err-codes.h:373
-msgid "Reload required in LCUP"
+msgid "Other LDAP error"
 msgstr ""
 
 #: src/err-codes.h:374
-msgid "LDAP cancelled"
+msgid "Resources exhausted in LCUP"
 msgstr ""
 
 #: src/err-codes.h:375
-msgid "No LDAP operation to cancel"
+msgid "Security violation in LCUP"
 msgstr ""
 
 #: src/err-codes.h:376
-msgid "Too late to cancel LDAP"
+msgid "Invalid data in LCUP"
 msgstr ""
 
 #: src/err-codes.h:377
-msgid "Cannot cancel LDAP"
+msgid "Unsupported scheme in LCUP"
 msgstr ""
 
 #: src/err-codes.h:378
-msgid "LDAP assertion failed"
+msgid "Reload required in LCUP"
 msgstr ""
 
 #: src/err-codes.h:379
-msgid "Proxied authorization denied by LDAP"
+msgid "LDAP cancelled"
 msgstr ""
 
 #: src/err-codes.h:380
-msgid "User defined error code 1"
+msgid "No LDAP operation to cancel"
 msgstr ""
 
 #: src/err-codes.h:381
-msgid "User defined error code 2"
+msgid "Too late to cancel LDAP"
 msgstr ""
 
 #: src/err-codes.h:382
-msgid "User defined error code 3"
+msgid "Cannot cancel LDAP"
 msgstr ""
 
 #: src/err-codes.h:383
-msgid "User defined error code 4"
+msgid "LDAP assertion failed"
 msgstr ""
 
 #: src/err-codes.h:384
-msgid "User defined error code 5"
+msgid "Proxied authorization denied by LDAP"
 msgstr ""
 
 #: src/err-codes.h:385
-msgid "User defined error code 6"
+msgid "User defined error code 1"
 msgstr ""
 
 #: src/err-codes.h:386
-msgid "User defined error code 7"
+msgid "User defined error code 2"
 msgstr ""
 
 #: src/err-codes.h:387
-msgid "User defined error code 8"
+msgid "User defined error code 3"
 msgstr ""
 
 #: src/err-codes.h:388
-msgid "User defined error code 9"
+msgid "User defined error code 4"
 msgstr ""
 
 #: src/err-codes.h:389
-msgid "User defined error code 10"
+msgid "User defined error code 5"
 msgstr ""
 
 #: src/err-codes.h:390
-msgid "User defined error code 11"
+msgid "User defined error code 6"
 msgstr ""
 
 #: src/err-codes.h:391
-msgid "User defined error code 12"
+msgid "User defined error code 7"
 msgstr ""
 
 #: src/err-codes.h:392
-msgid "User defined error code 13"
+msgid "User defined error code 8"
 msgstr ""
 
 #: src/err-codes.h:393
-msgid "User defined error code 14"
+msgid "User defined error code 9"
 msgstr ""
 
 #: src/err-codes.h:394
-msgid "User defined error code 15"
+msgid "User defined error code 10"
 msgstr ""
 
 #: src/err-codes.h:395
-msgid "User defined error code 16"
+msgid "User defined error code 11"
 msgstr ""
 
 #: src/err-codes.h:396
-msgid "System error w/o errno"
+msgid "User defined error code 12"
 msgstr ""
 
 #: src/err-codes.h:397
-msgid "Unknown system error"
+msgid "User defined error code 13"
 msgstr ""
 
 #: src/err-codes.h:398
-msgid "End of file"
+msgid "User defined error code 14"
 msgstr ""
 
 #: src/err-codes.h:399
+msgid "User defined error code 15"
+msgstr ""
+
+#: src/err-codes.h:400
+msgid "User defined error code 16"
+msgstr ""
+
+#: src/err-codes.h:401
+msgid "System error w/o errno"
+msgstr ""
+
+#: src/err-codes.h:402
+msgid "Unknown system error"
+msgstr ""
+
+#: src/err-codes.h:403
+msgid "End of file"
+msgstr ""
+
+#: src/err-codes.h:404
 msgid "Unknown error code"
 msgstr ""
 

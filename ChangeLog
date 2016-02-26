@@ -1,3 +1,93 @@
+2015-12-12  Werner Koch  <wk@gnupg.org>
+
+	Release 1.21.
+	* configure.ac: Set LT version to C17/A17/Ro.
+
+2015-12-07  Andre Heinecke  <aheinecke@intevation.de>
+
+	Fix windows 8bit encoding conversion.
+	* src/w32-gettext.c (wchar_to_native): Convert to ConsoleOutputCP.
+
+2015-12-03  Justus Winter  <justus@g10code.com>
+
+	tests: Fix read past buffer.
+	* tests/t-poll.c (test_poll): Fix read past buffer.
+
+2015-11-19  Justus Winter  <justus@g10code.com>
+
+	Avoid 'malloc' corner case.
+	* src/init.c (_gpgrt_realloc): Avoid calling 'malloc(0)'.
+
+2015-10-21  Werner Koch  <wk@gnupg.org>
+
+	Add error codes NO_NAME, NO_KEY, and SERVER_FAILURE.
+
+2015-10-18  Werner Koch  <wk@gnupg.org>
+
+	estream: Avoid calling write(fd,NULL,n).
+	* src/estream.c (es_func_fd_write): Take care of a flush requests.
+	(es_func_w32_write): Ditto.
+	(es_func_fp_write): Ditto.
+
+2015-09-28  Werner Koch  <wk@gnupg.org>
+
+	estream: Keep track of EPIPE.
+	* src/estream.c (_gpgrt_stream_internal): Add indicators.hup.
+	(init_stream_obj): Init it.
+	(es_fill, es_flush, es_seek): Set that.
+	(_gpgrt_poll): Set event.
+
+	Add GPG_ERR_FALSE and GPG_ERR_TRUE error codes.
+
+2015-09-25  Werner Koch  <wk@gnupg.org>
+
+	estream: Add gpgrt_set_nonblock and gpgrt_poll.
+	* configure.ac (AC_CHECK_HEADERS): Add sys/select.h and sys/time.h.
+	* src/estream.c: Include both header if available.
+	(COOKIE_IOCTL_NONBLOCK): New.
+	(struct estream_cookie_fd): Add field nonblock.
+	(func_fd_create): Set nonblock from MODEFLAGS.
+	(es_func_fd_ioctl): New.
+	(parse_mode): Add modeflag "nonblock".
+	(es_fill): Map EWOULDBLOCK to EAGAIN.  Do not set error indicator for
+	EAGAIN.
+	(es_flush, es_seek, es_write_nbf): Map EWOULDBLOCK to EAGAIN.
+	(do_fdopen): Call COOKIE_IOCTL_NONBLOCK.
+	(_gpgrt_set_nonblock): New.
+	(_gpgrt_get_nonblock): New.
+	(_gpgrt_poll): New.
+
+	* src/gpg-error.h.in (struct _gpgrt_poll_s): New.
+	(gpgrt_poll_t, es_poll_t): New.
+	(es_set_nonblock, es_get_nonblock, es_poll): New.
+
+	* src/gpg-error.vers, src/gpg-error.def.in: Add gpgrt_set_nonblock,
+	gpgrt_get_nonblock, and gpgrt_poll.
+	* src/visibility.c (gpgrt_set_nonblock, gpgrt_get_nonblock): New.
+	(gpgrt_poll): New.
+
+	* tests/t-common.h (DIM): New.
+	* tests/t-poll.c: New.
+	* tests/Makefile.am (TESTS): Add t-poll.
+	(t_poll_LDADD): New.
+
+2015-09-24  Werner Koch  <wk@gnupg.org>
+
+	estream: Replace indicator help functions to ease code reading.
+	* src/estream.c (es_set_indicators, es_get_indicator): Remove and
+	change callers to set/get indicators directly.
+
+2015-09-17  Daniel Kahn Gillmor  <dkg@fifthhorseman.net>
+
+	Support i[456]86-pc{,-linux,-kfreebsd}-gnu.h.
+	* src/mkheader (canon_host_triplet): Add new entries.
+	* src/syscfg/lock-obj-pub.i486-pc-gnu.h: Rename to ...
+	* src/syscfg/lock-obj-pub.i686-pc-gnu.h: this.
+	* src/syscfg/lock-obj-pub.i486-pc-kfreebsd-gnu.h: Rename to ...
+	* src/syscfg/lock-obj-pub.i686-pc-kfreebsd-gnu.h: this.
+	* src/syscfg/lock-obj-pub.i486-pc-linux-gnu.h: Remove.
+	* src/Makefile.am (lock_obj_pub): Update.
+
 2015-08-26  Werner Koch  <wk@gnupg.org>
 
 	Release 1.20.

@@ -99,7 +99,7 @@ POST_UNINSTALL = :
 build_triplet = @build@
 host_triplet = @host@
 TESTS = t-version$(EXEEXT) t-strerror$(EXEEXT) t-syserror$(EXEEXT) \
-	t-lock$(EXEEXT) t-printf$(EXEEXT)
+	t-lock$(EXEEXT) t-printf$(EXEEXT) t-poll$(EXEEXT)
 noinst_PROGRAMS = $(am__EXEEXT_1)
 subdir = tests
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
@@ -122,7 +122,8 @@ CONFIG_HEADER = $(top_builddir)/config.h
 CONFIG_CLEAN_FILES =
 CONFIG_CLEAN_VPATH_FILES =
 am__EXEEXT_1 = t-version$(EXEEXT) t-strerror$(EXEEXT) \
-	t-syserror$(EXEEXT) t-lock$(EXEEXT) t-printf$(EXEEXT)
+	t-syserror$(EXEEXT) t-lock$(EXEEXT) t-printf$(EXEEXT) \
+	t-poll$(EXEEXT)
 PROGRAMS = $(noinst_PROGRAMS)
 t_lock_SOURCES = t-lock.c
 t_lock_OBJECTS = t-lock.$(OBJEXT)
@@ -132,6 +133,9 @@ AM_V_lt = $(am__v_lt_@AM_V@)
 am__v_lt_ = $(am__v_lt_@AM_DEFAULT_V@)
 am__v_lt_0 = --silent
 am__v_lt_1 = 
+t_poll_SOURCES = t-poll.c
+t_poll_OBJECTS = t-poll.$(OBJEXT)
+t_poll_DEPENDENCIES = $(gpg_error_lib) $(am__DEPENDENCIES_1)
 t_printf_SOURCES = t-printf.c
 t_printf_OBJECTS = t-printf.$(OBJEXT)
 t_printf_LDADD = $(LDADD)
@@ -182,8 +186,9 @@ AM_V_CCLD = $(am__v_CCLD_@AM_V@)
 am__v_CCLD_ = $(am__v_CCLD_@AM_DEFAULT_V@)
 am__v_CCLD_0 = @echo "  CCLD    " $@;
 am__v_CCLD_1 = 
-SOURCES = t-lock.c t-printf.c t-strerror.c t-syserror.c t-version.c
-DIST_SOURCES = t-lock.c t-printf.c t-strerror.c t-syserror.c \
+SOURCES = t-lock.c t-poll.c t-printf.c t-strerror.c t-syserror.c \
+	t-version.c
+DIST_SOURCES = t-lock.c t-poll.c t-printf.c t-strerror.c t-syserror.c \
 	t-version.c
 am__can_run_installinfo = \
   case $$AM_UPDATE_INFO_DIR in \
@@ -394,6 +399,7 @@ AM_LDFLAGS = -no-install
 LDADD = $(gpg_error_lib)
 noinst_HEADERS = t-common.h
 t_lock_LDADD = $(gpg_error_lib) $(LIBMULTITHREAD)
+t_poll_LDADD = $(gpg_error_lib) $(LIBMULTITHREAD)
 all: all-am
 
 .SUFFIXES:
@@ -442,6 +448,10 @@ t-lock$(EXEEXT): $(t_lock_OBJECTS) $(t_lock_DEPENDENCIES) $(EXTRA_t_lock_DEPENDE
 	@rm -f t-lock$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(t_lock_OBJECTS) $(t_lock_LDADD) $(LIBS)
 
+t-poll$(EXEEXT): $(t_poll_OBJECTS) $(t_poll_DEPENDENCIES) $(EXTRA_t_poll_DEPENDENCIES) 
+	@rm -f t-poll$(EXEEXT)
+	$(AM_V_CCLD)$(LINK) $(t_poll_OBJECTS) $(t_poll_LDADD) $(LIBS)
+
 t-printf$(EXEEXT): $(t_printf_OBJECTS) $(t_printf_DEPENDENCIES) $(EXTRA_t_printf_DEPENDENCIES) 
 	@rm -f t-printf$(EXEEXT)
 	$(AM_V_CCLD)$(LINK) $(t_printf_OBJECTS) $(t_printf_LDADD) $(LIBS)
@@ -465,6 +475,7 @@ distclean-compile:
 	-rm -f *.tab.c
 
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/t-lock.Po@am__quote@
+@AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/t-poll.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/t-printf.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/t-strerror.Po@am__quote@
 @AMDEP_TRUE@@am__include@ @am__quote@./$(DEPDIR)/t-syserror.Po@am__quote@
