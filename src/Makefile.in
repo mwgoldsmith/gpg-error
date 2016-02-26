@@ -84,7 +84,7 @@ bin_PROGRAMS = gpg-error$(EXEEXT)
 @HAVE_W32_SYSTEM_FALSE@	$(am__DEPENDENCIES_1) \
 @HAVE_W32_SYSTEM_FALSE@	$(am__DEPENDENCIES_2) \
 @HAVE_W32_SYSTEM_FALSE@	$(am__DEPENDENCIES_2)
-@CROSS_COMPILING_FALSE@am__append_1 = ./lock-obj-pub.native.h
+@FORCE_USE_SYSCFG_FALSE@am__append_1 = ./lock-obj-pub.native.h
 subdir = src
 DIST_COMMON = README $(srcdir)/Makefile.am $(srcdir)/Makefile.in \
 	$(srcdir)/gpg-error-config.in $(srcdir)/versioninfo.rc.in
@@ -392,9 +392,11 @@ lock_obj_pub = \
         syscfg/lock-obj-pub.mipsel-unknown-linux-gnu.h      \
         syscfg/lock-obj-pub.powerpc-unknown-linux-gnu.h     \
         syscfg/lock-obj-pub.powerpc64-unknown-linux-gnu.h   \
+	syscfg/lock-obj-pub.powerpc64le-unknown-linux-gnu.h \
         syscfg/lock-obj-pub.s390x-ibm-linux-gnu.h           \
         syscfg/lock-obj-pub.sh4-unknown-linux-gnu.h         \
         syscfg/lock-obj-pub.sparc-unknown-linux-gnu.h       \
+        syscfg/lock-obj-pub.sparc64-unknown-linux-gnu.h     \
         syscfg/lock-obj-pub.x86_64-pc-kfreebsd-gnu.h        \
         syscfg/lock-obj-pub.x86_64-pc-linux-gnu.h           \
         syscfg/lock-obj-pub.x86_64-pc-linux-gnux32.h        \
@@ -483,11 +485,11 @@ gpg_error_LDADD = ./libgpg-error.la @LTLIBINTL@
 parts_of_gpg_error_h = gpg-error.h.in err-sources.h.in err-codes.h.in \
 	errnos.in w32-add.h w32ce-add.h $(lock_obj_pub) \
 	$(am__append_1)
-@CROSS_COMPILING_FALSE@pre_mkheader_cmds = :
+@FORCE_USE_SYSCFG_FALSE@pre_mkheader_cmds = :
 
-# If we are cross-compiling we better make sure that no stale native
-# lock include file will be found by mkheader.
-@CROSS_COMPILING_TRUE@pre_mkheader_cmds = -rm lock-obj-pub.native.h 2>/dev/null
+# If we are cross-compiling or building on Windows we better make sure
+# that no stale native lock include file will be found by mkheader.
+@FORCE_USE_SYSCFG_TRUE@pre_mkheader_cmds = -rm lock-obj-pub.native.h 2>/dev/null
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -1203,8 +1205,8 @@ errnos-sym.h: Makefile mkstrtable.awk errnos.in
 mkheader: mkheader.c Makefile
 	$(CC_FOR_BUILD) -g -O0 -I. -I$(srcdir) -o $@ $(srcdir)/mkheader.c
 
-@CROSS_COMPILING_FALSE@./lock-obj-pub.native.h: Makefile gen-posix-lock-obj posix-lock-obj.h
-@CROSS_COMPILING_FALSE@	./gen-posix-lock-obj >$@
+@FORCE_USE_SYSCFG_FALSE@./lock-obj-pub.native.h: Makefile gen-posix-lock-obj posix-lock-obj.h
+@FORCE_USE_SYSCFG_FALSE@	./gen-posix-lock-obj >$@
 
 # We also depend on versioninfo.rc because that is build by
 # config.status and thus has up-to-date version numbers.

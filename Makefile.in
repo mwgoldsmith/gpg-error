@@ -75,7 +75,8 @@ DIST_COMMON = README $(am__configure_deps) $(srcdir)/Makefile.am \
 	ChangeLog INSTALL NEWS THANKS build-aux/compile \
 	build-aux/config.guess build-aux/config.rpath \
 	build-aux/config.sub build-aux/depcomp build-aux/install-sh \
-	build-aux/ltmain.sh build-aux/missing mkinstalldirs
+	build-aux/ltmain.sh build-aux/mdate-sh build-aux/missing \
+	build-aux/texinfo.tex mkinstalldirs
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/autobuild.m4 \
 	$(top_srcdir)/m4/estream.m4 $(top_srcdir)/m4/gettext.m4 \
@@ -122,7 +123,7 @@ AM_RECURSIVE_TARGETS = $(RECURSIVE_TARGETS:-recursive=) \
 	distdir dist dist-all distcheck
 ETAGS = etags
 CTAGS = ctags
-DIST_SUBDIRS = m4 src tests po lang
+DIST_SUBDIRS = m4 src doc tests po lang
 DISTFILES = $(DIST_COMMON) $(DIST_SOURCES) $(TEXINFOS) $(EXTRA_DIST)
 distdir = $(PACKAGE)-$(VERSION)
 top_distdir = $(distdir)
@@ -327,7 +328,7 @@ EXTRA_DIST = autogen.sh autogen.rc libgpg-error.spec.in 		\
 
 @LANGUAGES_SOME_FALSE@lang_subdirs = 
 @LANGUAGES_SOME_TRUE@lang_subdirs = lang
-SUBDIRS = m4 src tests po $(lang_subdirs)
+SUBDIRS = m4 src doc tests po $(lang_subdirs)
 gen_start_date = 2011-12-01T00:00:00
 all: config.h
 	$(MAKE) $(AM_MAKEFLAGS) all-recursive

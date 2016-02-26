@@ -1,3 +1,83 @@
+2014-10-15  Werner Koch  <wk@gnupg.org>
+
+	Release 1.17.
+	* configure.ac: Set LT version to C13/A13/R0.
+
+	doc: Add a man page for gpg-error-config.
+	* doc/gpgrt.texi: New.  Just a start for now.
+	* doc/gpl.texi, doc/lgpl.texi: New.  Take from Libgcrypt.
+	* doc/yat2m.c: New.  Take from GnuPG master.
+	* doc/Makefile.am: New.
+	* configure.ac (AC_CONFIG_FILES): Add doc/Makefile.
+	* Makefile.am (SUBDIRS): Add doc/.
+	* build-aux/mdate-sh, build-aux/texinfo.tex: New.
+
+	Fix to help building native on Windows.
+	* configure.ac (FORCE_USE_SYSCFG): New am_conditional.
+	* src/Makefile.am: Use new conditional to decide whether to build the
+	native lock object header.
+
+2014-10-03  Werner Koch  <wk@gnupg.org>
+
+	Change gpgrt_pending{,_unlocked} to macros.
+	* src/gpg-error.h.in (gpgrt_pending): Change to a macro.
+	(gpgrt_pending_unlocked): Change to a macro.
+	(_gpgrt_pending, _gpgrt_pending_unlocked): New private functions.
+	* src/visibility.c, src/visibility.h: Change accordingly.
+	* src/gpg-error.vers, src/gpg-error.def.in: Ditto.
+	* src/estream.c (_gpgrt_pending_unlocked): Rename to
+	_gpgrt__pending_unlocked.
+	(_gpgrt_pending): Rename to _gpgrt__pending.
+
+2014-10-02  Werner Koch  <wk@gnupg.org>
+
+	w32: Make it build again.
+	* src/estream.c (es_func_w32_read): Fix var name.
+
+	build: Support SYSROOT based config script finding.
+	* src/gpg-error.m4: Add support for SYSROOT and set
+	gpg_config_script_warn.  Use AC_PATH_PROG instead of AC_PATH_TOOL
+	because the config script is not expected to be installed with a
+	prefix for its name.
+
+	Add GPG_ERR_BOGUS_STRING and an experimental gpgrt_pending.
+	* src/visibility.c (gpgrt_pending, gpgrt_pending_unlocked): New.
+	* src/estream.c (_gpgrt_pending, _gpgrt_pending_unlocked): New.
+	(check_pending): new.
+	(check_pending_fbf, check_pending_nbf): New.
+	(es_func_mem_read, es_func_fd_read, es_func_w32_read)
+	(es_func_fp_read, es_fill): Take care of the special 0 value for SIZE.
+
+2014-09-29  Daniel Kahn Gillmor  <dkg@fifthhorseman.net>
+
+	GNU calls little-endian powerpc64 powerpc64le, not powerpc64el.
+	* src/Makefile.am (lock_obj_pub): fix powerpc64el to powerpc64le
+	* src/sysconfig/lock-obj-pub.powerpc64el-unknown-linux-gnu.h : move to
+	  src/sysconfig/lock-obj-pub.powerpc64le-unknown-linux-gnu.h
+
+2014-09-29  Werner Koch  <wk@gnupg.org>
+
+	Add error codes for use by a TLS library.
+
+2014-09-24  Daniel Kahn Gillmor  <dkg@fifthhorseman.net>
+
+	Allow ./configure to explicitly set libgpg-error's build timestamp.
+	* configure.ac: add --enable-build-timestamp
+
+2014-09-24  Werner Koch  <wk@gnupg.org>
+
+	Add new error source GPG_ERR_SOURCE_TLS.
+
+2014-09-23  Daniel Kahn Gillmor  <dkg@fifthhorseman.net>
+
+	Add new lock-obj-pub for sparc64-unknown-linux-gnu.
+	* src/syscfg/lock-obj-pub.sparc64-unknown-linux-gnu.h: New.
+	* src/Makefile.am (lock_obj_pub): Add.
+
+	Add new lock-obj-pub for powerpc64el-unknown-linux-gnu.
+	* src/syscfg/lock-obj-pub.powerpc64el-unknown-linux-gnu.h: New.
+	* src/Makefile.am (lock_obj_pub): Add.
+
 2014-09-18  Werner Koch  <wk@gnupg.org>
 
 	Release 1.16.
