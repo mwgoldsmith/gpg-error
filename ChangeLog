@@ -1,3 +1,69 @@
+2015-04-10  Werner Koch  <wk@gnupg.org>
+
+	Release 1.19.
+
+	po: Update German translation.
+
+	w32: Remove compiler warnings.
+	* src/Makefile.am (pre_mkheader_cmds): Avoid make diagnostic about
+	failed but ignored command.  This confuses Emacs' compiler job parser.
+	* tests/t-lock.c [W32]: Include time.h.
+	* src/init.c: Reorganize Windows only code.
+	(wchar_to_utf8, utf8_to_wchar): Remove unused functions.
+	(_gpg_err_set_errno): Use only one copy for all platforms.
+
+2015-03-24  Werner Koch  <wk@gnupg.org>
+
+	Use assert to print diagnosicts before calling abort.
+	* src/posix-lock.c: Add assert calls.
+
+2015-03-24  Daniel Kahn Gillmor  <dkg@fifthhorseman.net>
+
+	Avoid breakage with gcc 5.
+	* src/Makefile.am: Add -P to the C preprocessor when building
+	mkerrcodes.h, to avoid a noisy intermediate pipeline.
+
+2015-03-19  Werner Koch  <wk@gnupg.org>
+
+	Add option --defines to gpg-error.
+	* src/gpg-error.c (main): Add option --help and --defines.
+
+	Add GPG_ERR_LDAP_* error codes.
+	* src/err-codes.h.in: Add error codes.
+	* doc/ldap2gpgerr.c: New.
+
+2015-03-16  Werner Koch  <wk@gnupg.org>
+
+	Remove useless conditions.
+	* src/estream.c (fname_set_internal): Remove useless condition.
+	* src/mkheader.c (main): Ditto.
+
+2015-03-06  Werner Koch  <wk@gnupg.org>
+
+	Add host-triplet aliasing feature to mkheader.
+	* src/Makefile.am (lock_obj_pub): Rename i586-pc-linux-gnu to
+	i686-pc-linux-gnu.  Remove i486-pc-linux-gnu.
+	* src/mkheader.c (canon_host_triplet): New.
+	(main): Use it.
+
+	w32: Add a manifest to libgpg-error.
+	* src/gpg-error.w32-manifest.in: New.
+	* src/Makefile.am (EXTRA_DIST): Add it.
+	(versioninfo.lo): Depend on it.
+	* src/versioninfo.rc.in: Add it.
+	* configure.ac (AC_CONFIG_FILES): Add it.
+	(BUILD_VERSION): New.
+
+2015-02-18  Neal H. Walfield  <neal@gnu.org>
+
+	Correct URL.
+
+2015-01-30  Werner Koch  <wk@gnupg.org>
+
+	w32: Use -static-libgcc to avoid linking to libgcc_s_sjlj-1.dll.
+	* src/Makefile.am (extra_ltoptions): New.
+	(libgpg_error_la_LDFLAGS): Use it.
+
 2015-01-26  Werner Koch  <wk@gnupg.org>
 
 	Release 1.18.

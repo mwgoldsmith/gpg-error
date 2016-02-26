@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: libgpg-error 1.1\n"
 "Report-Msgid-Bugs-To: translations@gnupg.org\n"
-"POT-Creation-Date: 2015-01-26 10:35+0100\n"
+"POT-Creation-Date: 2015-04-10 19:02+0200\n"
 "PO-Revision-Date: 2013-02-23 20:10+0100\n"
 "Last-Translator: Laurentiu Buzdugan <lbuz@rolix.org>\n"
 "Language-Team: Romanian <translation-team-ro@lists.sourceforge.net>\n"
@@ -1273,82 +1273,500 @@ msgid "Unknown IPC inquire"
 msgstr "Sursã necunoscutã"
 
 #: src/err-codes.h:299
-msgid "User defined error code 1"
-msgstr "Cod de eroare definit de utilizator 1"
+#, fuzzy
+msgid "General LDAP error"
+msgstr "Eroare generalã"
 
 #: src/err-codes.h:300
-msgid "User defined error code 2"
-msgstr "Cod de eroare definit de utilizator 2"
+#, fuzzy
+#| msgid "General error"
+msgid "General LDAP attribute error"
+msgstr "Eroare generalã"
 
 #: src/err-codes.h:301
-msgid "User defined error code 3"
-msgstr "Cod de eroare definit de utilizator 3"
+#, fuzzy
+#| msgid "General error"
+msgid "General LDAP name error"
+msgstr "Eroare generalã"
 
 #: src/err-codes.h:302
-msgid "User defined error code 4"
-msgstr "Cod de eroare definit de utilizator 4"
+#, fuzzy
+msgid "General LDAP security error"
+msgstr "Eroare generalã"
 
 #: src/err-codes.h:303
-msgid "User defined error code 5"
-msgstr "Cod de eroare definit de utilizator 5"
+#, fuzzy
+#| msgid "General error"
+msgid "General LDAP service error"
+msgstr "Eroare generalã"
 
 #: src/err-codes.h:304
-msgid "User defined error code 6"
-msgstr "Cod de eroare definit de utilizator 6"
+#, fuzzy
+msgid "General LDAP update error"
+msgstr "Eroare generalã"
 
 #: src/err-codes.h:305
-msgid "User defined error code 7"
-msgstr "Cod de eroare definit de utilizator 7"
+msgid "Experimental LDAP error code"
+msgstr ""
 
 #: src/err-codes.h:306
-msgid "User defined error code 8"
-msgstr "Cod de eroare definit de utilizator 8"
+#, fuzzy
+msgid "Private LDAP error code"
+msgstr "Eroare card"
 
 #: src/err-codes.h:307
-msgid "User defined error code 9"
-msgstr "Cod de eroare definit de utilizator 9"
+#, fuzzy
+msgid "Other general LDAP error"
+msgstr "Eroare generalã"
 
 #: src/err-codes.h:308
-msgid "User defined error code 10"
-msgstr "Cod de eroare definit de utilizator 10"
+#, fuzzy
+#| msgid "Decryption failed"
+msgid "LDAP connecting failed (X)"
+msgstr "Decriptarea a eºuat"
 
 #: src/err-codes.h:309
-msgid "User defined error code 11"
-msgstr "Cod de eroare definit de utilizator 11"
+#, fuzzy
+#| msgid "General error"
+msgid "LDAP referral limit exceeded"
+msgstr "Eroare generalã"
 
 #: src/err-codes.h:310
-msgid "User defined error code 12"
-msgstr "Cod de eroare definit de utilizator 12"
+msgid "LDAP client loop"
+msgstr ""
 
 #: src/err-codes.h:311
-msgid "User defined error code 13"
-msgstr "Cod de eroare definit de utilizator 13"
+#, fuzzy
+#| msgid "Card reset required"
+msgid "No LDAP results returned"
+msgstr "Este necesarã resetarea cardului"
 
 #: src/err-codes.h:312
-msgid "User defined error code 14"
-msgstr "Cod de eroare definit de utilizator 14"
+#, fuzzy
+#| msgid "Element not found"
+msgid "LDAP control not found"
+msgstr "Elementul nu a fost gãsit"
 
 #: src/err-codes.h:313
-msgid "User defined error code 15"
-msgstr "Cod de eroare definit de utilizator 15"
+#, fuzzy
+#| msgid "Not supported"
+msgid "Not supported by LDAP"
+msgstr "Nu este suportat(ã)"
 
 #: src/err-codes.h:314
-msgid "User defined error code 16"
-msgstr "Cod de eroare definit de utilizator 16"
+#, fuzzy
+#| msgid "Unexpected error"
+msgid "LDAP connect error"
+msgstr "Eroare neaºteptatã"
 
 #: src/err-codes.h:315
-msgid "System error w/o errno"
+msgid "Out of memory in LDAP"
 msgstr ""
 
 #: src/err-codes.h:316
+msgid "Bad parameter to an LDAP routine"
+msgstr ""
+
+#: src/err-codes.h:317
+#, fuzzy
+#| msgid "Unsupported operation"
+msgid "User cancelled LDAP operation"
+msgstr "Operaþie nesuportatã"
+
+#: src/err-codes.h:318
+#, fuzzy
+#| msgid "Bad certificate"
+msgid "Bad LDAP search filter"
+msgstr "Certificat incorect"
+
+#: src/err-codes.h:319
+#, fuzzy
+msgid "Unknown LDAP authentication method"
+msgstr "Expresie-S necunoscutã"
+
+#: src/err-codes.h:320
+#, fuzzy
+#| msgid "Timeout"
+msgid "Timeout in LDAP"
+msgstr "Pauzã"
+
+#: src/err-codes.h:321
+#, fuzzy
+#| msgid "dirmngr error"
+msgid "LDAP decoding error"
+msgstr "eroare dirmngr"
+
+#: src/err-codes.h:322
+#, fuzzy
+#| msgid "dirmngr error"
+msgid "LDAP encoding error"
+msgstr "eroare dirmngr"
+
+#: src/err-codes.h:323
+#, fuzzy
+msgid "LDAP local error"
+msgstr "Eroare card"
+
+#: src/err-codes.h:324
+msgid "Cannot contact LDAP server"
+msgstr ""
+
+#: src/err-codes.h:325
+#, fuzzy
+#| msgid "Success"
+msgid "LDAP success"
+msgstr "Succes"
+
+#: src/err-codes.h:326
+#, fuzzy
+#| msgid "Configuration error"
+msgid "LDAP operations error"
+msgstr "Eroare de configurare"
+
+#: src/err-codes.h:327
+#, fuzzy
+#| msgid "Protocol violation"
+msgid "LDAP protocol error"
+msgstr "Violare de protocol"
+
+#: src/err-codes.h:328
+msgid "Time limit exceeded in LDAP"
+msgstr ""
+
+#: src/err-codes.h:329
+msgid "Size limit exceeded in LDAP"
+msgstr ""
+
+#: src/err-codes.h:330
+msgid "LDAP compare false"
+msgstr ""
+
+#: src/err-codes.h:331
+msgid "LDAP compare true"
+msgstr ""
+
+#: src/err-codes.h:332
+#, fuzzy
+msgid "LDAP authentication method not supported"
+msgstr "Expresie-S necunoscutã"
+
+#: src/err-codes.h:333
+msgid "Strong(er) LDAP authentication required"
+msgstr ""
+
+#: src/err-codes.h:334
+msgid "Partial LDAP results+referral received"
+msgstr ""
+
+#: src/err-codes.h:335
+#, fuzzy
+#| msgid "General error"
+msgid "LDAP referral"
+msgstr "Eroare generalã"
+
+#: src/err-codes.h:336
+msgid "Administrative LDAP limit exceeded"
+msgstr ""
+
+#: src/err-codes.h:337
+msgid "Critical LDAP extension is unavailable"
+msgstr ""
+
+#: src/err-codes.h:338
+#, fuzzy
+#| msgid "Card reset required"
+msgid "Confidentiality required by LDAP"
+msgstr "Este necesarã resetarea cardului"
+
+#: src/err-codes.h:339
+msgid "LDAP SASL bind in progress"
+msgstr ""
+
+#: src/err-codes.h:340
+msgid "No such LDAP attribute"
+msgstr ""
+
+#: src/err-codes.h:341
+#, fuzzy
+#| msgid "Invalid attribute"
+msgid "Undefined LDAP attribute type"
+msgstr "Argument invalid"
+
+#: src/err-codes.h:342
+#, fuzzy
+#| msgid "Unsupported protection"
+msgid "Inappropriate matching in LDAP"
+msgstr "Protecþie nesuportatã"
+
+#: src/err-codes.h:343
+#, fuzzy
+#| msgid "Protocol violation"
+msgid "Constraint violation in LDAP"
+msgstr "Violare de protocol"
+
+#: src/err-codes.h:344
+msgid "LDAP type or value exists"
+msgstr ""
+
+#: src/err-codes.h:345
+#, fuzzy
+#| msgid "Invalid state"
+msgid "Invalid syntax in LDAP"
+msgstr "Stare invalidã"
+
+#: src/err-codes.h:346
+#, fuzzy
+#| msgid "No CMS object"
+msgid "No such LDAP object"
+msgstr "Nici un obiect CMS"
+
+#: src/err-codes.h:347
+#, fuzzy
+#| msgid "Hardware problem"
+msgid "LDAP alias problem"
+msgstr "Problemã hardware"
+
+#: src/err-codes.h:348
+#, fuzzy
+#| msgid "Invalid state"
+msgid "Invalid DN syntax in LDAP"
+msgstr "Stare invalidã"
+
+#: src/err-codes.h:349
+msgid "LDAP entry is a leaf"
+msgstr ""
+
+#: src/err-codes.h:350
+#, fuzzy
+#| msgid "Encoding problem"
+msgid "LDAP alias dereferencing problem"
+msgstr "Problemã de encodare"
+
+#: src/err-codes.h:351
+msgid "LDAP proxy authorization failure (X)"
+msgstr ""
+
+#: src/err-codes.h:352
+#, fuzzy
+#| msgid "Unsupported protection"
+msgid "Inappropriate LDAP authentication"
+msgstr "Protecþie nesuportatã"
+
+#: src/err-codes.h:353
+#, fuzzy
+#| msgid "Invalid card"
+msgid "Invalid LDAP credentials"
+msgstr "Card invalid"
+
+#: src/err-codes.h:354
+msgid "Insufficient access for LDAP"
+msgstr ""
+
+#: src/err-codes.h:355
+msgid "LDAP server is busy"
+msgstr ""
+
+#: src/err-codes.h:356
+msgid "LDAP server is unavailable"
+msgstr ""
+
+#: src/err-codes.h:357
+msgid "LDAP server is unwilling to perform"
+msgstr ""
+
+#: src/err-codes.h:358
+msgid "Loop detected by LDAP"
+msgstr ""
+
+#: src/err-codes.h:359
+#, fuzzy
+#| msgid "Missing action"
+msgid "LDAP naming violation"
+msgstr "Acþiune lipsã"
+
+#: src/err-codes.h:360
+#, fuzzy
+#| msgid "Protocol violation"
+msgid "LDAP object class violation"
+msgstr "Violare de protocol"
+
+#: src/err-codes.h:361
+#, fuzzy
+msgid "LDAP operation not allowed on non-leaf"
+msgstr "Operaþiune anulatã"
+
+#: src/err-codes.h:362
+#, fuzzy
+#| msgid "Operation cancelled"
+msgid "LDAP operation not allowed on RDN"
+msgstr "Operaþiune anulatã"
+
+#: src/err-codes.h:363
+msgid "Already exists (LDAP)"
+msgstr ""
+
+#: src/err-codes.h:364
+msgid "Cannot modify LDAP object class"
+msgstr ""
+
+#: src/err-codes.h:365
+#, fuzzy
+#| msgid "Line too long"
+msgid "LDAP results too large"
+msgstr "Linie prea lungã"
+
+#: src/err-codes.h:366
+#, fuzzy
+#| msgid "Operation cancelled"
+msgid "LDAP operation affects multiple DSAs"
+msgstr "Operaþiune anulatã"
+
+#: src/err-codes.h:367
+msgid "Virtual LDAP list view error"
+msgstr ""
+
+#: src/err-codes.h:368
+#, fuzzy
+msgid "Other LDAP error"
+msgstr "Eroare generalã"
+
+#: src/err-codes.h:369
+#, fuzzy
+#| msgid "Resources exhausted"
+msgid "Resources exhausted in LCUP"
+msgstr "Resurse epuizate"
+
+#: src/err-codes.h:370
+#, fuzzy
+#| msgid "Protocol violation"
+msgid "Security violation in LCUP"
+msgstr "Violare de protocol"
+
+#: src/err-codes.h:371
+#, fuzzy
+#| msgid "Invalid state"
+msgid "Invalid data in LCUP"
+msgstr "Stare invalidã"
+
+#: src/err-codes.h:372
+#, fuzzy
+#| msgid "Unsupported certificate"
+msgid "Unsupported scheme in LCUP"
+msgstr "Certificat nesuportat"
+
+#: src/err-codes.h:373
+#, fuzzy
+#| msgid "Card reset required"
+msgid "Reload required in LCUP"
+msgstr "Este necesarã resetarea cardului"
+
+#: src/err-codes.h:374
+#, fuzzy
+#| msgid "Success"
+msgid "LDAP cancelled"
+msgstr "Succes"
+
+#: src/err-codes.h:375
+#, fuzzy
+msgid "No LDAP operation to cancel"
+msgstr "Operaþie nesuportatã"
+
+#: src/err-codes.h:376
+#, fuzzy
+msgid "Too late to cancel LDAP"
+msgstr "Operaþie nesuportatã"
+
+#: src/err-codes.h:377
+msgid "Cannot cancel LDAP"
+msgstr ""
+
+#: src/err-codes.h:378
+#, fuzzy
+#| msgid "Decryption failed"
+msgid "LDAP assertion failed"
+msgstr "Decriptarea a eºuat"
+
+#: src/err-codes.h:379
+msgid "Proxied authorization denied by LDAP"
+msgstr ""
+
+#: src/err-codes.h:380
+msgid "User defined error code 1"
+msgstr "Cod de eroare definit de utilizator 1"
+
+#: src/err-codes.h:381
+msgid "User defined error code 2"
+msgstr "Cod de eroare definit de utilizator 2"
+
+#: src/err-codes.h:382
+msgid "User defined error code 3"
+msgstr "Cod de eroare definit de utilizator 3"
+
+#: src/err-codes.h:383
+msgid "User defined error code 4"
+msgstr "Cod de eroare definit de utilizator 4"
+
+#: src/err-codes.h:384
+msgid "User defined error code 5"
+msgstr "Cod de eroare definit de utilizator 5"
+
+#: src/err-codes.h:385
+msgid "User defined error code 6"
+msgstr "Cod de eroare definit de utilizator 6"
+
+#: src/err-codes.h:386
+msgid "User defined error code 7"
+msgstr "Cod de eroare definit de utilizator 7"
+
+#: src/err-codes.h:387
+msgid "User defined error code 8"
+msgstr "Cod de eroare definit de utilizator 8"
+
+#: src/err-codes.h:388
+msgid "User defined error code 9"
+msgstr "Cod de eroare definit de utilizator 9"
+
+#: src/err-codes.h:389
+msgid "User defined error code 10"
+msgstr "Cod de eroare definit de utilizator 10"
+
+#: src/err-codes.h:390
+msgid "User defined error code 11"
+msgstr "Cod de eroare definit de utilizator 11"
+
+#: src/err-codes.h:391
+msgid "User defined error code 12"
+msgstr "Cod de eroare definit de utilizator 12"
+
+#: src/err-codes.h:392
+msgid "User defined error code 13"
+msgstr "Cod de eroare definit de utilizator 13"
+
+#: src/err-codes.h:393
+msgid "User defined error code 14"
+msgstr "Cod de eroare definit de utilizator 14"
+
+#: src/err-codes.h:394
+msgid "User defined error code 15"
+msgstr "Cod de eroare definit de utilizator 15"
+
+#: src/err-codes.h:395
+msgid "User defined error code 16"
+msgstr "Cod de eroare definit de utilizator 16"
+
+#: src/err-codes.h:396
+msgid "System error w/o errno"
+msgstr ""
+
+#: src/err-codes.h:397
 msgid "Unknown system error"
 msgstr "Eroare de sistem necunoscutã"
 
-#: src/err-codes.h:317
+#: src/err-codes.h:398
 msgid "End of file"
 msgstr "Sfârºit de fiºier"
 
-#: src/err-codes.h:318
+#: src/err-codes.h:399
 msgid "Unknown error code"
 msgstr "Cod de eroare necunoscut"
 
@@ -1357,7 +1775,32 @@ msgstr "Cod de eroare necunoscut"
 msgid "Usage: %s GPG-ERROR [...]\n"
 msgstr "Folosire: %s EROARE-GPG [...]\n"
 
-#: src/gpg-error.c:444
+#: src/gpg-error.c:501
 #, c-format
 msgid "%s: warning: could not recognize %s\n"
 msgstr "%s: avertisment: nu am putut recunoaºte %s\n"
+
+#, fuzzy
+#~| msgid "Resources exhausted"
+#~ msgid "LCUP Resources exhausted"
+#~ msgstr "Resurse epuizate"
+
+#, fuzzy
+#~| msgid "Invalid data"
+#~ msgid "LCUP Invalid data"
+#~ msgstr "Date invalide"
+
+#, fuzzy
+#~| msgid "Decryption failed"
+#~ msgid "Assertion failed in lDAP"
+#~ msgstr "Decriptarea a eºuat"
+
+#, fuzzy
+#~| msgid "General error"
+#~ msgid "LDAP Other general error"
+#~ msgstr "Eroare generalã"
+
+#, fuzzy
+#~| msgid "dirmngr error"
+#~ msgid "Encoding error"
+#~ msgstr "eroare dirmngr"

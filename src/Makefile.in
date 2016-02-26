@@ -114,8 +114,10 @@ bin_PROGRAMS = gpg-error$(EXEEXT)
 @FORCE_USE_SYSCFG_FALSE@am__append_1 = ./lock-obj-pub.native.h
 subdir = src
 DIST_COMMON = $(srcdir)/Makefile.in $(srcdir)/Makefile.am \
-	$(srcdir)/versioninfo.rc.in $(srcdir)/gpg-error-config.in \
-	$(top_srcdir)/build-aux/depcomp README
+	$(srcdir)/versioninfo.rc.in \
+	$(srcdir)/gpg-error.w32-manifest.in \
+	$(srcdir)/gpg-error-config.in $(top_srcdir)/build-aux/depcomp \
+	README
 ACLOCAL_M4 = $(top_srcdir)/aclocal.m4
 am__aclocal_m4_deps = $(top_srcdir)/m4/autobuild.m4 \
 	$(top_srcdir)/m4/estream.m4 $(top_srcdir)/m4/gettext.m4 \
@@ -131,7 +133,8 @@ am__configure_deps = $(am__aclocal_m4_deps) $(CONFIGURE_DEPENDENCIES) \
 	$(ACLOCAL_M4)
 mkinstalldirs = $(install_sh) -d
 CONFIG_HEADER = $(top_builddir)/config.h
-CONFIG_CLEAN_FILES = versioninfo.rc gpg-error-config
+CONFIG_CLEAN_FILES = versioninfo.rc gpg-error.w32-manifest \
+	gpg-error-config
 CONFIG_CLEAN_VPATH_FILES =
 am__vpath_adj_setup = srcdirstrip=`echo "$(srcdir)" | sed 's|.|.|g'`;
 am__vpath_adj = case $$p in \
@@ -283,6 +286,7 @@ AWK = @AWK@
 BUILD_FILEVERSION = @BUILD_FILEVERSION@
 BUILD_REVISION = @BUILD_REVISION@
 BUILD_TIMESTAMP = @BUILD_TIMESTAMP@
+BUILD_VERSION = @BUILD_VERSION@
 CC = @CC@
 CCDEPMODE = @CCDEPMODE@
 CC_FOR_BUILD = @CC_FOR_BUILD@
@@ -440,8 +444,7 @@ lock_obj_pub = \
         syscfg/lock-obj-pub.hppa-unknown-linux-gnu.h        \
         syscfg/lock-obj-pub.i486-pc-gnu.h                   \
         syscfg/lock-obj-pub.i486-pc-kfreebsd-gnu.h          \
-        syscfg/lock-obj-pub.i486-pc-linux-gnu.h             \
-        syscfg/lock-obj-pub.i586-pc-linux-gnu.h             \
+        syscfg/lock-obj-pub.i686-pc-linux-gnu.h             \
         syscfg/lock-obj-pub.m68k-unknown-linux-gnu.h        \
         syscfg/lock-obj-pub.mips-unknown-linux-gnu.h        \
         syscfg/lock-obj-pub.mips64el-unknown-linux-gnuabi64.h \
@@ -469,7 +472,8 @@ EXTRA_DIST = mkstrtable.awk err-sources.h.in err-codes.h.in \
 	mkerrcodes.awk mkerrcodes1.awk mkerrcodes2.awk mkerrcodes.c \
 	mkheader.c gpg-error.h.in mkw32errmap.c w32-add.h w32ce-add.h \
 	err-sources.h err-codes.h gpg-error-config.in gpg-error.m4 \
-	gpg-error.vers gpg-error.def.in versioninfo.rc.in \
+	gpg-error.vers gpg-error.def.in \
+        versioninfo.rc.in gpg-error.w32-manifest.in \
 	$(lock_obj_pub)
 
 BUILT_SOURCES = err-sources.h err-codes.h code-to-errno.h code-from-errno.h \
@@ -506,6 +510,12 @@ CLEANFILES = err-sources.h err-codes.h code-to-errno.h code-from-errno.h \
 @HAVE_W32_SYSTEM_TRUE@no_undefined = -no-undefined
 @HAVE_W32_SYSTEM_FALSE@export_symbols = 
 @HAVE_W32_SYSTEM_TRUE@export_symbols = -export-symbols gpg-error.def
+@HAVE_W32_SYSTEM_FALSE@extra_ltoptions = 
+# i686-w64-mingw32.gcc version 4.9.1 takes the long long helper
+# functions from libgcc_s_sjlj-1.dll and not from a static libgcc.  As
+# a plain C program we do not use exception handler and thus there is
+# no need to use this DLL.  Thus we force gcc to link that statically.
+@HAVE_W32_SYSTEM_TRUE@extra_ltoptions = -XCClinker -static-libgcc
 @HAVE_W32_SYSTEM_TRUE@libgpg_error_la_DEPENDENCIES = $(gpg_error_res) gpg-error.def
 @HAVE_W32_SYSTEM_FALSE@intllibs = @LTLIBINTL@
 @HAVE_W32_SYSTEM_TRUE@intllibs = 
@@ -517,7 +527,7 @@ CLEANFILES = err-sources.h err-codes.h code-to-errno.h code-from-errno.h \
 @HAVE_LD_VERSION_SCRIPT_TRUE@libgpg_error_vers_opt = -Wl,--version-script=$(srcdir)/gpg-error.vers
 libgpg_error_la_LDFLAGS = \
   $(no_undefined) $(export_symbols) $(libgpg_error_vers_opt) \
-  -version-info \
+  $(extra_ltoptions) -version-info \
   @LIBGPG_ERROR_LT_CURRENT@:@LIBGPG_ERROR_LT_REVISION@:@LIBGPG_ERROR_LT_AGE@
 
 libgpg_error_la_SOURCES = gettext.h $(arch_sources) \
@@ -546,7 +556,9 @@ parts_of_gpg_error_h = gpg-error.h.in err-sources.h.in err-codes.h.in \
 
 # If we are cross-compiling or building on Windows we better make sure
 # that no stale native lock include file will be found by mkheader.
-@FORCE_USE_SYSCFG_TRUE@pre_mkheader_cmds = -rm lock-obj-pub.native.h 2>/dev/null
+@FORCE_USE_SYSCFG_TRUE@pre_mkheader_cmds = if test -f lock-obj-pub.native.h; \
+@FORCE_USE_SYSCFG_TRUE@                    then rm lock-obj-pub.native.h; fi
+
 all: $(BUILT_SOURCES)
 	$(MAKE) $(AM_MAKEFLAGS) all-am
 
@@ -583,6 +595,8 @@ $(ACLOCAL_M4): @MAINTAINER_MODE_TRUE@ $(am__aclocal_m4_deps)
 	cd $(top_builddir) && $(MAKE) $(AM_MAKEFLAGS) am--refresh
 $(am__aclocal_m4_deps):
 versioninfo.rc: $(top_builddir)/config.status $(srcdir)/versioninfo.rc.in
+	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
+gpg-error.w32-manifest: $(top_builddir)/config.status $(srcdir)/gpg-error.w32-manifest.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
 gpg-error-config: $(top_builddir)/config.status $(srcdir)/gpg-error-config.in
 	cd $(top_builddir) && $(SHELL) ./config.status $(subdir)/$@
@@ -1191,12 +1205,15 @@ uninstall-am: uninstall-binPROGRAMS uninstall-binSCRIPTS \
 @HAVE_W32_SYSTEM_TRUE@.rc.lo:
 @HAVE_W32_SYSTEM_TRUE@	$(LTRCCOMPILE) -i "$<" -o "$@"
 
+@HAVE_W32_SYSTEM_TRUE@versioninfo.lo : gpg-error.w32-manifest
+
 @HAVE_W32_SYSTEM_TRUE@install-def-file: gpg-error.def
 @HAVE_W32_SYSTEM_TRUE@	-$(INSTALL) -d $(DESTDIR)$(libdir)
 @HAVE_W32_SYSTEM_TRUE@	$(INSTALL) gpg-error.def $(DESTDIR)$(libdir)/gpg-error.def
 
 @HAVE_W32_SYSTEM_TRUE@uninstall-def-file:
 @HAVE_W32_SYSTEM_TRUE@	-rm $(DESTDIR)$(libdir)/gpg-error.def
+
 @HAVE_W32_SYSTEM_FALSE@install-def-file:
 @HAVE_W32_SYSTEM_FALSE@uninstall-def-file:
 
@@ -1227,7 +1244,7 @@ code-to-errno.h: Makefile mkerrnos.awk errnos.in
 # It is correct to use $(CPP).  We want the host's idea of the error codes.
 mkerrcodes.h: Makefile mkerrcodes.awk $(gpg_extra_headers)
 	$(AWK) -f $(srcdir)/mkerrcodes1.awk $(srcdir)/errnos.in >_$@
-	$(CPP) $(CPPFLAGS) $(extra_cppflags) _$@ | grep GPG_ERR_ | \
+	$(CPP) $(CPPFLAGS) $(extra_cppflags) -P _$@ | grep GPG_ERR_ | \
                $(AWK) -f $(srcdir)/mkerrcodes.awk >$@
 	-rm _$@
 
