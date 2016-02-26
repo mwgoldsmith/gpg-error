@@ -9,12 +9,12 @@
    modify it under the terms of the GNU Lesser General Public License
    as published by the Free Software Foundation; either version 2.1 of
    the License, or (at your option) any later version.
- 
+
    libgpg-error is distributed in the hope that it will be useful, but
    WITHOUT ANY WARRANTY; without even the implied warranty of
    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
    Lesser General Public License for more details.
- 
+
    You should have received a copy of the GNU Lesser General Public
    License along with libgpg-error; if not, write to the Free
    Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
@@ -103,7 +103,7 @@ static const char msgstr[] =
   gettext_noop ("Incomplete line") "\0"
   gettext_noop ("Invalid response") "\0"
   gettext_noop ("No agent running") "\0"
-  gettext_noop ("agent error") "\0"
+  gettext_noop ("Agent error") "\0"
   gettext_noop ("Invalid data") "\0"
   gettext_noop ("Unspecific Assuan server fault") "\0"
   gettext_noop ("General Assuan error") "\0"
@@ -211,6 +211,11 @@ static const char msgstr[] =
   gettext_noop ("Limit reached") "\0"
   gettext_noop ("Not initialized") "\0"
   gettext_noop ("Missing issuer certificate") "\0"
+  gettext_noop ("No keyserver available") "\0"
+  gettext_noop ("Invalid elliptic curve") "\0"
+  gettext_noop ("Unknown elliptic curve") "\0"
+  gettext_noop ("Duplicated key") "\0"
+  gettext_noop ("Ambiguous result") "\0"
   gettext_noop ("Operation fully cancelled") "\0"
   gettext_noop ("Operation not yet finished") "\0"
   gettext_noop ("Buffer too short") "\0"
@@ -461,76 +466,81 @@ static const int msgidx[] =
     3158,
     3174,
     3201,
-    3227,
-    3254,
-    3271,
-    3312,
-    3344,
-    3382,
-    3409,
-    3439,
-    3469,
-    3497,
-    3534,
-    3558,
-    3606,
-    3648,
-    3688,
-    3724,
-    3742,
-    3765,
+    3224,
+    3247,
+    3270,
+    3285,
+    3302,
+    3328,
+    3355,
+    3372,
+    3413,
+    3445,
+    3483,
+    3510,
+    3540,
+    3570,
+    3598,
+    3635,
+    3659,
+    3707,
+    3749,
     3789,
-    3810,
-    3838,
-    3868,
-    3896,
-    3916,
-    3940,
-    3967,
-    3985,
-    4003,
-    4031,
-    4046,
-    4062,
-    4090,
-    4113,
-    4133,
-    4150,
-    4178,
-    4202,
-    4227,
-    4247,
-    4267,
-    4293,
-    4319,
-    4345,
-    4371,
-    4397,
-    4423,
-    4449,
-    4475,
-    4501,
-    4528,
-    4555,
-    4582,
-    4609,
-    4636,
-    4663,
-    4690,
-    4713,
-    4734,
-    4746
+    3825,
+    3843,
+    3866,
+    3890,
+    3911,
+    3939,
+    3969,
+    3997,
+    4017,
+    4041,
+    4068,
+    4086,
+    4104,
+    4132,
+    4147,
+    4163,
+    4191,
+    4214,
+    4234,
+    4251,
+    4279,
+    4303,
+    4328,
+    4348,
+    4368,
+    4394,
+    4420,
+    4446,
+    4472,
+    4498,
+    4524,
+    4550,
+    4576,
+    4602,
+    4629,
+    4656,
+    4683,
+    4710,
+    4737,
+    4764,
+    4791,
+    4814,
+    4835,
+    4847
   };
 
-static inline int
+static GPG_ERR_INLINE int
 msgidxof (int code)
 {
   return (0 ? 0
-  : ((code >= 0) && (code <= 185)) ? (code - 0)
-  : ((code >= 198) && (code <= 213)) ? (code - 12)
-  : ((code >= 257) && (code <= 271)) ? (code - 55)
-  : ((code >= 273) && (code <= 281)) ? (code - 56)
-  : ((code >= 1024) && (code <= 1039)) ? (code - 798)
-  : ((code >= 16381) && (code <= 16383)) ? (code - 16139)
-  : 16384 - 16139);
+  : ((code >= 0) && (code <= 190)) ? (code - 0)
+  : ((code >= 198) && (code <= 213)) ? (code - 7)
+  : ((code >= 257) && (code <= 271)) ? (code - 50)
+  : ((code >= 273) && (code <= 281)) ? (code - 51)
+  : ((code >= 1024) && (code <= 1039)) ? (code - 793)
+  : ((code >= 16381) && (code <= 16383)) ? (code - 16134)
+  : 16384 - 16134);
 }
