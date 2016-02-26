@@ -1,3 +1,21 @@
+2014-09-18  Werner Koch  <wk@gnupg.org>
+
+	Release 1.16.
+	* configure.ac: Set LT version to C12/A12/R2.
+
+	Add new lock-obj-pub for Apple iOS.
+	* src/syscfg/lock-obj-pub.aarch64-apple-darwin.h: New.
+	* src/syscfg/lock-obj-pub.arm-apple-darwin.h: New.
+
+2014-09-12  Werner Koch  <wk@gnupg.org>
+
+	Fix es_fclose for streams opened with "samethread".
+	* src/estream.c (destroy_stream_lock): New.
+	(es_create, do_close): Use new wrapper function.
+
+	Fix a prototype.
+	* src/gpgrt-int.h: s/off_t/gpgrt_off_t/.
+
 2014-09-11  Werner Koch  <wk@gnupg.org>
 
 	Release 1.15.
