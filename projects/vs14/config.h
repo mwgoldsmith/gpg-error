@@ -1,3 +1,13 @@
+#ifdef _MSC_VER
+#   define inline __inline
+#   define strcasecmp _stricmp
+#   define strncasecmp _strnicmp
+#   include <crtversion.h>
+#   if _VC_CRT_MAJOR_VERSION < 14
+#       define snprintf _snprintf
+#       define strtoll _strtoi64
+#   endif
+#endif
 
 /* Define to 1 if translation of program messages to the user's native
    language is requested. */
