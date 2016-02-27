@@ -46,33 +46,28 @@ static const char header[] =
 "   02111-1307, USA.  */\n"
 "\n";
 
-int
-main (int argc, char **argv)
-{
+int main(int argc, char** argv) {
   int sorted;
   int i;
 
-  printf ("%s", header);
-  do
-    {
-      sorted = 1;
-      for (i = 0; i < sizeof (err_table) / sizeof (err_table[0]) - 1; i++)
-	if (err_table[i].err > err_table[i + 1].err)
-	  {
-	    int err = err_table[i].err;
-	    const char *err_sym = err_table[i].err_sym;
+  printf("%s", header);
+  do {
+    sorted = 1;
+    for (i = 0; i < sizeof (err_table) / sizeof (err_table[0]) - 1; i++)
+      if (err_table[i].err > err_table[i + 1].err) {
+        int err = err_table[i].err;
+        const char* err_sym = err_table[i].err_sym;
 
-	    err_table[i].err = err_table[i + 1].err;
-	    err_table[i].err_sym = err_table[i + 1].err_sym;
-	    err_table[i + 1].err = err;
-	    err_table[i + 1].err_sym = err_sym;
-	    sorted = 0;
-	  }
-    }
-  while (!sorted);
-      
+        err_table[i].err = err_table[i + 1].err;
+        err_table[i].err_sym = err_table[i + 1].err_sym;
+        err_table[i + 1].err = err;
+        err_table[i + 1].err_sym = err_sym;
+        sorted = 0;
+      }
+  } while (!sorted);
+
   for (i = 0; i < sizeof (err_table) / sizeof (err_table[0]); i++)
-    printf ("%i\t%s\n", err_table[i].err, err_table[i].err_sym);
+    printf("%i\t%s\n", err_table[i].err, err_table[i].err_sym);
 
   return 0;
 }
