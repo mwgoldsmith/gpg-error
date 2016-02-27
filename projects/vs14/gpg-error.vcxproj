@@ -17,6 +17,22 @@
       <Configuration>Release</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|Win32">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|Win32">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="DebugDLL|x64">
+      <Configuration>DebugDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="ReleaseDLL|x64">
+      <Configuration>ReleaseDLL</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{AF388A49-3AEA-4D28-9BD4-242497BEBC54}</ProjectGuid>
@@ -51,6 +67,32 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
@@ -68,64 +110,900 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
   <PropertyGroup Label="UserMacros" />
-  <PropertyGroup />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <TargetName>lib$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <TargetName>lib$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <TargetName>lib$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <TargetName>$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <TargetName>$(ProjectName)d</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <TargetName>$(ProjectName)</TargetName>
+    <OutDir Condition="'$(ConfigurationType)'=='StaticLibrary'">$(ProjectDir)..\..\..\..\build\msvc\lib\$(PlatformTarget)\</OutDir>
+    <OutDir Condition="'$(ConfigurationType)'=='DynamicLibrary'">$(ProjectDir)..\..\..\..\build\msvc\bin\$(PlatformTarget)\</OutDir>
+    <IntDir>$(OutDir)..\..\obj\$(PlatformTarget)\$(Configuration)\$(ConfigurationType)\$(ProjectName)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_WINDOWS;_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4018;4005;4244</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
     </ClCompile>
-    <Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-    </Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+FOR %%H IN (err-sources.h err-sources-sym.h err-codes.h err-codes-sym.h code-to-errno.h code-from-errno.h errnos-sym.h lock-obj-pub.native.h gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\src\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\src\!_HEADER!"
+  )
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\code-to-errno.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkerrnos.awk" "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\code-to-errno.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\errnos-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 -v prefix=GPG_ERR_ -v namespace=errnos_ "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\errnos-sym.h"
+)
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)src\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_WINDOWS;_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4018;4005;4244;4267</DisableSpecificWarnings>
     </ClCompile>
-    <Link>
+    <Lib>
       <SubSystem>Windows</SubSystem>
-    </Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+FOR %%H IN (err-sources.h err-sources-sym.h err-codes.h err-codes-sym.h code-to-errno.h code-from-errno.h errnos-sym.h lock-obj-pub.native.h gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\src\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\src\!_HEADER!"
+  )
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\code-to-errno.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkerrnos.awk" "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\code-to-errno.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\errnos-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 -v prefix=GPG_ERR_ -v namespace=errnos_ "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\errnos-sym.h"
+)
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)src\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_WINDOWS;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4018;4005;4244</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
     </ClCompile>
-    <Link>
+    <Lib>
+      <TargetMachine>MachineX86</TargetMachine>
       <SubSystem>Windows</SubSystem>
-      <EnableCOMDATFolding>true</EnableCOMDATFolding>
-      <OptimizeReferences>true</OptimizeReferences>
-    </Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+FOR %%H IN (err-sources.h err-sources-sym.h err-codes.h err-codes-sym.h code-to-errno.h code-from-errno.h errnos-sym.h lock-obj-pub.native.h gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\src\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\src\!_HEADER!"
+  )
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\code-to-errno.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkerrnos.awk" "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\code-to-errno.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\errnos-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 -v prefix=GPG_ERR_ -v namespace=errnos_ "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\errnos-sym.h"
+)
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)src\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
+      <PrecompiledHeader />
       <WarningLevel>Level3</WarningLevel>
-      <PrecompiledHeader>
-      </PrecompiledHeader>
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_WINDOWS;_LIB;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4018;4005;4244;4267</DisableSpecificWarnings>
+      <InterproceduralOptimization>SingleFile</InterproceduralOptimization>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Lib>
+      <SubSystem>Windows</SubSystem>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+FOR %%H IN (err-sources.h err-sources-sym.h err-codes.h err-codes-sym.h code-to-errno.h code-from-errno.h errnos-sym.h lock-obj-pub.native.h gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\src\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\src\!_HEADER!"
+  )
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\code-to-errno.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkerrnos.awk" "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\code-to-errno.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\errnos-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 -v prefix=GPG_ERR_ -v namespace=errnos_ "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\errnos-sym.h"
+)
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)src\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_WINDOWS;_USRDLL;DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4018;4005;4244</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <BufferSecurityCheck>true</BufferSecurityCheck>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
+      <ModuleDefinitionFile>gpg-error.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+FOR %%H IN (err-sources.h err-sources-sym.h err-codes.h err-codes-sym.h code-to-errno.h code-from-errno.h errnos-sym.h lock-obj-pub.native.h gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\src\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\src\!_HEADER!"
+  )
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\code-to-errno.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkerrnos.awk" "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\code-to-errno.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\errnos-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 -v prefix=GPG_ERR_ -v namespace=errnos_ "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\errnos-sym.h"
+)
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)src\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='DebugDLL|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_WINDOWS;_USRDLL;DEBUG;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4018;4005;4244;4267</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <ModuleDefinitionFile>gpg-error.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+FOR %%H IN (err-sources.h err-sources-sym.h err-codes.h err-codes-sym.h code-to-errno.h code-from-errno.h errnos-sym.h lock-obj-pub.native.h gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\src\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\src\!_HEADER!"
+  )
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\code-to-errno.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkerrnos.awk" "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\code-to-errno.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\errnos-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 -v prefix=GPG_ERR_ -v namespace=errnos_ "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\errnos-sym.h"
+)
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)src\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|Win32'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_WINDOWS;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4018;4005;4244</DisableSpecificWarnings>
+      <EnableEnhancedInstructionSet>StreamingSIMDExtensions2</EnableEnhancedInstructionSet>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <LargeAddressAware>true</LargeAddressAware>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>gpg-error.def</ModuleDefinitionFile>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+FOR %%H IN (err-sources.h err-sources-sym.h err-codes.h err-codes-sym.h code-to-errno.h code-from-errno.h errnos-sym.h lock-obj-pub.native.h gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\src\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\src\!_HEADER!"
+  )
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\code-to-errno.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkerrnos.awk" "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\code-to-errno.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\errnos-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 -v prefix=GPG_ERR_ -v namespace=errnos_ "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\errnos-sym.h"
+)
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)src\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseDLL|x64'">
+    <ClCompile>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(ProjectDir)src;$(OutDir)..\..\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <ProgramDataBaseFileName>$(IntDir)$(TargetName).pdb</ProgramDataBaseFileName>
+      <PreprocessorDefinitions>HAVE_CONFIG_H;WIN32;_WINDOWS;_USRDLL;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BrowseInformationFile>$(IntDir)bsc\</BrowseInformationFile>
+      <BrowseInformation>true</BrowseInformation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <DisableSpecificWarnings>4996;4018;4005;4244;4267</DisableSpecificWarnings>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <FloatingPointExceptions>false</FloatingPointExceptions>
+      <EnableFiberSafeOptimizations>true</EnableFiberSafeOptimizations>
+      <OmitFramePointers>true</OmitFramePointers>
+      <StringPooling>true</StringPooling>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>DebugFastLink</GenerateDebugInformation>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <ImportLibrary>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).lib</ImportLibrary>
+      <ProfileGuidedDatabase>$(IntDir)$(TargetName).pgd</ProfileGuidedDatabase>
+      <ProgramDatabaseFile>$(OutDir)..\..\lib\$(PlatformTarget)\$(TargetName).pdb</ProgramDatabaseFile>
+      <AdditionalLibraryDirectories>$(OutDir)..\..\lib\$(PlatformTarget)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <ModuleDefinitionFile>gpg-error.def</ModuleDefinitionFile>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+    <PreBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+IF EXIST "$(OutDir)..\..\licenses\$(ProjectName).txt" (
+  DEL "$(OutDir)..\..\licenses\$(ProjectName).txt"
+)
+
+:: Delete directory if empty; silence if failure
+RD /q "$(OutDir)..\..\include\$(ProjectName)\" 2&gt;NUL
+
+FOR %%H IN (err-sources.h err-sources-sym.h err-codes.h err-codes-sym.h code-to-errno.h code-from-errno.h errnos-sym.h lock-obj-pub.native.h gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  IF EXIST "$(ProjectDir)..\..\src\!_HEADER!" (
+    DEL /f /q "$(ProjectDir)..\..\src\!_HEADER!"
+  )
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-sources-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-sources.h.in" &gt; "$(ProjectDir)src\err-sources-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=3 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\err-codes-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 "$(ProjectDir)..\..\src\err-codes.h.in" &gt; "$(ProjectDir)src\err-codes-sym.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\code-to-errno.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkerrnos.awk" "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\code-to-errno.h"
+)
+
+IF NOT EXIST "$(ProjectDir)src\errnos-sym.h" (
+  AWK -f "$(ProjectDir)..\..\src\mkstrtable.awk" -v textidx=2 -v nogettext=1 -v prefix=GPG_ERR_ -v namespace=errnos_ "$(ProjectDir)..\..\src\errnos.in" &gt; "$(ProjectDir)src\errnos-sym.h"
+)
+
+ENDLOCAL
+      </Command>
+    </PreBuildEvent>
+    <PostBuildEvent>
+      <Command>
+ECHO OFF
+SETLOCAL EnableDelayedExpansion EnableExtensions
+
+MKDIR "$(OutDir)..\..\include"
+MKDIR "$(OutDir)..\..\include\$(ProjectName)"
+
+FOR %%H IN (gpg-error.h) DO (
+  SET "_HEADER=%%H"
+  COPY "$(ProjectDir)src\!_HEADER!" "$(OutDir)..\..\include\$(ProjectName)"
+)
+
+MKDIR "$(OutDir)..\..\licenses"
+COPY "$(ProjectDir)..\..\COPYING" "$(OutDir)..\..\licenses\$(ProjectName).txt" 
+
+ENDLOCAL
+      </Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\src\estream-printf.h" />
+    <ClInclude Include="..\..\src\estream.h" />
+    <ClInclude Include="..\..\src\gettext.h" />
+    <ClInclude Include="..\..\src\gpgrt-int.h" />
+    <ClInclude Include="..\..\src\init.h" />
+    <ClInclude Include="..\..\src\lock.h" />
+    <ClInclude Include="..\..\src\thread.h" />
+    <ClInclude Include="..\..\src\visibility.h" />
+    <ClInclude Include="..\..\src\w32-add.h" />
+    <ClInclude Include="..\..\src\w32-lock-obj.h" />
+    <ClInclude Include="config.h" />
+    <ClInclude Include="version.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="gpg-error.def" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\src\code-from-errno.c" />
+    <ClCompile Include="..\..\src\code-to-errno.c" />
+    <ClCompile Include="..\..\src\estream-printf.c" />
+    <ClCompile Include="..\..\src\estream.c" />
+    <ClCompile Include="..\..\src\gpg-error.c" />
+    <ClCompile Include="..\..\src\init.c" />
+    <ClCompile Include="..\..\src\strerror-sym.c" />
+    <ClCompile Include="..\..\src\strerror.c" />
+    <ClCompile Include="..\..\src\strsource-sym.c" />
+    <ClCompile Include="..\..\src\strsource.c" />
+    <ClCompile Include="..\..\src\version.c" />
+    <ClCompile Include="..\..\src\visibility.c" />
+    <ClCompile Include="..\..\src\w32-gettext.c" />
+    <ClCompile Include="..\..\src\w32-lock.c" />
+    <ClCompile Include="..\..\src\w32-thread.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="versioninfo.rc">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</ExcludedFromBuild>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+    </ResourceCompile>
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
